@@ -2,15 +2,15 @@
 SurrealDB client wrapper for Surreal FA.
 Handles connection, node creation, and relationship creation.
 
-Uses the blocking SurrealDB SDK (surrealdb 1.x).
-Surreal() connects on init — no separate connect() call needed.
+Uses httpx for HTTPS (SurrealDB cloud) and the SDK for local websockets.
 """
 
 import os
 import json
 import threading
+import base64
+import httpx
 from dotenv import load_dotenv
-from surrealdb import Surreal
 
 load_dotenv()
 
@@ -31,28 +31,78 @@ SURREAL_PASS = _cfg("SURREAL_PASS", "root")
 SURREAL_NS = _cfg("SURREAL_NAMESPACE", "surreal_fa")
 SURREAL_DB = _cfg("SURREAL_DATABASE", "surreal_fa")
 
+_USE_HTTP = SURREAL_URL.startswith("https://")
+
+
+class _HttpConn:
+    """Thin HTTP client that talks to SurrealDB's /sql endpoint via httpx."""
+
+    def __init__(self, base_url: str, ns: str, db: str):
+        self._sql_url = base_url.rstrip("/") + "/sql"
+        self._headers = {
+            "Accept": "application/json",
+            "Surreal-NS": ns,
+            "Surreal-DB": db,
+        }
+        self._client = httpx.Client(timeout=30)
+
+    def signin(self, creds: dict):
+        user = creds["username"]
+        pw = creds["password"]
+        token = base64.b64encode(f"{user}:{pw}".encode()).decode()
+        self._headers["Authorization"] = f"Basic {token}"
+
+    def authenticate(self, token: str):
+        self._headers["Authorization"] = f"Bearer {token}"
+
+    def query(self, sql: str, vars: dict | None = None):
+        body = sql
+        # Prepend LET statements for variables (handles complex types like dicts)
+        if vars:
+            lets = []
+            for k, v in vars.items():
+                lets.append(f"LET ${k} = {json.dumps(v)};")
+            body = "\n".join(lets) + "\n" + sql
+        resp = self._client.post(
+            self._sql_url,
+            content=body,
+            headers={**self._headers, "Content-Type": "text/plain"},
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        # HTTP API returns [{"result": [...], "status": "OK", "time": "..."}]
+        # With LET prefixes, actual query result is the last element
+        if vars and isinstance(data, list) and len(data) > 1:
+            return [data[-1]]
+        return data
+
+    def close(self):
+        self._client.close()
+
 
 class GraphDB:
     """Thread-safe blocking SurrealDB client for the knowledge graph.
-    Each thread gets its own connection via thread-local storage."""
+    Each thread gets its own connection via thread-local storage.
+    Uses httpx for HTTPS (cloud), SDK for ws:// (local)."""
 
     def __init__(self):
         self._local = threading.local()
 
-    def _get_conn(self) -> Surreal:
-        """Get or create a thread-local connection.
-        Uses HTTP for https:// URLs (SurrealDB cloud hangs on websockets)."""
+    def _get_conn(self):
+        """Get or create a thread-local connection."""
         if not hasattr(self._local, "db") or self._local.db is None:
-            url = SURREAL_URL
-            # SurrealDB cloud needs HTTP, not websockets
-            if url.startswith("https://"):
-                url = url.rstrip("/") + "/rpc"
-            db = Surreal(url)
+            if _USE_HTTP:
+                db = _HttpConn(SURREAL_URL, SURREAL_NS, SURREAL_DB)
+            else:
+                from surrealdb import Surreal
+                db = Surreal(SURREAL_URL)
+                db.use(SURREAL_NS, SURREAL_DB)
             if SURREAL_TOKEN:
                 db.authenticate(SURREAL_TOKEN)
             else:
                 db.signin({"username": SURREAL_USER, "password": SURREAL_PASS})
-            db.use(SURREAL_NS, SURREAL_DB)
+            if not _USE_HTTP:
+                pass  # use() already called above
             self._local.db = db
         return self._local.db
 
@@ -65,7 +115,7 @@ class GraphDB:
             try:
                 self._local.db.close()
             except Exception:
-                pass  # HTTP connections don't implement close
+                pass
             self._local.db = None
 
     def query(self, sql: str, vars: dict | None = None):
