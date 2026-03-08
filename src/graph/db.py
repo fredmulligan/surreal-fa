@@ -44,7 +44,16 @@ def _load_secrets():
 
 def _cfg(key, default=""):
     _load_secrets()
-    return _secrets.get(key) or os.getenv(key, default)
+    val = _secrets.get(key)
+    if val:
+        return val
+    # Direct st.secrets access (fallback if dict() injection missed it)
+    try:
+        import streamlit as st
+        return str(st.secrets[key])
+    except Exception:
+        pass
+    return os.getenv(key, default)
 
 
 class _HttpConn:

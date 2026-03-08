@@ -14,18 +14,18 @@ import streamlit as st
 import streamlit.components.v1 as components
 from pyvis.network import Network
 
-# Inject Streamlit secrets into db.py BEFORE any tools import it.
-# st.secrets is only available on the main thread — worker threads can't access it.
+st.set_page_config(page_title="Surreal FA", layout="wide")
+
+# Inject Streamlit secrets into db.py BEFORE any tools run.
 from src.graph import db as _db
 try:
     _db._secrets = dict(st.secrets)
-    st.sidebar.caption(f"secrets: {list(_db._secrets.keys())}")
+    st.sidebar.caption(f"secrets loaded: {list(_db._secrets.keys())}")
 except Exception as e:
     st.sidebar.caption(f"secrets failed: {e}")
 
 from src.frontend.agent import get_agent
 
-st.set_page_config(page_title="Surreal FA", layout="wide")
 st.title("Surreal FA — Economic Knowledge Graph")
 
 # --- Session state ---
