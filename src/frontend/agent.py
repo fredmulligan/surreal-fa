@@ -7,13 +7,21 @@ No freeform query generation.
 """
 
 import os
-from dotenv import load_dotenv
 from langchain_openai import AzureChatOpenAI
 from langgraph.prebuilt import create_react_agent
 
 from src.frontend.tools import ALL_TOOLS
 
-load_dotenv()
+# Try Streamlit secrets first, fall back to env vars / .env
+try:
+    import streamlit as st
+    _secrets = dict(st.secrets)
+except Exception:
+    _secrets = {}
+
+def _get(key, default=None):
+    """Read from Streamlit secrets, then env vars, then default."""
+    return _secrets.get(key) or os.getenv(key, default)
 
 SYSTEM_PROMPT = """You are Surreal FA, an economic knowledge graph assistant.
 
@@ -43,16 +51,15 @@ Do NOT explain, interpret, editorialize, or list individual results. The visuali
 panel shows everything. Your ONLY job is to state the counts. Nothing else.
 """
 
-llm = AzureChatOpenAI(
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview"),
-)
-
 
 def get_agent():
-    """Build and return the LangGraph agent."""
+    """Build and return the LangGraph agent (lazy init)."""
+    llm = AzureChatOpenAI(
+        azure_endpoint=_get("AZURE_OPENAI_ENDPOINT"),
+        api_key=_get("AZURE_OPENAI_API_KEY"),
+        azure_deployment=_get("AZURE_OPENAI_DEPLOYMENT", "gpt-4o"),
+        api_version=_get("AZURE_OPENAI_API_VERSION", "2025-01-01-preview"),
+    )
     return create_react_agent(
         model=llm,
         tools=ALL_TOOLS,

@@ -14,12 +14,22 @@ from surrealdb import Surreal
 
 load_dotenv()
 
-SURREAL_URL = os.getenv("SURREAL_URL", "ws://localhost:8000/rpc")
-SURREAL_TOKEN = os.getenv("SURREAL_TOKEN", "")
-SURREAL_USER = os.getenv("SURREAL_USER", "root")
-SURREAL_PASS = os.getenv("SURREAL_PASS", "root")
-SURREAL_NS = os.getenv("SURREAL_NAMESPACE", "surreal_fa")
-SURREAL_DB = os.getenv("SURREAL_DATABASE", "surreal_fa")
+# Streamlit secrets → env vars → defaults
+try:
+    import streamlit as st
+    _secrets = dict(st.secrets)
+except Exception:
+    _secrets = {}
+
+def _cfg(key, default=""):
+    return _secrets.get(key) or os.getenv(key, default)
+
+SURREAL_URL = _cfg("SURREAL_URL", "ws://localhost:8000/rpc")
+SURREAL_TOKEN = _cfg("SURREAL_TOKEN", "")
+SURREAL_USER = _cfg("SURREAL_USER", "root")
+SURREAL_PASS = _cfg("SURREAL_PASS", "root")
+SURREAL_NS = _cfg("SURREAL_NAMESPACE", "surreal_fa")
+SURREAL_DB = _cfg("SURREAL_DATABASE", "surreal_fa")
 
 
 class GraphDB:
@@ -30,9 +40,14 @@ class GraphDB:
         self._local = threading.local()
 
     def _get_conn(self) -> Surreal:
-        """Get or create a thread-local connection."""
+        """Get or create a thread-local connection.
+        Uses HTTP for https:// URLs (SurrealDB cloud hangs on websockets)."""
         if not hasattr(self._local, "db") or self._local.db is None:
-            db = Surreal(SURREAL_URL)
+            url = SURREAL_URL
+            # SurrealDB cloud needs HTTP, not websockets
+            if url.startswith("https://"):
+                url = url.rstrip("/") + "/rpc"
+            db = Surreal(url)
             if SURREAL_TOKEN:
                 db.authenticate(SURREAL_TOKEN)
             else:
