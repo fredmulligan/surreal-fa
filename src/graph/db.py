@@ -115,6 +115,7 @@ class GraphDB:
         Reads config lazily so Streamlit secrets are available."""
         if not hasattr(self._local, "db") or self._local.db is None:
             url = _cfg("SURREAL_URL", "ws://localhost:8000/rpc")
+            print(f"[db] _secrets keys={list(_secrets.keys())} url={url}")
             token = _cfg("SURREAL_TOKEN", "")
             user = _cfg("SURREAL_USER", "root")
             pw = _cfg("SURREAL_PASS", "root")
