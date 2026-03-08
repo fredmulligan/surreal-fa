@@ -17,20 +17,30 @@ load_dotenv()
 _secrets = {}
 
 def _load_secrets():
-    """Load secrets from secrets.toml directly (thread-safe, no Streamlit runtime needed)."""
+    """Load secrets into a plain dict. Tries TOML file first, then st.secrets."""
     global _secrets
     if _secrets:
         return
-    import tomllib
-    for p in [
-        os.path.join(os.path.dirname(__file__), "..", "..", ".streamlit", "secrets.toml"),
-        os.path.expanduser("~/.streamlit/secrets.toml"),
-    ]:
-        p = os.path.normpath(p)
-        if os.path.exists(p):
-            with open(p, "rb") as f:
-                _secrets = tomllib.load(f)
-            return
+    # 1) Read secrets.toml directly (thread-safe, no Streamlit runtime needed)
+    try:
+        import tomllib
+        for p in [
+            os.path.join(os.path.dirname(__file__), "..", "..", ".streamlit", "secrets.toml"),
+            os.path.expanduser("~/.streamlit/secrets.toml"),
+        ]:
+            p = os.path.normpath(p)
+            if os.path.exists(p):
+                with open(p, "rb") as f:
+                    _secrets = tomllib.load(f)
+                return
+    except Exception:
+        pass
+    # 2) Materialize st.secrets into a plain dict (works from main thread)
+    try:
+        import streamlit as st
+        _secrets = dict(st.secrets)
+    except Exception:
+        pass
 
 def _cfg(key, default=""):
     _load_secrets()
