@@ -19,8 +19,9 @@ from pyvis.network import Network
 from src.graph import db as _db
 try:
     _db._secrets = dict(st.secrets)
-except Exception:
-    pass  # No secrets.toml locally — db.py falls back to .env
+    st.sidebar.caption(f"secrets: {list(_db._secrets.keys())}")
+except Exception as e:
+    st.sidebar.caption(f"secrets failed: {e}")
 
 from src.frontend.agent import get_agent
 
