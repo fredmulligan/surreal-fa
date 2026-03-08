@@ -14,17 +14,27 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+_secrets = {}
+
+def _load_secrets():
+    """Load secrets from secrets.toml directly (thread-safe, no Streamlit runtime needed)."""
+    global _secrets
+    if _secrets:
+        return
+    import tomllib
+    for p in [
+        os.path.join(os.path.dirname(__file__), "..", "..", ".streamlit", "secrets.toml"),
+        os.path.expanduser("~/.streamlit/secrets.toml"),
+    ]:
+        p = os.path.normpath(p)
+        if os.path.exists(p):
+            with open(p, "rb") as f:
+                _secrets = tomllib.load(f)
+            return
+
 def _cfg(key, default=""):
-    """Read config: Streamlit secrets → env vars → default.
-    Evaluated lazily so st.secrets is available when Streamlit is running."""
-    try:
-        import streamlit as st
-        val = st.secrets.get(key)
-        if val:
-            return val
-    except Exception:
-        pass
-    return os.getenv(key, default)
+    _load_secrets()
+    return _secrets.get(key) or os.getenv(key, default)
 
 
 class _HttpConn:
