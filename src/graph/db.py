@@ -14,24 +14,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Streamlit secrets → env vars → defaults
-try:
-    import streamlit as st
-    _secrets = dict(st.secrets)
-except Exception:
-    _secrets = {}
-
 def _cfg(key, default=""):
-    return _secrets.get(key) or os.getenv(key, default)
-
-SURREAL_URL = _cfg("SURREAL_URL", "ws://localhost:8000/rpc")
-SURREAL_TOKEN = _cfg("SURREAL_TOKEN", "")
-SURREAL_USER = _cfg("SURREAL_USER", "root")
-SURREAL_PASS = _cfg("SURREAL_PASS", "root")
-SURREAL_NS = _cfg("SURREAL_NAMESPACE", "surreal_fa")
-SURREAL_DB = _cfg("SURREAL_DATABASE", "surreal_fa")
-
-_USE_HTTP = SURREAL_URL.startswith("https://")
+    """Read config: Streamlit secrets → env vars → default.
+    Evaluated lazily so st.secrets is available when Streamlit is running."""
+    try:
+        import streamlit as st
+        val = st.secrets.get(key)
+        if val:
+            return val
+    except Exception:
+        pass
+    return os.getenv(key, default)
 
 
 class _HttpConn:
@@ -89,20 +82,26 @@ class GraphDB:
         self._local = threading.local()
 
     def _get_conn(self):
-        """Get or create a thread-local connection."""
+        """Get or create a thread-local connection.
+        Reads config lazily so Streamlit secrets are available."""
         if not hasattr(self._local, "db") or self._local.db is None:
-            if _USE_HTTP:
-                db = _HttpConn(SURREAL_URL, SURREAL_NS, SURREAL_DB)
+            url = _cfg("SURREAL_URL", "ws://localhost:8000/rpc")
+            token = _cfg("SURREAL_TOKEN", "")
+            user = _cfg("SURREAL_USER", "root")
+            pw = _cfg("SURREAL_PASS", "root")
+            ns = _cfg("SURREAL_NAMESPACE", "surreal_fa")
+            dbname = _cfg("SURREAL_DATABASE", "surreal_fa")
+
+            if url.startswith("https://"):
+                db = _HttpConn(url, ns, dbname)
             else:
                 from surrealdb import Surreal
-                db = Surreal(SURREAL_URL)
-                db.use(SURREAL_NS, SURREAL_DB)
-            if SURREAL_TOKEN:
-                db.authenticate(SURREAL_TOKEN)
+                db = Surreal(url)
+                db.use(ns, dbname)
+            if token:
+                db.authenticate(token)
             else:
-                db.signin({"username": SURREAL_USER, "password": SURREAL_PASS})
-            if not _USE_HTTP:
-                pass  # use() already called above
+                db.signin({"username": user, "password": pw})
             self._local.db = db
         return self._local.db
 
