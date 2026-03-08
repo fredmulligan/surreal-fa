@@ -11,7 +11,7 @@ import sys
 from typing import Literal
 
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_openai import AzureChatOpenAI
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode
 
@@ -97,7 +97,11 @@ def create_build_agent(query: str):
     graph_tools = make_graph_tools(builder)
     all_tools = DATA_TOOLS + graph_tools
 
-    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm = AzureChatOpenAI(
+        azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o"),
+        api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview"),
+        temperature=0,
+    )
     llm_with_tools = llm.bind_tools(all_tools)
 
     def get_prompt(state: BuildState) -> str:

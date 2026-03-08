@@ -10,34 +10,71 @@ DEFINE TABLE industry SCHEMAFULL;
 DEFINE FIELD name ON TABLE industry TYPE string;
 DEFINE FIELD description ON TABLE industry TYPE option<string>;
 DEFINE FIELD sector ON TABLE industry TYPE option<string>;
+DEFINE FIELD wikidata_id ON TABLE industry TYPE option<string>;
+DEFINE FIELD yfinance_name ON TABLE industry TYPE option<string>;
 DEFINE FIELD market_size_usd ON TABLE industry TYPE option<float>;
 DEFINE FIELD growth_rate ON TABLE industry TYPE option<float>;
 DEFINE FIELD barriers_to_entry ON TABLE industry TYPE option<array<string>>;
 DEFINE FIELD key_regulations ON TABLE industry TYPE option<array<string>>;
 DEFINE FIELD source ON TABLE industry TYPE option<string>;
+DEFINE FIELD status ON TABLE industry TYPE option<string>; -- stub, processed
 DEFINE FIELD created_at ON TABLE industry TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE industry TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_industry_name ON TABLE industry COLUMNS name UNIQUE;
+DEFINE INDEX idx_industry_wikidata ON TABLE industry COLUMNS wikidata_id;
 
 -- Companies
 DEFINE TABLE company SCHEMAFULL;
 DEFINE FIELD name ON TABLE company TYPE string;
 DEFINE FIELD ticker ON TABLE company TYPE option<string>;
 DEFINE FIELD description ON TABLE company TYPE option<string>;
+-- Price
+DEFINE FIELD current_price ON TABLE company TYPE option<float>;
+DEFINE FIELD currency ON TABLE company TYPE option<string>;
+-- Market & revenue
 DEFINE FIELD market_cap ON TABLE company TYPE option<float>;
 DEFINE FIELD revenue ON TABLE company TYPE option<float>;
+-- Earnings & valuation
 DEFINE FIELD earnings ON TABLE company TYPE option<float>;
+DEFINE FIELD trailing_eps ON TABLE company TYPE option<float>;
+DEFINE FIELD forward_eps ON TABLE company TYPE option<float>;
+DEFINE FIELD trailing_pe ON TABLE company TYPE option<float>;
+DEFINE FIELD forward_pe ON TABLE company TYPE option<float>;
+DEFINE FIELD peg_ratio ON TABLE company TYPE option<float>;
+DEFINE FIELD price_to_book ON TABLE company TYPE option<float>;
+DEFINE FIELD price_to_sales ON TABLE company TYPE option<float>;
+-- Margins
 DEFINE FIELD gross_margin ON TABLE company TYPE option<float>;
 DEFINE FIELD operating_margin ON TABLE company TYPE option<float>;
 DEFINE FIELD profit_margin ON TABLE company TYPE option<float>;
 DEFINE FIELD cost_of_revenue ON TABLE company TYPE option<float>;
+-- Cash flow & balance sheet
+DEFINE FIELD ebitda ON TABLE company TYPE option<float>;
+DEFINE FIELD free_cash_flow ON TABLE company TYPE option<float>;
+DEFINE FIELD operating_cash_flow ON TABLE company TYPE option<float>;
+DEFINE FIELD total_cash ON TABLE company TYPE option<float>;
+DEFINE FIELD total_debt ON TABLE company TYPE option<float>;
+DEFINE FIELD debt_to_equity ON TABLE company TYPE option<float>;
+-- Growth & risk
+DEFINE FIELD revenue_growth ON TABLE company TYPE option<float>;
+DEFINE FIELD earnings_growth ON TABLE company TYPE option<float>;
+DEFINE FIELD beta ON TABLE company TYPE option<float>;
+-- Dividends
+DEFINE FIELD dividend_yield ON TABLE company TYPE option<float>;
+DEFINE FIELD dividend_rate ON TABLE company TYPE option<float>;
+-- Meta
 DEFINE FIELD employees ON TABLE company TYPE option<int>;
 DEFINE FIELD hq_country ON TABLE company TYPE option<string>;
 DEFINE FIELD hq_city ON TABLE company TYPE option<string>;
 DEFINE FIELD founded ON TABLE company TYPE option<string>;
 DEFINE FIELD website ON TABLE company TYPE option<string>;
 DEFINE FIELD wikidata_id ON TABLE company TYPE option<string>;
+DEFINE FIELD yfinance_industry ON TABLE company TYPE option<string>;
+DEFINE FIELD yfinance_sector ON TABLE company TYPE option<string>;
 DEFINE FIELD source ON TABLE company TYPE option<string>;
+DEFINE FIELD status ON TABLE company TYPE option<string>; -- stub, processed
 DEFINE FIELD created_at ON TABLE company TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE company TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_company_name ON TABLE company COLUMNS name UNIQUE;
 DEFINE INDEX idx_company_ticker ON TABLE company COLUMNS ticker;
 
@@ -49,6 +86,7 @@ DEFINE FIELD maturity ON TABLE technology TYPE option<string>; -- emerging, grow
 DEFINE FIELD adoption_stage ON TABLE technology TYPE option<string>; -- r&d, early_adopter, mainstream, legacy
 DEFINE FIELD source ON TABLE technology TYPE option<string>;
 DEFINE FIELD created_at ON TABLE technology TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE technology TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_tech_name ON TABLE technology COLUMNS name UNIQUE;
 
 -- Products / Services
@@ -58,18 +96,22 @@ DEFINE FIELD description ON TABLE product TYPE option<string>;
 DEFINE FIELD category ON TABLE product TYPE option<string>;
 DEFINE FIELD source ON TABLE product TYPE option<string>;
 DEFINE FIELD created_at ON TABLE product TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE product TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_product_name ON TABLE product COLUMNS name;
 
 -- Commodities / Raw Inputs
 DEFINE TABLE commodity SCHEMAFULL;
 DEFINE FIELD name ON TABLE commodity TYPE string;
 DEFINE FIELD description ON TABLE commodity TYPE option<string>;
+DEFINE FIELD wikidata_id ON TABLE commodity TYPE option<string>;
 DEFINE FIELD category ON TABLE commodity TYPE option<string>; -- metal, energy, agricultural, chemical
 DEFINE FIELD unit ON TABLE commodity TYPE option<string>;
 DEFINE FIELD current_price ON TABLE commodity TYPE option<float>;
 DEFINE FIELD volatility ON TABLE commodity TYPE option<float>;
 DEFINE FIELD source ON TABLE commodity TYPE option<string>;
+DEFINE FIELD status ON TABLE commodity TYPE option<string>; -- stub, processed
 DEFINE FIELD created_at ON TABLE commodity TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE commodity TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_commodity_name ON TABLE commodity COLUMNS name UNIQUE;
 
 -- Government Policies / Subsidies
@@ -82,6 +124,7 @@ DEFINE FIELD status ON TABLE policy TYPE option<string>; -- proposed, active, ex
 DEFINE FIELD effective_date ON TABLE policy TYPE option<string>;
 DEFINE FIELD source ON TABLE policy TYPE option<string>;
 DEFINE FIELD created_at ON TABLE policy TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE policy TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_policy_name ON TABLE policy COLUMNS name UNIQUE;
 
 -- Events / Shocks (including Polymarket events)
@@ -94,6 +137,7 @@ DEFINE FIELD probability ON TABLE event TYPE option<float>; -- 0-1 from Polymark
 DEFINE FIELD timeframe ON TABLE event TYPE option<string>;
 DEFINE FIELD source ON TABLE event TYPE option<string>;
 DEFINE FIELD created_at ON TABLE event TYPE datetime VALUE time::now();
+DEFINE FIELD updated_at ON TABLE event TYPE option<datetime> VALUE time::now();
 DEFINE INDEX idx_event_name ON TABLE event COLUMNS name;
 
 -- ============================================================
@@ -166,6 +210,13 @@ DEFINE FIELD annual_volume ON TABLE uses_input TYPE option<string>;
 DEFINE FIELD pct_of_costs ON TABLE uses_input TYPE option<float>;
 DEFINE FIELD confidence ON TABLE uses_input TYPE option<float>;
 DEFINE FIELD source ON TABLE uses_input TYPE option<string>;
+
+-- Industry uses commodity input (industry-level dependency)
+DEFINE TABLE industry_uses_input TYPE RELATION IN industry OUT commodity;
+DEFINE FIELD pct_of_industry_costs ON TABLE industry_uses_input TYPE option<float>;
+DEFINE FIELD criticality ON TABLE industry_uses_input TYPE option<string>; -- critical, important, minor
+DEFINE FIELD substitutability ON TABLE industry_uses_input TYPE option<string>; -- none, limited, moderate, high
+DEFINE FIELD source ON TABLE industry_uses_input TYPE option<string>;
 
 -- Commodity can substitute for another commodity
 DEFINE TABLE substitute_input TYPE RELATION IN commodity OUT commodity;

@@ -97,7 +97,6 @@ def search_polymarket(query: str) -> str:
     events = search_events(query)
     if events:
         return json.dumps(events[:5], indent=2, default=str)
-    # Also try markets directly
     markets = search_markets(query)
     if markets:
         return json.dumps(markets[:5], indent=2, default=str)
@@ -105,27 +104,22 @@ def search_polymarket(query: str) -> str:
 
 
 # ── Graph operation tools ──
-# These are created dynamically with a GraphBuilder/GraphDB instance.
-# See build.py and shock.py for how they're wired up.
 
 def make_graph_tools(builder):
     """Create graph-writing tools bound to a specific GraphBuilder instance."""
-    import asyncio
 
     @tool
     def add_company_to_graph(name: str, ticker: str = "", description: str = "", market_cap: float = 0, hq_country: str = "", industry: str = "") -> str:
         """Add a company to the knowledge graph. If an industry is provided,
         also creates the industry node and links them."""
-        async def _do():
-            data = {"name": name, "ticker": ticker, "description": description,
-                    "market_cap": market_cap if market_cap else None,
-                    "hq_country": hq_country if hq_country else None, "source": "agent"}
-            company_id = await builder.add_company(data)
-            if industry:
-                industry_id = await builder.add_industry(industry)
-                await builder.link_company_to_industry(company_id, industry_id)
-            return f"Added company '{name}' to graph as {company_id}" + (f" in industry '{industry}'" if industry else "")
-        return asyncio.run(_do())
+        data = {"name": name, "ticker": ticker, "description": description,
+                "market_cap": market_cap if market_cap else None,
+                "hq_country": hq_country if hq_country else None, "source": "agent"}
+        company_id = builder.add_company(data)
+        if industry:
+            industry_id = builder.add_industry(industry)
+            builder.link_company_to_industry(company_id, industry_id)
+        return f"Added company '{name}' to graph as {company_id}" + (f" in industry '{industry}'" if industry else "")
 
     @tool
     def add_relationship_to_graph(
@@ -142,63 +136,51 @@ def make_graph_tools(builder):
                       subsidiary_of, uses_technology, invested_in, uses_input, substitute_input,
                       demand_driver, affected_by_policy, produces
         properties: JSON string of edge properties like '{"cost_sensitivity": 0.8}'"""
-        async def _do():
-            props = json.loads(properties) if properties != "{}" else None
-            from_id = from_name.lower().replace(" ", "_")
-            to_id = to_name.lower().replace(" ", "_")
-            await builder.db.create_relationship(from_type, from_id, relationship, to_type, to_id, props)
-            return f"Created {from_name} -[{relationship}]-> {to_name}"
-        return asyncio.run(_do())
+        props = json.loads(properties) if properties != "{}" else None
+        from_id = from_name.lower().replace(" ", "_")
+        to_id = to_name.lower().replace(" ", "_")
+        builder.db.create_relationship(from_type, from_id, relationship, to_type, to_id, props)
+        return f"Created {from_name} -[{relationship}]-> {to_name}"
 
     @tool
     def add_technology_to_graph(name: str, maturity: str = "", description: str = "") -> str:
         """Add a technology to the knowledge graph.
         maturity: emerging, growing, mature, declining"""
-        async def _do():
-            await builder.add_technology(name, {"maturity": maturity, "description": description})
-            return f"Added technology '{name}' to graph"
-        return asyncio.run(_do())
+        builder.add_technology(name, {"maturity": maturity, "description": description})
+        return f"Added technology '{name}' to graph"
 
     @tool
     def add_commodity_to_graph(name: str, category: str = "", description: str = "") -> str:
         """Add a commodity/raw material to the knowledge graph.
         category: metal, energy, agricultural, chemical"""
-        async def _do():
-            await builder.add_commodity(name, {"category": category, "description": description})
-            return f"Added commodity '{name}' to graph"
-        return asyncio.run(_do())
+        builder.add_commodity(name, {"category": category, "description": description})
+        return f"Added commodity '{name}' to graph"
 
     @tool
     def add_policy_to_graph(name: str, policy_type: str = "", region: str = "", description: str = "") -> str:
         """Add a government policy/subsidy to the knowledge graph.
         policy_type: subsidy, tariff, regulation, tax_credit, ban"""
-        async def _do():
-            await builder.add_policy(name, {"policy_type": policy_type, "region": region, "description": description})
-            return f"Added policy '{name}' to graph"
-        return asyncio.run(_do())
+        builder.add_policy(name, {"policy_type": policy_type, "region": region, "description": description})
+        return f"Added policy '{name}' to graph"
 
     @tool
     def add_event_to_graph(name: str, event_type: str = "", description: str = "", probability: float = 0) -> str:
         """Add an event/shock to the knowledge graph.
         event_type: market_shock, geopolitical, technology_shift, regulation"""
-        async def _do():
-            data = {"event_type": event_type, "description": description}
-            if probability > 0:
-                data["probability"] = probability
-            await builder.add_event(name, data)
-            return f"Added event '{name}' to graph"
-        return asyncio.run(_do())
+        data = {"event_type": event_type, "description": description}
+        if probability > 0:
+            data["probability"] = probability
+        builder.add_event(name, data)
+        return f"Added event '{name}' to graph"
 
     @tool
     def get_graph_stats() -> str:
         """Get current stats of the knowledge graph — how many companies, industries,
         relationships, etc. Useful for understanding what's already been mapped."""
         from src.graph.queries import GraphQueries
-        async def _do():
-            queries = GraphQueries(builder.db)
-            stats = await queries.graph_stats()
-            return json.dumps(stats, indent=2)
-        return asyncio.run(_do())
+        queries = GraphQueries(builder.db)
+        stats = queries.graph_stats()
+        return json.dumps(stats, indent=2)
 
     return [
         add_company_to_graph,

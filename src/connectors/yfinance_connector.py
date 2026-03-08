@@ -25,6 +25,32 @@ def get_company_info(ticker: str) -> dict | None:
             "website": info.get("website"),
             "sector": info.get("sector"),
             "industry": info.get("industry"),
+            # Price
+            "current_price": info.get("currentPrice"),
+            "currency": info.get("currency"),
+            # Earnings & valuation
+            "earnings": info.get("netIncomeToCommon"),
+            "trailing_eps": info.get("trailingEps"),
+            "forward_eps": info.get("forwardEps"),
+            "trailing_pe": info.get("trailingPE"),
+            "forward_pe": info.get("forwardPE"),
+            "peg_ratio": info.get("trailingPegRatio"),
+            "price_to_book": info.get("priceToBook"),
+            "price_to_sales": info.get("priceToSalesTrailing12Months"),
+            # Cash flow & balance sheet
+            "ebitda": info.get("ebitda"),
+            "free_cash_flow": info.get("freeCashflow"),
+            "operating_cash_flow": info.get("operatingCashflow"),
+            "total_cash": info.get("totalCash"),
+            "total_debt": info.get("totalDebt"),
+            "debt_to_equity": info.get("debtToEquity"),
+            # Growth & risk
+            "revenue_growth": info.get("revenueGrowth"),
+            "earnings_growth": info.get("earningsGrowth"),
+            "beta": info.get("beta"),
+            # Dividends
+            "dividend_yield": info.get("dividendYield"),
+            "dividend_rate": info.get("dividendRate"),
             "source": "yfinance",
         }
     except Exception as e:

@@ -1,13 +1,21 @@
 """
 SurrealDB client wrapper for Surreal FA.
 Handles connection, node creation, and relationship creation.
+
+Uses the blocking SurrealDB SDK (surrealdb 1.x).
+Surreal() connects on init — no separate connect() call needed.
 """
 
 import os
-import asyncio
+import json
+import threading
+from dotenv import load_dotenv
 from surrealdb import Surreal
 
+load_dotenv()
+
 SURREAL_URL = os.getenv("SURREAL_URL", "ws://localhost:8000/rpc")
+SURREAL_TOKEN = os.getenv("SURREAL_TOKEN", "")
 SURREAL_USER = os.getenv("SURREAL_USER", "root")
 SURREAL_PASS = os.getenv("SURREAL_PASS", "root")
 SURREAL_NS = os.getenv("SURREAL_NAMESPACE", "surreal_fa")
@@ -15,79 +23,83 @@ SURREAL_DB = os.getenv("SURREAL_DATABASE", "surreal_fa")
 
 
 class GraphDB:
-    """Async SurrealDB client for the knowledge graph."""
+    """Thread-safe blocking SurrealDB client for the knowledge graph.
+    Each thread gets its own connection via thread-local storage."""
 
     def __init__(self):
-        self.db = Surreal(SURREAL_URL)
-        self._connected = False
+        self._local = threading.local()
 
-    async def connect(self):
-        if self._connected:
-            return
-        await self.db.connect()
-        await self.db.signin({"username": SURREAL_USER, "password": SURREAL_PASS})
-        await self.db.use(SURREAL_NS, SURREAL_DB)
-        self._connected = True
+    def _get_conn(self) -> Surreal:
+        """Get or create a thread-local connection."""
+        if not hasattr(self._local, "db") or self._local.db is None:
+            db = Surreal(SURREAL_URL)
+            if SURREAL_TOKEN:
+                db.authenticate(SURREAL_TOKEN)
+            else:
+                db.signin({"username": SURREAL_USER, "password": SURREAL_PASS})
+            db.use(SURREAL_NS, SURREAL_DB)
+            self._local.db = db
+        return self._local.db
 
-    async def close(self):
-        if self._connected:
-            await self.db.close()
-            self._connected = False
+    def connect(self):
+        """Ensure connection exists for current thread."""
+        self._get_conn()
 
-    async def query(self, sql: str, vars: dict | None = None):
+    def close(self):
+        if hasattr(self._local, "db") and self._local.db:
+            try:
+                self._local.db.close()
+            except Exception:
+                pass  # HTTP connections don't implement close
+            self._local.db = None
+
+    def query(self, sql: str, vars: dict | None = None):
         """Run a raw SurrealQL query."""
-        await self.connect()
-        return await self.db.query(sql, vars or {})
+        conn = self._get_conn()
+        sql = sql.strip()
+        if not sql.endswith(";"):
+            sql += ";"
+        return conn.query(sql, vars or {})
 
     # ── Node operations ──
 
-    async def upsert_node(self, table: str, node_id: str, data: dict) -> dict:
+    def upsert_node(self, table: str, node_id: str, data: dict) -> dict:
         """
         Create or update a node. node_id becomes the record ID.
         e.g. upsert_node("company", "tesla", {"name": "Tesla", ...})
         creates company:tesla
         """
-        await self.connect()
-        # Clean the ID for SurrealDB (lowercase, no spaces, alphanumeric + underscore)
         clean_id = _clean_id(node_id)
-        # Merge to upsert
-        result = await self.db.query(
-            f"UPDATE {table}:{clean_id} MERGE $data",
-            {"data": data},
+        clean_data = {k: v for k, v in data.items() if v is not None}
+        return self.query(
+            f"UPSERT {table}:{clean_id} MERGE $data",
+            {"data": clean_data},
         )
-        return result
 
-    async def get_node(self, table: str, node_id: str) -> dict | None:
+    def get_node(self, table: str, node_id: str) -> dict | None:
         """Get a node by table and ID."""
-        await self.connect()
         clean_id = _clean_id(node_id)
-        result = await self.db.query(f"SELECT * FROM {table}:{clean_id}")
-        if result and result[0].get("result"):
-            return result[0]["result"][0] if result[0]["result"] else None
-        return None
+        result = self.query(f"SELECT * FROM {table}:{clean_id}")
+        extracted = _extract_results(result)
+        return extracted[0] if extracted else None
 
-    async def find_node(self, table: str, name: str) -> dict | None:
+    def find_node(self, table: str, name: str) -> dict | None:
         """Find a node by name field."""
-        await self.connect()
-        result = await self.db.query(
+        result = self.query(
             f"SELECT * FROM {table} WHERE name = $name LIMIT 1",
             {"name": name},
         )
-        if result and result[0].get("result"):
-            return result[0]["result"][0] if result[0]["result"] else None
-        return None
+        extracted = _extract_results(result)
+        return extracted[0] if extracted else None
 
-    async def list_nodes(self, table: str, limit: int = 100) -> list[dict]:
+    def list_nodes(self, table: str, limit: int = 100) -> list[dict]:
         """List all nodes of a given type."""
-        await self.connect()
-        result = await self.db.query(f"SELECT * FROM {table} LIMIT {limit}")
-        if result and result[0].get("result"):
-            return result[0]["result"]
-        return []
+        result = self.query(f"SELECT * FROM {table} LIMIT {limit}")
+        return _extract_results(result)
 
     # ── Relationship operations ──
 
-    async def create_relationship(
+    def create_relationship(
         self,
         from_table: str,
         from_id: str,
@@ -100,28 +112,25 @@ class GraphDB:
         Create a relationship (edge) between two nodes.
         e.g. create_relationship("company", "tesla", "operates_in", "industry", "electric_vehicles")
         """
-        await self.connect()
         clean_from = _clean_id(from_id)
         clean_to = _clean_id(to_id)
 
         if properties:
-            result = await self.db.query(
+            return self.query(
                 f"RELATE {from_table}:{clean_from}->{rel_type}->{to_table}:{clean_to} SET {_dict_to_set(properties)}"
             )
         else:
-            result = await self.db.query(
+            return self.query(
                 f"RELATE {from_table}:{clean_from}->{rel_type}->{to_table}:{clean_to}"
             )
-        return result
 
-    async def get_relationships(
+    def get_relationships(
         self, table: str, node_id: str, rel_type: str, direction: str = "out"
     ) -> list[dict]:
         """
         Get relationships for a node.
         direction: "out" (node->rel->?), "in" (?->rel->node), "both"
         """
-        await self.connect()
         clean_id = _clean_id(node_id)
 
         if direction == "out":
@@ -131,22 +140,17 @@ class GraphDB:
         else:
             q = f"SELECT ->{rel_type}->? AS out_targets, <-{rel_type}<-? AS in_sources FROM {table}:{clean_id}"
 
-        result = await self.db.query(q)
-        if result and result[0].get("result"):
-            return result[0]["result"]
-        return []
+        return _extract_results(self.query(q))
 
     # ── Graph traversal (for shock propagation) ──
 
-    async def traverse(self, start_table: str, start_id: str, depth: int = 3) -> list[dict]:
+    def traverse(self, start_table: str, start_id: str, depth: int = 3) -> list[dict]:
         """
         Traverse the graph from a starting node up to N hops.
         Returns all connected nodes and the paths to reach them.
         """
-        await self.connect()
         clean_id = _clean_id(start_id)
-        # Get the ego graph — all outgoing relationships
-        result = await self.db.query(f"""
+        result = self.query(f"""
             SELECT
                 *,
                 ->operates_in->industry AS industries,
@@ -163,18 +167,14 @@ class GraphDB:
                 ->invested_in->company AS investments
             FROM {start_table}:{clean_id}
         """)
-        if result and result[0].get("result"):
-            return result[0]["result"]
-        return []
+        return _extract_results(result)
 
-    async def shock_propagate(self, event_name: str) -> list[dict]:
+    def shock_propagate(self, event_name: str) -> list[dict]:
         """
         Trace shock propagation from an event through the graph.
         Returns the cascade path.
         """
-        await self.connect()
-        # 3-hop traversal: event → industries → companies → their dependencies
-        result = await self.db.query("""
+        result = self.query("""
             SELECT
                 *,
                 ->demand_driver->industry AS affected_industries,
@@ -183,33 +183,77 @@ class GraphDB:
                 ->demand_driver->industry<-operates_in<-company->supplies_to->company AS downstream_companies
             FROM event WHERE name = $name
         """, {"name": event_name})
-        if result and result[0].get("result"):
-            return result[0]["result"]
-        return []
+        return _extract_results(result)
 
-    async def get_full_graph(self, limit: int = 500) -> dict:
+    def get_full_graph(self, limit: int = 500) -> dict:
         """Get all nodes and edges for visualization."""
-        await self.connect()
         nodes = {}
         for table in ["company", "industry", "technology", "commodity", "policy", "event", "product"]:
-            result = await self.db.query(f"SELECT * FROM {table} LIMIT {limit}")
-            if result and result[0].get("result"):
-                nodes[table] = result[0]["result"]
+            result = self.query(f"SELECT * FROM {table} LIMIT {limit}")
+            extracted = _extract_results(result)
+            if extracted:
+                nodes[table] = extracted
 
         edges = {}
         for rel in ["operates_in", "competes_with", "supplies_to", "complement_of",
                      "substitute_for", "subsidiary_of", "uses_technology", "invested_in",
                      "uses_input", "substitute_input", "demand_driver", "affected_by_policy", "produces"]:
-            result = await self.db.query(f"SELECT * FROM {rel} LIMIT {limit}")
-            if result and result[0].get("result"):
-                edges[rel] = result[0]["result"]
+            result = self.query(f"SELECT * FROM {rel} LIMIT {limit}")
+            extracted = _extract_results(result)
+            if extracted:
+                edges[rel] = extracted
 
         return {"nodes": nodes, "edges": edges}
 
 
+def _extract_results(result) -> list[dict]:
+    """Extract results from SurrealDB query response (handles SDK format variations).
+    HTTP SDK returns flat list of dicts. WS SDK may wrap in {"result": [...]}.
+    """
+    if not result:
+        return []
+    if isinstance(result, list):
+        if not result:
+            return []
+        first = result[0]
+        # WS SDK format: [{"result": [...], "status": "OK"}]
+        if isinstance(first, dict) and "result" in first and "status" in first:
+            return first["result"] or []
+        # HTTP SDK format: flat list of dicts
+        if isinstance(first, dict):
+            return result
+        # Nested list
+        if isinstance(first, list):
+            return first
+    if isinstance(result, dict):
+        return [result]
+    return []
+
+
 def _clean_id(raw: str) -> str:
-    """Clean a string for use as a SurrealDB record ID."""
-    return raw.lower().replace(" ", "_").replace("-", "_").replace(".", "").replace(",", "").replace("'", "").replace('"', "").replace("(", "").replace(")", "").replace("/", "_").replace("&", "and")
+    """Clean a string for use as a SurrealDB record ID.
+    Strips non-ASCII chars (Citroën → citroen) and normalizes."""
+    import unicodedata
+    # Decompose accented chars (ë → e + combining diaeresis), then strip combining marks
+    nfkd = unicodedata.normalize('NFKD', raw)
+    ascii_only = ''.join(c for c in nfkd if not unicodedata.combining(c) and ord(c) < 128)
+    return (ascii_only.lower()
+            .replace(" ", "_").replace("-", "_")
+            .replace(".", "").replace(",", "")
+            .replace("'", "").replace('"', "")
+            .replace("(", "").replace(")", "")
+            .replace("/", "_").replace("&", "and")
+            .replace("+", "and").replace("@", "at")
+            .replace("#", "").replace("!", "")
+            .replace("?", "").replace("*", "")
+            .replace("[", "").replace("]", "")
+            .replace("{", "").replace("}", "")
+            .replace(":", "").replace(";", "")
+            .replace("~", "").replace("`", "")
+            .replace("$", "").replace("%", "")
+            .replace("^", "").replace("|", "")
+            .replace("<", "").replace(">", "")
+            .replace("=", ""))
 
 
 def _dict_to_set(d: dict) -> str:
@@ -225,18 +269,5 @@ def _dict_to_set(d: dict) -> str:
         elif isinstance(v, (int, float)):
             parts.append(f"{k} = {v}")
         elif isinstance(v, list):
-            import json
             parts.append(f"{k} = {json.dumps(v)}")
     return ", ".join(parts)
-
-
-# Convenience: run async functions from sync context
-def run_sync(coro):
-    """Run an async function synchronously."""
-    try:
-        loop = asyncio.get_running_loop()
-        import concurrent.futures
-        with concurrent.futures.ThreadPoolExecutor() as pool:
-            return loop.run_in_executor(pool, asyncio.run, coro)
-    except RuntimeError:
-        return asyncio.run(coro)

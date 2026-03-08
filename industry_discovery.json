@@ -1,0 +1,5700 @@
+{
+  "meta": {
+    "description": "Industry discovery via Wikipedia link walking",
+    "method": "Pull Wikipedia links, pick physical inputs, follow the tree",
+    "started_from": "Data center",
+    "date": "2026-03-07"
+  },
+  "industries": {
+    "colocation_data_center": {
+      "name": "Colocation Data Center",
+      "wikipedia": "Colocation centre",
+      "discovered_from": "Data center"
+    },
+    "hyperscale_cloud": {
+      "name": "Hyperscale Cloud",
+      "wikipedia": "Hyperscale computing",
+      "discovered_from": "Data center"
+    },
+    "server": {
+      "name": "Server",
+      "wikipedia": "Server (computing)",
+      "discovered_from": "Data center"
+    },
+    "gpu": {
+      "name": "Graphics Card / GPU",
+      "wikipedia": "Graphics card",
+      "discovered_from": "Data center"
+    },
+    "motherboard": {
+      "name": "Motherboard",
+      "wikipedia": "Motherboard",
+      "discovered_from": "Data center"
+    },
+    "printed_circuit_board": {
+      "name": "Printed Circuit Board",
+      "wikipedia": "Printed circuit board",
+      "discovered_from": [
+        "Data center",
+        "Graphics card",
+        "Central processing unit",
+        "Semiconductor device fabrication"
+      ]
+    },
+    "data_storage": {
+      "name": "Computer Data Storage",
+      "wikipedia": "Computer data storage",
+      "discovered_from": "Data center"
+    },
+    "network_switch": {
+      "name": "Network Switch",
+      "wikipedia": "Network switch",
+      "discovered_from": "Data center"
+    },
+    "router": {
+      "name": "Router",
+      "wikipedia": "Router (computing)",
+      "discovered_from": "Data center"
+    },
+    "networking_hardware": {
+      "name": "Networking Hardware",
+      "wikipedia": "Networking hardware",
+      "discovered_from": "Data center"
+    },
+    "structured_cabling": {
+      "name": "Structured Cabling",
+      "wikipedia": "Structured cabling",
+      "discovered_from": "Data center"
+    },
+    "submarine_cable": {
+      "name": "Submarine Communication Cable",
+      "wikipedia": "Submarine communication cable",
+      "discovered_from": "Data center"
+    },
+    "ups": {
+      "name": "Uninterruptible Power Supply",
+      "wikipedia": "Uninterruptible power supplies",
+      "discovered_from": "Data center"
+    },
+    "power_distribution_unit": {
+      "name": "Power Distribution Unit",
+      "wikipedia": "Power distribution unit",
+      "discovered_from": "Data center"
+    },
+    "diesel_generator": {
+      "name": "Diesel Generator",
+      "wikipedia": "Diesel generator",
+      "discovered_from": "Data center"
+    },
+    "transformer": {
+      "name": "Transformer",
+      "wikipedia": "Transformer",
+      "discovered_from": [
+        "Data center",
+        "Central processing unit"
+      ]
+    },
+    "gas_turbine": {
+      "name": "Gas Turbine",
+      "wikipedia": "Gas turbine",
+      "discovered_from": "Data center"
+    },
+    "transfer_switch": {
+      "name": "Transfer Switch",
+      "wikipedia": "Transfer switch",
+      "discovered_from": "Data center"
+    },
+    "lithium_ion_battery": {
+      "name": "Lithium-ion Battery",
+      "wikipedia": "Lithium-ion battery",
+      "discovered_from": "Data center"
+    },
+    "air_conditioning": {
+      "name": "Air Conditioning",
+      "wikipedia": "Air conditioning",
+      "discovered_from": "Data center"
+    },
+    "computer_cooling": {
+      "name": "Computer Cooling",
+      "wikipedia": "Computer cooling",
+      "discovered_from": "Data center"
+    },
+    "evaporative_cooler": {
+      "name": "Evaporative Cooler",
+      "wikipedia": "Evaporative cooler",
+      "discovered_from": "Data center"
+    },
+    "heat_pump": {
+      "name": "Heat Pump",
+      "wikipedia": "Heat pumps",
+      "discovered_from": "Data center"
+    },
+    "heat_sink": {
+      "name": "Heat Sink",
+      "wikipedia": "Heat sinks",
+      "discovered_from": [
+        "Data center",
+        "Graphics card"
+      ]
+    },
+    "server_rack": {
+      "name": "19-inch Rack",
+      "wikipedia": "19-inch rack",
+      "discovered_from": "Data center"
+    },
+    "fire_sprinkler": {
+      "name": "Fire Sprinkler System",
+      "wikipedia": "Fire sprinkler system",
+      "discovered_from": "Data center"
+    },
+    "gaseous_fire_suppression": {
+      "name": "Gaseous Fire Suppression",
+      "wikipedia": "Gaseous fire suppression",
+      "discovered_from": "Data center"
+    },
+    "smoke_detector": {
+      "name": "Smoke Detector",
+      "wikipedia": "Smoke detectors",
+      "discovered_from": "Data center"
+    },
+    "gpu_chip": {
+      "name": "Graphics Processing Unit",
+      "wikipedia": "Graphics processing unit",
+      "discovered_from": "Graphics card"
+    },
+    "hbm": {
+      "name": "High Bandwidth Memory",
+      "wikipedia": "High Bandwidth Memory",
+      "discovered_from": "Graphics card"
+    },
+    "gddr_sdram": {
+      "name": "GDDR SDRAM",
+      "wikipedia": "GDDR6 SDRAM",
+      "discovered_from": "Graphics card"
+    },
+    "power_mosfet": {
+      "name": "Power MOSFET",
+      "wikipedia": "Power MOSFET",
+      "discovered_from": [
+        "Graphics card",
+        "Central processing unit"
+      ]
+    },
+    "voltage_regulator_module": {
+      "name": "Voltage Regulator Module",
+      "wikipedia": "Voltage regulator module",
+      "discovered_from": [
+        "Graphics card",
+        "Central processing unit"
+      ]
+    },
+    "ramdac": {
+      "name": "RAMDAC",
+      "wikipedia": "RAMDAC",
+      "discovered_from": "Graphics card"
+    },
+    "dram": {
+      "name": "DRAM",
+      "wikipedia": "DDR5 SDRAM",
+      "discovered_from": [
+        "Server (computing)",
+        "Semiconductor device fabrication"
+      ]
+    },
+    "hard_disk": {
+      "name": "Hard Disk Drive",
+      "wikipedia": "Hard disk drive",
+      "discovered_from": "Server (computing)"
+    },
+    "power_supply": {
+      "name": "Power Supply Unit",
+      "wikipedia": "Power supply unit (computer)",
+      "discovered_from": "Server (computing)"
+    },
+    "cpu": {
+      "name": "Central Processing Unit",
+      "wikipedia": "Central processing unit",
+      "discovered_from": "Server (computing)"
+    },
+    "water_cooling": {
+      "name": "Water Cooling",
+      "wikipedia": "Water-cooled",
+      "discovered_from": "Server (computing)"
+    },
+    "semiconductor_fabrication": {
+      "name": "Semiconductor Device Fabrication",
+      "wikipedia": "Semiconductor device fabrication",
+      "discovered_from": "Central processing unit"
+    },
+    "integrated_circuit": {
+      "name": "Integrated Circuit",
+      "wikipedia": "Integrated circuit",
+      "discovered_from": "Central processing unit"
+    },
+    "crystal_oscillator": {
+      "name": "Crystal Oscillator",
+      "wikipedia": "Crystal oscillator",
+      "discovered_from": "Central processing unit"
+    },
+    "capacitor": {
+      "name": "Capacitor",
+      "wikipedia": "Capacitor",
+      "discovered_from": "Central processing unit"
+    },
+    "resistor": {
+      "name": "Resistor",
+      "wikipedia": "Resistor",
+      "discovered_from": "Central processing unit"
+    },
+    "inductor": {
+      "name": "Inductor",
+      "wikipedia": "Inductor",
+      "discovered_from": "Central processing unit"
+    },
+    "semiconductor_equipment": {
+      "name": "Semiconductor Equipment",
+      "wikipedia": "Semiconductor equipment sales leaders by year",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "photolithography": {
+      "name": "Photolithography",
+      "wikipedia": "Photolithography",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "photomask": {
+      "name": "Photomask",
+      "wikipedia": "Photomask",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "photoresist": {
+      "name": "Photoresist",
+      "wikipedia": "Photoresist",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "silicon_wafer": {
+      "name": "Silicon Wafer",
+      "wikipedia": "Wafer (electronics)",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "monocrystalline_silicon": {
+      "name": "Monocrystalline Silicon",
+      "wikipedia": "Monocrystalline silicon",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "polysilicon": {
+      "name": "Polysilicon",
+      "wikipedia": "Polysilicon",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "silicon": {
+      "name": "Silicon",
+      "wikipedia": "Silicon",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "raw_material"
+    },
+    "copper": {
+      "name": "Copper",
+      "wikipedia": "Copper",
+      "discovered_from": [
+        "Semiconductor device fabrication",
+        "Lithium-ion battery"
+      ],
+      "type": "raw_material"
+    },
+    "tungsten": {
+      "name": "Tungsten",
+      "wikipedia": "Tungsten",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "raw_material"
+    },
+    "tin": {
+      "name": "Tin",
+      "wikipedia": "Tin",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "raw_material"
+    },
+    "ultrapure_water": {
+      "name": "Ultrapure Water",
+      "wikipedia": "Ultrapure water",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "raw_material"
+    },
+    "hydrofluoric_acid": {
+      "name": "Hydrofluoric Acid",
+      "wikipedia": "Hydrofluoric acid",
+      "discovered_from": [
+        "Semiconductor device fabrication",
+        "Lithium-ion battery"
+      ],
+      "type": "chemical"
+    },
+    "sulfuric_acid": {
+      "name": "Sulfuric Acid",
+      "wikipedia": "Sulfuric acid",
+      "discovered_from": [
+        "Semiconductor device fabrication",
+        "Lithium-ion battery"
+      ],
+      "type": "chemical"
+    },
+    "nitric_acid": {
+      "name": "Nitric Acid",
+      "wikipedia": "Nitric acid",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "chemical"
+    },
+    "hydrogen_peroxide": {
+      "name": "Hydrogen Peroxide",
+      "wikipedia": "Hydrogen peroxide",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "chemical"
+    },
+    "silane": {
+      "name": "Silane",
+      "wikipedia": "Silane",
+      "discovered_from": "Semiconductor device fabrication",
+      "type": "chemical"
+    },
+    "ic_packaging": {
+      "name": "IC Packaging",
+      "wikipedia": "Integrated circuit packaging",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "automatic_test_equipment": {
+      "name": "Automatic Test Equipment",
+      "wikipedia": "Automatic test equipment",
+      "discovered_from": "Semiconductor device fabrication"
+    },
+    "lithium": {
+      "name": "Lithium",
+      "wikipedia": "Lithium",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "cobalt": {
+      "name": "Cobalt",
+      "wikipedia": "Cobalt",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "nickel": {
+      "name": "Nickel",
+      "wikipedia": "Nickel",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "graphite": {
+      "name": "Graphite",
+      "wikipedia": "Graphite",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "manganese_oxide": {
+      "name": "Manganese Oxide",
+      "wikipedia": "Manganese oxide",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "aluminium": {
+      "name": "Aluminium",
+      "wikipedia": "Aluminium",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "phosphate": {
+      "name": "Phosphate",
+      "wikipedia": "Phosphate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "raw_material"
+    },
+    "lithium_cobalt_oxide": {
+      "name": "Lithium Cobalt Oxide (LCO)",
+      "wikipedia": "Lithium cobalt oxide",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_iron_phosphate": {
+      "name": "Lithium Iron Phosphate (LFP)",
+      "wikipedia": "Lithium iron phosphate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_nmc": {
+      "name": "Lithium Nickel Manganese Cobalt Oxide (NMC)",
+      "wikipedia": "Lithium nickel manganese cobalt oxides",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_nca": {
+      "name": "Lithium Nickel Cobalt Aluminium Oxide (NCA)",
+      "wikipedia": "Lithium nickel cobalt aluminium oxides",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_carbonate": {
+      "name": "Lithium Carbonate",
+      "wikipedia": "Lithium carbonate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_hydroxide": {
+      "name": "Lithium Hydroxide",
+      "wikipedia": "Lithium hydroxide",
+      "discovered_from": "Lithium-ion battery",
+      "type": "processed_material"
+    },
+    "lithium_hexafluorophosphate": {
+      "name": "Lithium Hexafluorophosphate",
+      "wikipedia": "Lithium hexafluorophosphate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "chemical"
+    },
+    "ethylene_carbonate": {
+      "name": "Ethylene Carbonate",
+      "wikipedia": "Ethylene carbonate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "chemical"
+    },
+    "dimethyl_carbonate": {
+      "name": "Dimethyl Carbonate",
+      "wikipedia": "Dimethyl carbonate",
+      "discovered_from": "Lithium-ion battery",
+      "type": "chemical"
+    },
+    "nmp": {
+      "name": "N-Methyl-2-pyrrolidone (NMP)",
+      "wikipedia": "N-Methyl-2-pyrrolidone",
+      "discovered_from": "Lithium-ion battery",
+      "type": "chemical"
+    },
+    "electrode": {
+      "name": "Electrode",
+      "wikipedia": "Electrode",
+      "discovered_from": "Lithium-ion battery"
+    },
+    "electrolyte": {
+      "name": "Electrolyte",
+      "wikipedia": "Electrolyte",
+      "discovered_from": "Lithium-ion battery"
+    },
+    "battery_recycling": {
+      "name": "Battery Recycling",
+      "wikipedia": "Battery recycling",
+      "discovered_from": "Lithium-ion battery"
+    },
+    "disk_read_write_head": {
+      "name": "Disk Read-and-Write Head",
+      "wikipedia": "Disk read-and-write head",
+      "discovered_from": "Hard disk drive"
+    },
+    "voice_coil": {
+      "name": "Voice Coil / Actuator",
+      "wikipedia": "Voice coil",
+      "discovered_from": "Hard disk drive"
+    },
+    "stepper_motor": {
+      "name": "Stepper Motor",
+      "wikipedia": "Stepper motor",
+      "discovered_from": "Hard disk drive"
+    },
+    "servomotor": {
+      "name": "Servomotor",
+      "wikipedia": "Servomotor",
+      "discovered_from": "Hard disk drive"
+    },
+    "neodymium_magnet": {
+      "name": "Neodymium Magnet",
+      "wikipedia": "Neodymium magnet",
+      "discovered_from": "Hard disk drive",
+      "note": "Leads to rare earth mining \u2014 geopolitically critical"
+    },
+    "glass": {
+      "name": "Glass",
+      "wikipedia": "Glass",
+      "discovered_from": "Hard disk drive",
+      "type": "raw_material"
+    },
+    "ceramic": {
+      "name": "Ceramic",
+      "wikipedia": "Ceramic",
+      "discovered_from": "Hard disk drive",
+      "type": "raw_material"
+    },
+    "ruthenium": {
+      "name": "Ruthenium",
+      "wikipedia": "Ruthenium",
+      "discovered_from": "Hard disk drive",
+      "type": "raw_material"
+    },
+    "helium": {
+      "name": "Helium",
+      "wikipedia": "Helium",
+      "discovered_from": "Hard disk drive",
+      "type": "raw_material"
+    },
+    "flash_memory": {
+      "name": "Flash Memory / NAND",
+      "wikipedia": "Flash memory",
+      "discovered_from": "Hard disk drive"
+    },
+    "solid_state_drive": {
+      "name": "Solid-State Drive",
+      "wikipedia": "Solid-state drive",
+      "discovered_from": "Hard disk drive",
+      "note": "Substitute for HDD \u2014 same industry by substitution test"
+    },
+    "magnet_wire": {
+      "name": "Magnet Wire",
+      "wikipedia": "Magnet wire",
+      "discovered_from": "Hard disk drive"
+    },
+    "neodymium": {
+      "name": "Neodymium",
+      "wikipedia": "Neodymium",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material",
+      "note": "Rare earth element, China dominates supply"
+    },
+    "iron": {
+      "name": "Iron",
+      "wikipedia": "Iron",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material"
+    },
+    "boron": {
+      "name": "Boron",
+      "wikipedia": "Boron",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material"
+    },
+    "dysprosium": {
+      "name": "Dysprosium",
+      "wikipedia": "Dysprosium",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material",
+      "note": "Critical rare earth for high-temp magnets"
+    },
+    "praseodymium": {
+      "name": "Praseodymium",
+      "wikipedia": "Praseodymium",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material"
+    },
+    "terbium": {
+      "name": "Terbium",
+      "wikipedia": "Terbium",
+      "discovered_from": "Neodymium magnet",
+      "type": "raw_material"
+    },
+    "electric_motor": {
+      "name": "Electric Motor",
+      "wikipedia": "Electric motor",
+      "discovered_from": "Neodymium magnet"
+    },
+    "wind_turbine": {
+      "name": "Wind Turbine",
+      "wikipedia": "Wind turbine",
+      "discovered_from": "Neodymium magnet"
+    },
+    "electric_generator": {
+      "name": "Electric Generator",
+      "wikipedia": "Electric generator",
+      "discovered_from": "Neodymium magnet"
+    },
+    "loudspeaker": {
+      "name": "Loudspeaker",
+      "wikipedia": "Loudspeaker",
+      "discovered_from": "Neodymium magnet"
+    },
+    "mri": {
+      "name": "Magnetic Resonance Imaging",
+      "wikipedia": "Magnetic resonance imaging",
+      "discovered_from": "Neodymium magnet"
+    },
+    "electrical_steel": {
+      "name": "Electrical Steel",
+      "wikipedia": "Electrical steel",
+      "discovered_from": "Electric motor",
+      "note": "Silicon steel laminations \u2014 every motor and transformer needs this"
+    },
+    "bearing": {
+      "name": "Bearing (Mechanical)",
+      "wikipedia": "Bearing (mechanical)",
+      "discovered_from": "Electric motor"
+    },
+    "power_inverter": {
+      "name": "Power Inverter",
+      "wikipedia": "Power inverter",
+      "discovered_from": "Electric motor"
+    },
+    "variable_frequency_drive": {
+      "name": "Variable-Frequency Drive",
+      "wikipedia": "Variable-frequency drive",
+      "discovered_from": "Electric motor"
+    },
+    "electromagnetic_coil": {
+      "name": "Electromagnetic Coil",
+      "wikipedia": "Electromagnetic coil",
+      "discovered_from": "Electric motor"
+    },
+    "carbon": {
+      "name": "Carbon",
+      "wikipedia": "Carbon",
+      "discovered_from": "Electric motor",
+      "type": "raw_material"
+    },
+    "resin": {
+      "name": "Resin",
+      "wikipedia": "Resin",
+      "discovered_from": "Electric motor",
+      "type": "raw_material"
+    },
+    "electric_vehicle": {
+      "name": "Electric Vehicle",
+      "wikipedia": "Electric vehicle",
+      "discovered_from": "Electric motor",
+      "note": "Demand node \u2014 connects back to automotive industry in existing graph"
+    },
+    "robotics": {
+      "name": "Robotics",
+      "wikipedia": "Robotics",
+      "discovered_from": "Electric motor"
+    },
+    "gearbox": {
+      "name": "Gearbox",
+      "wikipedia": "Epicyclic gearing",
+      "discovered_from": "Wind turbine"
+    },
+    "fiberglass": {
+      "name": "Fiberglass",
+      "wikipedia": "Fiberglass",
+      "discovered_from": "Wind turbine",
+      "type": "processed_material"
+    },
+    "epoxy": {
+      "name": "Epoxy",
+      "wikipedia": "Epoxy",
+      "discovered_from": "Wind turbine",
+      "type": "processed_material"
+    },
+    "concrete": {
+      "name": "Concrete",
+      "wikipedia": "Concrete",
+      "discovered_from": "Wind turbine",
+      "type": "raw_material"
+    },
+    "crane": {
+      "name": "Crane",
+      "wikipedia": "Crane (machine)",
+      "discovered_from": "Wind turbine"
+    },
+    "carbon_nanotube": {
+      "name": "Carbon Nanotubes",
+      "wikipedia": "Carbon nanotubes",
+      "discovered_from": "Wind turbine",
+      "type": "processed_material"
+    },
+    "fluorspar": {
+      "name": "Fluorspar",
+      "wikipedia": "Fluorspar",
+      "discovered_from": "Wind turbine",
+      "type": "raw_material"
+    },
+    "steel": {
+      "name": "Steel",
+      "wikipedia": "Steel",
+      "discovered_from": "Electrical steel",
+      "type": "raw_material"
+    },
+    "manganese": {
+      "name": "Manganese",
+      "wikipedia": "Manganese",
+      "discovered_from": "Electrical steel",
+      "type": "raw_material"
+    },
+    "ferrosilicon": {
+      "name": "Ferrosilicon",
+      "wikipedia": "Ferrosilicon",
+      "discovered_from": "Electrical steel",
+      "type": "processed_material"
+    },
+    "cold_rolling": {
+      "name": "Cold Rolling",
+      "wikipedia": "Cold rolling",
+      "discovered_from": "Electrical steel"
+    },
+    "hydrogen": {
+      "name": "Hydrogen",
+      "wikipedia": "Hydrogen",
+      "discovered_from": "Electrical steel",
+      "type": "raw_material"
+    },
+    "smartphone": {
+      "name": "Smartphone",
+      "wikipedia": "Smartphone",
+      "discovered_from": "Final consumption",
+      "type": "final_consumption"
+    },
+    "system_on_a_chip": {
+      "name": "System-on-a-Chip (SoC)",
+      "wikipedia": "System on a chip",
+      "discovered_from": "Smartphone"
+    },
+    "baseband_processor": {
+      "name": "Baseband Processor",
+      "wikipedia": "Baseband processor",
+      "discovered_from": "Smartphone"
+    },
+    "digital_signal_processor": {
+      "name": "Digital Signal Processor",
+      "wikipedia": "Digital signal processor",
+      "discovered_from": "Smartphone"
+    },
+    "liquid_crystal_display": {
+      "name": "Liquid-Crystal Display (LCD)",
+      "wikipedia": "Liquid-crystal display",
+      "discovered_from": "Smartphone"
+    },
+    "oled": {
+      "name": "OLED Display",
+      "wikipedia": "Organic light-emitting diode",
+      "discovered_from": "Smartphone"
+    },
+    "touchscreen": {
+      "name": "Touchscreen",
+      "wikipedia": "Touchscreen",
+      "discovered_from": "Smartphone"
+    },
+    "display_driver": {
+      "name": "Display Driver IC",
+      "wikipedia": "Display driver",
+      "discovered_from": "Smartphone"
+    },
+    "led_driver": {
+      "name": "LED Driver",
+      "wikipedia": "LED driver",
+      "discovered_from": "Smartphone"
+    },
+    "cmos_image_sensor": {
+      "name": "CMOS Image Sensor",
+      "wikipedia": "Active-pixel sensor",
+      "discovered_from": "Smartphone"
+    },
+    "camera_lens": {
+      "name": "Camera Lens",
+      "wikipedia": "Camera lens",
+      "discovered_from": "Smartphone"
+    },
+    "optical_image_stabilization": {
+      "name": "Optical Image Stabilization",
+      "wikipedia": "Image stabilization",
+      "discovered_from": "Smartphone"
+    },
+    "power_management_ic": {
+      "name": "Power Management IC (PMIC)",
+      "wikipedia": "Power management integrated circuit",
+      "discovered_from": "Smartphone"
+    },
+    "wireless_charging": {
+      "name": "Wireless Charging (Qi)",
+      "wikipedia": "Qi (standard)",
+      "discovered_from": "Smartphone"
+    },
+    "charge_controller": {
+      "name": "Charge Controller",
+      "wikipedia": "Charge controller",
+      "discovered_from": "Smartphone"
+    },
+    "rf_transceiver": {
+      "name": "RF Transceiver",
+      "wikipedia": "RF transceiver",
+      "discovered_from": "Smartphone"
+    },
+    "rf_power_amplifier": {
+      "name": "RF Power Amplifier",
+      "wikipedia": "RF power amplifier",
+      "discovered_from": "Smartphone"
+    },
+    "bluetooth": {
+      "name": "Bluetooth",
+      "wikipedia": "Bluetooth",
+      "discovered_from": "Smartphone",
+      "type": "connectivity"
+    },
+    "wifi": {
+      "name": "Wi-Fi",
+      "wikipedia": "Wi-Fi",
+      "discovered_from": "Smartphone",
+      "type": "connectivity"
+    },
+    "nfc": {
+      "name": "Near-Field Communication (NFC)",
+      "wikipedia": "Near-field communication",
+      "discovered_from": "Smartphone",
+      "type": "connectivity"
+    },
+    "gps_receiver": {
+      "name": "GPS Receiver",
+      "wikipedia": "GPS navigation device",
+      "discovered_from": "Smartphone"
+    },
+    "sim_card": {
+      "name": "SIM Card",
+      "wikipedia": "SIM card",
+      "discovered_from": "Smartphone"
+    },
+    "accelerometer": {
+      "name": "Accelerometer (MEMS)",
+      "wikipedia": "Accelerometer",
+      "discovered_from": "Smartphone",
+      "type": "sensor"
+    },
+    "gyroscope": {
+      "name": "Gyroscope (MEMS)",
+      "wikipedia": "Gyroscope",
+      "discovered_from": "Smartphone",
+      "type": "sensor"
+    },
+    "magnetometer": {
+      "name": "Magnetometer",
+      "wikipedia": "Magnetometer",
+      "discovered_from": "Smartphone",
+      "type": "sensor"
+    },
+    "barometer_sensor": {
+      "name": "Barometer Sensor",
+      "wikipedia": "Barometer",
+      "discovered_from": "Smartphone",
+      "type": "sensor"
+    },
+    "fingerprint_scanner": {
+      "name": "Fingerprint Scanner",
+      "wikipedia": "Fingerprint scanner",
+      "discovered_from": "Smartphone",
+      "type": "sensor"
+    },
+    "audio_codec": {
+      "name": "Audio Codec IC",
+      "wikipedia": "Audio codec",
+      "discovered_from": "Smartphone"
+    },
+    "micro_speaker": {
+      "name": "Micro Speaker",
+      "wikipedia": "Loudspeaker",
+      "discovered_from": "Smartphone",
+      "note": "Miniaturized speaker for mobile devices"
+    },
+    "mems_microphone": {
+      "name": "MEMS Microphone",
+      "wikipedia": "Microphone",
+      "discovered_from": "Smartphone"
+    },
+    "polycarbonate": {
+      "name": "Polycarbonate",
+      "wikipedia": "Polycarbonate",
+      "discovered_from": "Smartphone",
+      "type": "material"
+    },
+    "cover_glass": {
+      "name": "Cover Glass (Gorilla Glass etc.)",
+      "wikipedia": "Gorilla Glass",
+      "discovered_from": "Smartphone",
+      "type": "material",
+      "note": "Specialty chemically strengthened glass, Corning dominates"
+    },
+    "mobile_operating_system": {
+      "name": "Mobile Operating System",
+      "wikipedia": "Mobile operating system",
+      "discovered_from": "Smartphone",
+      "type": "software_service",
+      "note": "Android (Google) vs iOS (Apple) \u2014 duopoly"
+    },
+    "app_store": {
+      "name": "App Store / Distribution Platform",
+      "wikipedia": "App store",
+      "discovered_from": "Smartphone",
+      "type": "software_service"
+    },
+    "anthracene": {
+      "name": "Anthracene",
+      "wikipedia": "Anthracene",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "perylene": {
+      "name": "Perylene",
+      "wikipedia": "Perylene",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "rubrene": {
+      "name": "Rubrene",
+      "wikipedia": "Rubrene",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "quinacridone": {
+      "name": "Quinacridone",
+      "wikipedia": "Quinacridone",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "ppv": {
+      "name": "Poly(p-phenylene vinylene)",
+      "wikipedia": "Poly(p-phenylene vinylene)",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "polyfluorene": {
+      "name": "Polyfluorene",
+      "wikipedia": "Polyfluorene",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "triphenylamine": {
+      "name": "Triphenylamine",
+      "wikipedia": "Triphenylamine",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "alq3": {
+      "name": "Tris(8-hydroxyquinolinato)aluminium (Alq3)",
+      "wikipedia": "Tris(8-hydroxyquinolinato)aluminium",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "pedot_pss": {
+      "name": "PEDOT:PSS",
+      "wikipedia": "PEDOT:PSS",
+      "discovered_from": "OLED",
+      "type": "organic_chemical"
+    },
+    "organoiridium": {
+      "name": "Organoiridium Compound",
+      "wikipedia": "Organoiridium compound",
+      "discovered_from": "OLED",
+      "type": "organic_chemical",
+      "note": "Phosphorescent OLED emitters, key IP held by Universal Display Corp"
+    },
+    "indium_tin_oxide": {
+      "name": "Indium Tin Oxide (ITO)",
+      "wikipedia": "Indium tin oxide",
+      "discovered_from": "OLED",
+      "type": "processed_material",
+      "note": "Transparent conductor, critical \u2014 indium is scarce"
+    },
+    "ltps": {
+      "name": "Low-Temperature Polycrystalline Silicon (LTPS)",
+      "wikipedia": "Low-temperature polycrystalline silicon",
+      "discovered_from": "OLED"
+    },
+    "thin_film_transistor": {
+      "name": "Thin-Film Transistor",
+      "wikipedia": "Thin-film transistor",
+      "discovered_from": "OLED"
+    },
+    "pet_film": {
+      "name": "Polyethylene Terephthalate (PET)",
+      "wikipedia": "Polyethylene terephthalate",
+      "discovered_from": "OLED",
+      "type": "material"
+    },
+    "antireflective_coating": {
+      "name": "Antireflective Coating",
+      "wikipedia": "Antireflective coating",
+      "discovered_from": "OLED"
+    },
+    "circular_polarizer": {
+      "name": "Circular Polarizer",
+      "wikipedia": "Circular polarizer",
+      "discovered_from": "OLED"
+    },
+    "vapor_deposition": {
+      "name": "Vapor Deposition",
+      "wikipedia": "Vapor deposition",
+      "discovered_from": "OLED"
+    },
+    "atomic_layer_deposition": {
+      "name": "Atomic Layer Deposition",
+      "wikipedia": "Atomic layer deposition",
+      "discovered_from": "OLED"
+    },
+    "excimer_laser": {
+      "name": "Excimer Laser",
+      "wikipedia": "Excimer laser",
+      "discovered_from": "OLED"
+    },
+    "roll_to_roll": {
+      "name": "Roll-to-Roll Processing",
+      "wikipedia": "Roll-to-roll processing",
+      "discovered_from": "OLED"
+    },
+    "barium": {
+      "name": "Barium",
+      "wikipedia": "Barium",
+      "discovered_from": "OLED",
+      "type": "raw_material"
+    },
+    "calcium": {
+      "name": "Calcium",
+      "wikipedia": "Calcium",
+      "discovered_from": "OLED",
+      "type": "raw_material"
+    },
+    "argon": {
+      "name": "Argon",
+      "wikipedia": "Argon",
+      "discovered_from": "OLED",
+      "type": "raw_material"
+    },
+    "nitrogen": {
+      "name": "Nitrogen",
+      "wikipedia": "Nitrogen",
+      "discovered_from": "OLED",
+      "type": "raw_material"
+    },
+    "automobile": {
+      "name": "Automobile",
+      "wikipedia": "Car",
+      "discovered_from": "Final consumption",
+      "type": "final_consumption"
+    },
+    "internal_combustion_engine": {
+      "name": "Internal Combustion Engine",
+      "wikipedia": "Internal combustion engine",
+      "discovered_from": "Automobile"
+    },
+    "transmission": {
+      "name": "Transmission / Gearbox",
+      "wikipedia": "Transmission (mechanical device)",
+      "discovered_from": "Automobile"
+    },
+    "clutch": {
+      "name": "Clutch",
+      "wikipedia": "Clutch",
+      "discovered_from": "Automobile"
+    },
+    "turbocharger": {
+      "name": "Turbocharger",
+      "wikipedia": "Turbocharger",
+      "discovered_from": "Automobile"
+    },
+    "fuel_injection": {
+      "name": "Fuel Injection System",
+      "wikipedia": "Fuel injection",
+      "discovered_from": "Automobile"
+    },
+    "catalytic_converter": {
+      "name": "Catalytic Converter",
+      "wikipedia": "Catalytic converter",
+      "discovered_from": "Automobile",
+      "note": "Needs platinum, palladium, rhodium \u2014 precious metals"
+    },
+    "exhaust_system": {
+      "name": "Exhaust System",
+      "wikipedia": "Exhaust system",
+      "discovered_from": "Automobile"
+    },
+    "tire": {
+      "name": "Tire",
+      "wikipedia": "Tire",
+      "discovered_from": "Automobile"
+    },
+    "disc_brake": {
+      "name": "Disc Brake",
+      "wikipedia": "Disc brake",
+      "discovered_from": "Automobile"
+    },
+    "brake_fluid": {
+      "name": "Brake Fluid (Hydraulic)",
+      "wikipedia": "Brake fluid",
+      "discovered_from": "Automobile"
+    },
+    "brake_lining": {
+      "name": "Brake Lining / Pad",
+      "wikipedia": "Brake lining",
+      "discovered_from": "Automobile"
+    },
+    "shock_absorber": {
+      "name": "Shock Absorber",
+      "wikipedia": "Shock absorber",
+      "discovered_from": "Automobile"
+    },
+    "coil_spring": {
+      "name": "Coil Spring",
+      "wikipedia": "Coil spring",
+      "discovered_from": "Automobile"
+    },
+    "leaf_spring": {
+      "name": "Leaf Spring",
+      "wikipedia": "Leaf spring",
+      "discovered_from": "Automobile"
+    },
+    "power_steering": {
+      "name": "Power Steering",
+      "wikipedia": "Power steering",
+      "discovered_from": "Automobile"
+    },
+    "rack_and_pinion": {
+      "name": "Rack and Pinion",
+      "wikipedia": "Rack and pinion",
+      "discovered_from": "Automobile"
+    },
+    "vehicle_glass": {
+      "name": "Vehicle Glass (Windshield)",
+      "wikipedia": "Windshield",
+      "discovered_from": "Automobile",
+      "note": "Laminated safety glass \u2014 float glass + PVB interlayer"
+    },
+    "automotive_paint": {
+      "name": "Automotive Paint / Lacquer",
+      "wikipedia": "Paint",
+      "discovered_from": "Automobile"
+    },
+    "airbag": {
+      "name": "Airbag",
+      "wikipedia": "Airbag",
+      "discovered_from": "Automobile"
+    },
+    "seat_belt": {
+      "name": "Seat Belt",
+      "wikipedia": "Seat belt",
+      "discovered_from": "Automobile"
+    },
+    "spark_plug": {
+      "name": "Spark Plug",
+      "wikipedia": "Spark plug",
+      "discovered_from": "Automobile"
+    },
+    "engine_control_unit": {
+      "name": "Engine Control Unit (ECU)",
+      "wikipedia": "Engine control unit",
+      "discovered_from": "Automobile",
+      "note": "Automotive semiconductor \u2014 biggest auto chip demand"
+    },
+    "headlamp": {
+      "name": "Headlamp",
+      "wikipedia": "Headlamp",
+      "discovered_from": "Automobile"
+    },
+    "automotive_battery": {
+      "name": "Automotive Lead-Acid Battery",
+      "wikipedia": "Automotive battery",
+      "discovered_from": "Automobile",
+      "note": "12V lead-acid, not EV battery (which is lithium-ion)"
+    },
+    "alternator": {
+      "name": "Alternator (Automotive)",
+      "wikipedia": "Alternator (automotive)",
+      "discovered_from": "Automobile"
+    },
+    "radiator": {
+      "name": "Radiator (Engine Cooling)",
+      "wikipedia": "Radiator (engine cooling)",
+      "discovered_from": "Automobile"
+    },
+    "motor_oil": {
+      "name": "Motor Oil",
+      "wikipedia": "Motor oil",
+      "discovered_from": "Automobile"
+    },
+    "fuel_tank": {
+      "name": "Fuel Tank",
+      "wikipedia": "Fuel tank",
+      "discovered_from": "Automobile"
+    },
+    "piston": {
+      "name": "Piston",
+      "wikipedia": "Piston",
+      "discovered_from": "Automobile"
+    },
+    "crankshaft": {
+      "name": "Crankshaft",
+      "wikipedia": "Crankshaft",
+      "discovered_from": "Automobile"
+    },
+    "camshaft": {
+      "name": "Camshaft",
+      "wikipedia": "Camshaft",
+      "discovered_from": "Automobile"
+    },
+    "drive_shaft": {
+      "name": "Drive Shaft",
+      "wikipedia": "Drive shaft",
+      "discovered_from": "Automobile"
+    },
+    "differential": {
+      "name": "Differential",
+      "wikipedia": "Differential (mechanical device)",
+      "discovered_from": "Automobile"
+    },
+    "universal_joint": {
+      "name": "Universal Joint",
+      "wikipedia": "Universal joint",
+      "discovered_from": "Automobile"
+    },
+    "flywheel": {
+      "name": "Flywheel",
+      "wikipedia": "Flywheel",
+      "discovered_from": "Automobile"
+    },
+    "anti_lock_braking": {
+      "name": "Anti-lock Braking System (ABS)",
+      "wikipedia": "Anti-lock braking system",
+      "discovered_from": "Automobile"
+    },
+    "electronic_stability_control": {
+      "name": "Electronic Stability Control",
+      "wikipedia": "Electronic stability control",
+      "discovered_from": "Automobile"
+    },
+    "lidar": {
+      "name": "LiDAR",
+      "wikipedia": "Lidar",
+      "discovered_from": "Automobile",
+      "note": "Autonomous driving sensor, also used in surveying/mapping"
+    },
+    "automotive_navigation": {
+      "name": "Automotive Navigation System",
+      "wikipedia": "Automotive navigation system",
+      "discovered_from": "Automobile"
+    },
+    "vehicle_audio": {
+      "name": "Vehicle Audio / Infotainment",
+      "wikipedia": "Vehicle audio",
+      "discovered_from": "Automobile"
+    },
+    "rubber": {
+      "name": "Natural Rubber",
+      "wikipedia": "Natural rubber",
+      "discovered_from": "Automobile",
+      "type": "raw_material"
+    },
+    "synthetic_rubber": {
+      "name": "Synthetic Rubber",
+      "wikipedia": "Synthetic rubber",
+      "discovered_from": "Automobile",
+      "type": "processed_material"
+    },
+    "lead": {
+      "name": "Lead",
+      "wikipedia": "Lead",
+      "discovered_from": "Automobile",
+      "type": "raw_material",
+      "note": "Lead-acid batteries"
+    },
+    "palladium": {
+      "name": "Palladium",
+      "wikipedia": "Palladium",
+      "discovered_from": "Automobile",
+      "type": "raw_material",
+      "note": "Catalytic converters, also pharma catalysts"
+    },
+    "rhodium": {
+      "name": "Rhodium",
+      "wikipedia": "Rhodium",
+      "discovered_from": "Automobile",
+      "type": "raw_material",
+      "note": "Catalytic converters, extremely rare and expensive"
+    },
+    "diesel_fuel": {
+      "name": "Diesel Fuel",
+      "wikipedia": "Diesel fuel",
+      "discovered_from": "Automobile",
+      "type": "fuel"
+    },
+    "gasoline": {
+      "name": "Gasoline / Petrol",
+      "wikipedia": "Gasoline",
+      "discovered_from": "Automobile",
+      "type": "fuel"
+    },
+    "ev_charging_network": {
+      "name": "Electric Vehicle Charging Network",
+      "wikipedia": "Electric vehicle charging network",
+      "discovered_from": "Automobile"
+    },
+    "solar_panel": {
+      "name": "Solar Panel",
+      "wikipedia": "Solar panel",
+      "discovered_from": "Final consumption",
+      "type": "final_consumption"
+    },
+    "solar_cell": {
+      "name": "Solar Cell (Photovoltaic)",
+      "wikipedia": "Solar cell",
+      "discovered_from": "Solar panel"
+    },
+    "solar_inverter": {
+      "name": "Solar Inverter",
+      "wikipedia": "Solar inverter",
+      "discovered_from": "Solar panel"
+    },
+    "photovoltaic_mounting": {
+      "name": "PV Mounting System / Racking",
+      "wikipedia": "Photovoltaic mounting system",
+      "discovered_from": "Solar panel"
+    },
+    "solar_tracker": {
+      "name": "Solar Tracker",
+      "wikipedia": "Solar tracker",
+      "discovered_from": "Solar panel"
+    },
+    "junction_box": {
+      "name": "Junction Box (Solar)",
+      "wikipedia": "Junction box",
+      "discovered_from": "Solar panel"
+    },
+    "mc4_connector": {
+      "name": "MC4 Connector",
+      "wikipedia": "MC4 connector",
+      "discovered_from": "Solar panel"
+    },
+    "mppt": {
+      "name": "Maximum Power Point Tracker (MPPT)",
+      "wikipedia": "Maximum power point tracking",
+      "discovered_from": "Solar panel"
+    },
+    "cadmium_telluride": {
+      "name": "Cadmium Telluride",
+      "wikipedia": "Cadmium telluride",
+      "discovered_from": "Solar panel",
+      "type": "processed_material"
+    },
+    "cigs": {
+      "name": "Copper Indium Gallium Selenide (CIGS)",
+      "wikipedia": "Copper indium gallium selenide",
+      "discovered_from": "Solar panel",
+      "type": "processed_material"
+    },
+    "gallium_arsenide": {
+      "name": "Gallium Arsenide",
+      "wikipedia": "Gallium arsenide",
+      "discovered_from": "Solar panel",
+      "type": "processed_material"
+    },
+    "eva_encapsulant": {
+      "name": "Ethylene-Vinyl Acetate (EVA) Encapsulant",
+      "wikipedia": "Ethylene-vinyl acetate",
+      "discovered_from": "Solar panel",
+      "type": "material"
+    },
+    "silver": {
+      "name": "Silver",
+      "wikipedia": "Silver",
+      "discovered_from": "Solar panel",
+      "type": "raw_material",
+      "note": "Solar cell contacts \u2014 solar is now largest silver consumer globally"
+    },
+    "cadmium": {
+      "name": "Cadmium",
+      "wikipedia": "Cadmium",
+      "discovered_from": "Solar panel",
+      "type": "raw_material"
+    },
+    "tellurium": {
+      "name": "Tellurium",
+      "wikipedia": "Tellurium",
+      "discovered_from": "Solar panel",
+      "type": "raw_material",
+      "note": "Very rare, byproduct of copper refining"
+    },
+    "indium": {
+      "name": "Indium",
+      "wikipedia": "Indium",
+      "discovered_from": [
+        "Solar panel",
+        "OLED"
+      ],
+      "type": "raw_material",
+      "note": "CIGS solar + ITO displays. Scarce."
+    },
+    "gallium": {
+      "name": "Gallium",
+      "wikipedia": "Gallium",
+      "discovered_from": "Solar panel",
+      "type": "raw_material",
+      "note": "GaAs solar + LEDs + 5G chips. China controls 80%+"
+    },
+    "selenium": {
+      "name": "Selenium",
+      "wikipedia": "Selenium",
+      "discovered_from": "Solar panel",
+      "type": "raw_material"
+    },
+    "perovskite_solar_cell": {
+      "name": "Perovskite Solar Cell",
+      "wikipedia": "Perovskite solar cell",
+      "discovered_from": "Solar panel",
+      "note": "Emerging technology, could disrupt silicon"
+    },
+    "backsheet": {
+      "name": "PV Backsheet",
+      "wikipedia": "Backsheet",
+      "discovered_from": "Solar panel",
+      "type": "material",
+      "note": "Typically fluoropolymer (PVF/PVDF) film"
+    },
+    "wine_bottle": {
+      "name": "Wine bottle",
+      "wikipedia": "Wine_bottle",
+      "discovered_from": "final_consumption_wild_card",
+      "type": "product"
+    },
+    "cork": {
+      "name": "Cork",
+      "wikipedia": "Cork_(material)",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "paper": {
+      "name": "Paper",
+      "wikipedia": "Paper",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "adhesive": {
+      "name": "Adhesive",
+      "wikipedia": "Adhesive",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "printing": {
+      "name": "Printing",
+      "wikipedia": "Printing",
+      "discovered_from": "wine_bottle",
+      "type": "service"
+    },
+    "blow_molding": {
+      "name": "Blow molding",
+      "wikipedia": "Blow_molding",
+      "discovered_from": "wine_bottle",
+      "type": "manufacturing"
+    },
+    "packaging_machinery": {
+      "name": "Packaging machinery",
+      "wikipedia": "Packaging_machinery",
+      "discovered_from": "wine_bottle",
+      "type": "equipment"
+    },
+    "corrugated_fiberboard": {
+      "name": "Corrugated fiberboard",
+      "wikipedia": "Corrugated_fiberboard",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "pvc": {
+      "name": "Polyvinyl chloride (PVC)",
+      "wikipedia": "PVC",
+      "discovered_from": "wine_bottle",
+      "type": "chemical"
+    },
+    "polyethylene": {
+      "name": "Polyethylene",
+      "wikipedia": "Polyethylene",
+      "discovered_from": "wine_bottle",
+      "type": "chemical"
+    },
+    "polypropylene": {
+      "name": "Polypropylene",
+      "wikipedia": "Polypropylene",
+      "discovered_from": "wine_bottle",
+      "type": "chemical"
+    },
+    "aluminium_foil": {
+      "name": "Aluminium foil",
+      "wikipedia": "Aluminium_foil",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "label": {
+      "name": "Label",
+      "wikipedia": "Label",
+      "discovered_from": "wine_bottle",
+      "type": "component"
+    },
+    "hot_melt_adhesive": {
+      "name": "Hot-melt adhesive",
+      "wikipedia": "Hot-melt_adhesive",
+      "discovered_from": "wine_bottle",
+      "type": "material"
+    },
+    "silica": {
+      "name": "Silica (sand)",
+      "wikipedia": "Silica",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "mineral"
+    },
+    "soda_ash": {
+      "name": "Soda ash (sodium carbonate)",
+      "wikipedia": "Sodium_carbonate",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "chemical"
+    },
+    "limestone": {
+      "name": "Limestone (calcium oxide)",
+      "wikipedia": "Limestone",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "mineral"
+    },
+    "alumina": {
+      "name": "Alumina (aluminium oxide)",
+      "wikipedia": "Aluminium_oxide",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "chemical"
+    },
+    "magnesium_oxide": {
+      "name": "Magnesium oxide",
+      "wikipedia": "Magnesium_oxide",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "chemical"
+    },
+    "natural_gas": {
+      "name": "Natural gas",
+      "wikipedia": "Natural_gas",
+      "discovered_from": "container_glass_via_wine_bottle",
+      "type": "energy"
+    },
+    "kraft_paper": {
+      "name": "Kraft paper",
+      "wikipedia": "Kraft_paper",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "material"
+    },
+    "wood_pulp": {
+      "name": "Wood pulp",
+      "wikipedia": "Pulp_(paper)",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "material"
+    },
+    "starch": {
+      "name": "Starch",
+      "wikipedia": "Starch",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "chemical"
+    },
+    "kaolin": {
+      "name": "Kaolin (clay)",
+      "wikipedia": "Kaolinite",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "mineral"
+    },
+    "flexography": {
+      "name": "Flexography",
+      "wikipedia": "Flexography",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "manufacturing"
+    },
+    "paper_machine": {
+      "name": "Paper machine",
+      "wikipedia": "Paper_machine",
+      "discovered_from": "corrugated_fiberboard_via_wine_bottle",
+      "type": "equipment"
+    },
+    "ethylene": {
+      "name": "Ethylene",
+      "wikipedia": "Ethylene",
+      "discovered_from": "polyethylene_via_wine_bottle",
+      "type": "chemical"
+    },
+    "propylene": {
+      "name": "Propylene",
+      "wikipedia": "Propylene",
+      "discovered_from": "polypropylene_via_wine_bottle",
+      "type": "chemical"
+    },
+    "vinyl_chloride": {
+      "name": "Vinyl chloride",
+      "wikipedia": "Vinyl_chloride",
+      "discovered_from": "pvc_via_wine_bottle",
+      "type": "chemical"
+    },
+    "chlorine": {
+      "name": "Chlorine",
+      "wikipedia": "Chlorine",
+      "discovered_from": "pvc_via_wine_bottle",
+      "type": "chemical"
+    },
+    "petroleum": {
+      "name": "Petroleum (crude oil)",
+      "wikipedia": "Petroleum",
+      "discovered_from": "petrochemicals_via_wine_bottle",
+      "type": "commodity"
+    },
+    "naphtha": {
+      "name": "Naphtha",
+      "wikipedia": "Naphtha",
+      "discovered_from": "petrochemicals_via_wine_bottle",
+      "type": "chemical"
+    },
+    "bicycle": {
+      "name": "Bicycle",
+      "wikipedia": "Bicycle",
+      "discovered_from": "final_consumption_wild_card",
+      "type": "product"
+    },
+    "carbon_fiber": {
+      "name": "Carbon fiber",
+      "wikipedia": "Carbon_fibre",
+      "discovered_from": "bicycle",
+      "type": "material"
+    },
+    "titanium": {
+      "name": "Titanium",
+      "wikipedia": "Titanium",
+      "discovered_from": "bicycle",
+      "type": "metal"
+    },
+    "welding": {
+      "name": "Welding",
+      "wikipedia": "Welding",
+      "discovered_from": "bicycle",
+      "type": "manufacturing"
+    },
+    "aramid_fiber": {
+      "name": "Aramid fiber (Kevlar)",
+      "wikipedia": "Kevlar",
+      "discovered_from": "bicycle",
+      "type": "material"
+    },
+    "polyurethane": {
+      "name": "Polyurethane",
+      "wikipedia": "Polyurethane",
+      "discovered_from": "bicycle",
+      "type": "chemical"
+    },
+    "leather": {
+      "name": "Leather",
+      "wikipedia": "Leather",
+      "discovered_from": "bicycle",
+      "type": "material"
+    },
+    "nylon": {
+      "name": "Nylon",
+      "wikipedia": "Nylon",
+      "discovered_from": "bicycle",
+      "type": "chemical"
+    },
+    "roller_chain": {
+      "name": "Roller chain",
+      "wikipedia": "Roller_chain",
+      "discovered_from": "bicycle",
+      "type": "component"
+    },
+    "hydraulic_brake": {
+      "name": "Hydraulic brake",
+      "wikipedia": "Hydraulic_brake",
+      "discovered_from": "bicycle",
+      "type": "component"
+    },
+    "paint": {
+      "name": "Paint",
+      "wikipedia": "Paint",
+      "discovered_from": "bicycle",
+      "type": "material"
+    },
+    "polyacrylonitrile": {
+      "name": "Polyacrylonitrile (PAN)",
+      "wikipedia": "Polyacrylonitrile",
+      "discovered_from": "carbon_fiber_via_bicycle",
+      "type": "chemical"
+    },
+    "acrylonitrile": {
+      "name": "Acrylonitrile",
+      "wikipedia": "Acrylonitrile",
+      "discovered_from": "carbon_fiber_via_bicycle",
+      "type": "chemical"
+    },
+    "autoclave": {
+      "name": "Autoclave (industrial)",
+      "wikipedia": "Autoclave_(industrial)",
+      "discovered_from": "carbon_fiber_via_bicycle",
+      "type": "equipment"
+    },
+    "ammonia": {
+      "name": "Ammonia",
+      "wikipedia": "Ammonia",
+      "discovered_from": "carbon_fiber_via_bicycle",
+      "type": "chemical"
+    },
+    "pitch_resin": {
+      "name": "Pitch (resin)",
+      "wikipedia": "Pitch_(resin)",
+      "discovered_from": "carbon_fiber_via_bicycle",
+      "type": "chemical"
+    },
+    "washing_machine": {
+      "name": "Washing machine",
+      "wikipedia": "Washing_machine",
+      "discovered_from": "final_consumption_wild_card",
+      "type": "product"
+    },
+    "solenoid_valve": {
+      "name": "Solenoid valve",
+      "wikipedia": "Solenoid_valve",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "water_pump": {
+      "name": "Water pump",
+      "wikipedia": "Pump",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "laundry_detergent": {
+      "name": "Laundry detergent",
+      "wikipedia": "Laundry_detergent",
+      "discovered_from": "washing_machine",
+      "type": "chemical"
+    },
+    "stainless_steel": {
+      "name": "Stainless steel",
+      "wikipedia": "Stainless_steel",
+      "discovered_from": "washing_machine",
+      "type": "material"
+    },
+    "microcontroller": {
+      "name": "Microcontroller",
+      "wikipedia": "Microcontroller",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "surfactant": {
+      "name": "Surfactant",
+      "wikipedia": "Surfactant",
+      "discovered_from": "washing_machine",
+      "type": "chemical"
+    },
+    "enzyme_industrial": {
+      "name": "Industrial enzyme",
+      "wikipedia": "Enzyme",
+      "discovered_from": "washing_machine",
+      "type": "chemical"
+    },
+    "sodium_hypochlorite": {
+      "name": "Sodium hypochlorite (bleach)",
+      "wikipedia": "Sodium_hypochlorite",
+      "discovered_from": "washing_machine",
+      "type": "chemical"
+    },
+    "induction_motor": {
+      "name": "Induction motor",
+      "wikipedia": "Induction_motor",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "drive_belt": {
+      "name": "Drive belt",
+      "wikipedia": "Belt_(mechanical)",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "hose": {
+      "name": "Hose (flexible pipe)",
+      "wikipedia": "Hose",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "spring": {
+      "name": "Spring (mechanical)",
+      "wikipedia": "Spring_(device)",
+      "discovered_from": "washing_machine",
+      "type": "component"
+    },
+    "house": {
+      "name": "House (Residential construction)",
+      "wikipedia": "House",
+      "discovered_from": "final_consumption",
+      "type": "product"
+    },
+    "cement": {
+      "name": "Portland cement",
+      "wikipedia": "Portland_cement",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "brick": {
+      "name": "Brick",
+      "wikipedia": "Brick",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "lumber": {
+      "name": "Lumber (softwood)",
+      "wikipedia": "Lumber",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "plywood": {
+      "name": "Plywood / Engineered wood",
+      "wikipedia": "Plywood",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "drywall": {
+      "name": "Drywall (Gypsum board)",
+      "wikipedia": "Drywall",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "gypsum": {
+      "name": "Gypsum",
+      "wikipedia": "Gypsum",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "sand": {
+      "name": "Sand",
+      "wikipedia": "Sand",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "gravel": {
+      "name": "Gravel (aggregate)",
+      "wikipedia": "Gravel",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "rebar": {
+      "name": "Rebar (reinforcing bar)",
+      "wikipedia": "Rebar",
+      "discovered_from": "house",
+      "type": "component"
+    },
+    "asphalt_shingle": {
+      "name": "Asphalt shingle",
+      "wikipedia": "Asphalt_shingle",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "asphalt": {
+      "name": "Asphalt (bitumen)",
+      "wikipedia": "Asphalt",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "thermal_insulation": {
+      "name": "Thermal insulation",
+      "wikipedia": "Building_insulation",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "mineral_wool": {
+      "name": "Mineral wool (Rockwool)",
+      "wikipedia": "Mineral_wool",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "polystyrene": {
+      "name": "Polystyrene (EPS/XPS)",
+      "wikipedia": "Polystyrene",
+      "discovered_from": "house",
+      "type": "chemical"
+    },
+    "plumbing": {
+      "name": "Plumbing",
+      "wikipedia": "Plumbing",
+      "discovered_from": "house",
+      "type": "system"
+    },
+    "electrical_wiring": {
+      "name": "Electrical wiring",
+      "wikipedia": "Electrical_wiring",
+      "discovered_from": "house",
+      "type": "system"
+    },
+    "hvac": {
+      "name": "HVAC",
+      "wikipedia": "Heating,_ventilation,_and_air_conditioning",
+      "discovered_from": "house",
+      "type": "system"
+    },
+    "window": {
+      "name": "Window",
+      "wikipedia": "Window",
+      "discovered_from": "house",
+      "type": "component"
+    },
+    "door": {
+      "name": "Door",
+      "wikipedia": "Door",
+      "discovered_from": "house",
+      "type": "component"
+    },
+    "ceramic_tile": {
+      "name": "Ceramic tile",
+      "wikipedia": "Tile",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "mortar": {
+      "name": "Mortar (masonry)",
+      "wikipedia": "Mortar_(masonry)",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "granite": {
+      "name": "Granite",
+      "wikipedia": "Granite",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "clay": {
+      "name": "Clay",
+      "wikipedia": "Clay",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "lime": {
+      "name": "Lime (calcium oxide)",
+      "wikipedia": "Lime_(material)",
+      "discovered_from": "house",
+      "type": "chemical"
+    },
+    "plaster": {
+      "name": "Plaster",
+      "wikipedia": "Plaster",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "slate": {
+      "name": "Slate",
+      "wikipedia": "Slate",
+      "discovered_from": "house",
+      "type": "mineral"
+    },
+    "compressor": {
+      "name": "Compressor",
+      "wikipedia": "Compressor",
+      "discovered_from": "house_hvac",
+      "type": "component"
+    },
+    "refrigerant": {
+      "name": "Refrigerant",
+      "wikipedia": "Refrigerant",
+      "discovered_from": "house_hvac",
+      "type": "chemical"
+    },
+    "ductwork": {
+      "name": "Ductwork",
+      "wikipedia": "Duct_(HVAC)",
+      "discovered_from": "house_hvac",
+      "type": "component"
+    },
+    "nail": {
+      "name": "Nail (fastener)",
+      "wikipedia": "Nail_(fastener)",
+      "discovered_from": "house",
+      "type": "component"
+    },
+    "screw": {
+      "name": "Screw",
+      "wikipedia": "Screw",
+      "discovered_from": "house",
+      "type": "component"
+    },
+    "waterproofing": {
+      "name": "Waterproofing membrane",
+      "wikipedia": "Waterproofing",
+      "discovered_from": "house",
+      "type": "material"
+    },
+    "styrene": {
+      "name": "Styrene",
+      "wikipedia": "Styrene",
+      "discovered_from": "polystyrene_via_house",
+      "type": "chemical"
+    },
+    "t_shirt": {
+      "name": "T-shirt",
+      "wikipedia": "T-shirt",
+      "discovered_from": "final_consumption",
+      "type": "product"
+    },
+    "cotton": {
+      "name": "Cotton",
+      "wikipedia": "Cotton",
+      "discovered_from": "t_shirt",
+      "type": "agricultural"
+    },
+    "polyester_fiber": {
+      "name": "Polyester fiber",
+      "wikipedia": "Polyester",
+      "discovered_from": "t_shirt",
+      "type": "chemical"
+    },
+    "elastane": {
+      "name": "Elastane (Spandex/Lycra)",
+      "wikipedia": "Spandex",
+      "discovered_from": "t_shirt",
+      "type": "chemical"
+    },
+    "wool": {
+      "name": "Wool",
+      "wikipedia": "Wool",
+      "discovered_from": "textile_manufacturing",
+      "type": "agricultural"
+    },
+    "silk": {
+      "name": "Silk",
+      "wikipedia": "Silk",
+      "discovered_from": "textile_manufacturing",
+      "type": "agricultural"
+    },
+    "linen": {
+      "name": "Linen (flax)",
+      "wikipedia": "Linen",
+      "discovered_from": "textile_manufacturing",
+      "type": "agricultural"
+    },
+    "rayon": {
+      "name": "Rayon (viscose)",
+      "wikipedia": "Rayon",
+      "discovered_from": "textile_manufacturing",
+      "type": "chemical"
+    },
+    "acrylic_fiber": {
+      "name": "Acrylic fiber",
+      "wikipedia": "Acrylic_fiber",
+      "discovered_from": "textile_manufacturing",
+      "type": "chemical"
+    },
+    "yarn": {
+      "name": "Yarn (spinning)",
+      "wikipedia": "Yarn",
+      "discovered_from": "t_shirt",
+      "type": "material"
+    },
+    "knitting": {
+      "name": "Knitting (fabric)",
+      "wikipedia": "Knitting",
+      "discovered_from": "t_shirt",
+      "type": "manufacturing"
+    },
+    "weaving": {
+      "name": "Weaving",
+      "wikipedia": "Weaving",
+      "discovered_from": "textile_manufacturing",
+      "type": "manufacturing"
+    },
+    "dyeing": {
+      "name": "Dyeing",
+      "wikipedia": "Dyeing",
+      "discovered_from": "t_shirt",
+      "type": "manufacturing"
+    },
+    "textile_bleaching": {
+      "name": "Textile bleaching",
+      "wikipedia": "Textile_bleaching",
+      "discovered_from": "t_shirt",
+      "type": "manufacturing"
+    },
+    "textile_printing": {
+      "name": "Textile printing (screen print)",
+      "wikipedia": "Textile_printing",
+      "discovered_from": "t_shirt",
+      "type": "manufacturing"
+    },
+    "sewing_machine": {
+      "name": "Sewing machine",
+      "wikipedia": "Sewing_machine",
+      "discovered_from": "t_shirt",
+      "type": "equipment"
+    },
+    "loom": {
+      "name": "Loom",
+      "wikipedia": "Loom",
+      "discovered_from": "weaving",
+      "type": "equipment"
+    },
+    "knitting_machine": {
+      "name": "Knitting machine",
+      "wikipedia": "Knitting_machine",
+      "discovered_from": "knitting",
+      "type": "equipment"
+    },
+    "synthetic_dye": {
+      "name": "Synthetic dye",
+      "wikipedia": "Synthetic_dye",
+      "discovered_from": "dyeing",
+      "type": "chemical"
+    },
+    "cotton_gin": {
+      "name": "Cotton gin",
+      "wikipedia": "Cotton_gin",
+      "discovered_from": "cotton",
+      "type": "equipment"
+    },
+    "zipper": {
+      "name": "Zipper",
+      "wikipedia": "Zipper",
+      "discovered_from": "t_shirt",
+      "type": "component"
+    },
+    "button": {
+      "name": "Button (clothing)",
+      "wikipedia": "Button",
+      "discovered_from": "t_shirt",
+      "type": "component"
+    },
+    "thread": {
+      "name": "Thread (sewing)",
+      "wikipedia": "Thread_(yarn)",
+      "discovered_from": "t_shirt",
+      "type": "material"
+    },
+    "terephthalic_acid": {
+      "name": "Terephthalic acid (PTA)",
+      "wikipedia": "Terephthalic_acid",
+      "discovered_from": "polyester_fiber",
+      "type": "chemical"
+    },
+    "ethylene_glycol": {
+      "name": "Ethylene glycol",
+      "wikipedia": "Ethylene_glycol",
+      "discovered_from": "polyester_fiber",
+      "type": "chemical"
+    },
+    "para_xylene": {
+      "name": "Para-xylene",
+      "wikipedia": "P-Xylene",
+      "discovered_from": "terephthalic_acid",
+      "type": "chemical"
+    },
+    "oil_refinery": {
+      "name": "Oil refinery",
+      "wikipedia": "Oil refinery",
+      "discovered_from": "Oil refinery",
+      "type": "processing"
+    },
+    "jet_fuel": {
+      "name": "Jet fuel",
+      "wikipedia": "Jet fuel",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "fuel_oil": {
+      "name": "Fuel oil (bunker)",
+      "wikipedia": "Fuel oil",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "lpg": {
+      "name": "Liquefied petroleum gas (LPG)",
+      "wikipedia": "Liquefied petroleum gas",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "lubricant": {
+      "name": "Lubricant (motor oil/grease)",
+      "wikipedia": "Lubricant",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "paraffin_wax": {
+      "name": "Paraffin wax",
+      "wikipedia": "Paraffin wax",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "petroleum_coke": {
+      "name": "Petroleum coke",
+      "wikipedia": "Petroleum coke",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "sulfur": {
+      "name": "Sulfur",
+      "wikipedia": "Sulfur",
+      "discovered_from": "Oil refinery",
+      "type": "commodity"
+    },
+    "benzene": {
+      "name": "Benzene",
+      "wikipedia": "Benzene",
+      "discovered_from": "Oil refinery",
+      "type": "commodity"
+    },
+    "toluene": {
+      "name": "Toluene",
+      "wikipedia": "Toluene",
+      "discovered_from": "Oil refinery",
+      "type": "commodity"
+    },
+    "xylene": {
+      "name": "Xylene (mixed)",
+      "wikipedia": "Xylene",
+      "discovered_from": "Oil refinery",
+      "type": "commodity"
+    },
+    "phenol": {
+      "name": "Phenol",
+      "wikipedia": "Phenol",
+      "discovered_from": "Oil refinery",
+      "type": "commodity"
+    },
+    "refining_catalyst": {
+      "name": "Refining catalyst",
+      "wikipedia": "Catalytic cracking",
+      "discovered_from": "Oil refinery",
+      "type": "component"
+    },
+    "heat_exchanger": {
+      "name": "Heat exchanger",
+      "wikipedia": "Heat exchanger",
+      "discovered_from": "Oil refinery",
+      "type": "equipment"
+    },
+    "fertilizer": {
+      "name": "Fertilizer",
+      "wikipedia": "Fertilizer",
+      "discovered_from": "Oil refinery",
+      "type": "product"
+    },
+    "shipping_container": {
+      "name": "Shipping container (intermodal)",
+      "wikipedia": "Intermodal container",
+      "discovered_from": "Shipping container",
+      "type": "product"
+    },
+    "container_ship": {
+      "name": "Container ship",
+      "wikipedia": "Container ship",
+      "discovered_from": "Shipping container",
+      "type": "product"
+    },
+    "shipbuilding": {
+      "name": "Shipbuilding",
+      "wikipedia": "Shipbuilding",
+      "discovered_from": "Shipping container",
+      "type": "manufacturing"
+    },
+    "container_crane": {
+      "name": "Container crane (gantry)",
+      "wikipedia": "Container crane",
+      "discovered_from": "Shipping container",
+      "type": "equipment"
+    },
+    "marine_engine": {
+      "name": "Marine diesel engine",
+      "wikipedia": "Marine diesel engine",
+      "discovered_from": "Shipping container",
+      "type": "component"
+    },
+    "container_terminal": {
+      "name": "Container terminal",
+      "wikipedia": "Container terminal",
+      "discovered_from": "Shipping container",
+      "type": "infrastructure"
+    },
+    "container_shipping": {
+      "name": "Container shipping (lines)",
+      "wikipedia": "Container ship",
+      "discovered_from": "Shipping container",
+      "type": "service"
+    },
+    "forklift": {
+      "name": "Forklift",
+      "wikipedia": "Forklift",
+      "discovered_from": "Shipping container",
+      "type": "equipment"
+    },
+    "refrigerated_container": {
+      "name": "Refrigerated container (reefer)",
+      "wikipedia": "Refrigerated container",
+      "discovered_from": "Shipping container",
+      "type": "product"
+    },
+    "twistlock": {
+      "name": "Twistlock (container connector)",
+      "wikipedia": "Twistlock",
+      "discovered_from": "Shipping container",
+      "type": "component"
+    },
+    "statin": {
+      "name": "Statin (cholesterol drug)",
+      "wikipedia": "Statin",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "antibiotic": {
+      "name": "Antibiotic",
+      "wikipedia": "Antibiotic",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "vaccine": {
+      "name": "Vaccine",
+      "wikipedia": "Vaccine",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "monoclonal_antibody": {
+      "name": "Monoclonal antibody",
+      "wikipedia": "Monoclonal antibody",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "insulin": {
+      "name": "Insulin (pharmaceutical)",
+      "wikipedia": "Insulin (medication)",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "antiretroviral": {
+      "name": "Antiretroviral (HIV drug)",
+      "wikipedia": "Antiretroviral drug",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "biologic_drug": {
+      "name": "Biologic drug",
+      "wikipedia": "Biopharmaceutical",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "drug_class"
+    },
+    "pharmaceutical_manufacturing": {
+      "name": "Pharmaceutical manufacturing",
+      "wikipedia": "Pharmaceutical manufacturing",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "manufacturing"
+    },
+    "api_synthesis": {
+      "name": "API synthesis (active ingredient)",
+      "wikipedia": "Active ingredient",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "processing"
+    },
+    "bioreactor": {
+      "name": "Bioreactor",
+      "wikipedia": "Bioreactor",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "equipment"
+    },
+    "tablet_press": {
+      "name": "Tablet press",
+      "wikipedia": "Tablet press",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "equipment"
+    },
+    "pharmaceutical_packaging": {
+      "name": "Pharmaceutical packaging",
+      "wikipedia": "Pharmaceutical packaging",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "manufacturing"
+    },
+    "gelatin": {
+      "name": "Gelatin",
+      "wikipedia": "Gelatin",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "commodity"
+    },
+    "cleanroom": {
+      "name": "Cleanroom",
+      "wikipedia": "Cleanroom",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "infrastructure"
+    },
+    "syringe": {
+      "name": "Syringe",
+      "wikipedia": "Syringe",
+      "discovered_from": "Pharmaceutical pill",
+      "type": "product"
+    }
+  },
+  "edges": {
+    "uses_input": [
+      [
+        "colocation_data_center",
+        "server"
+      ],
+      [
+        "colocation_data_center",
+        "gpu"
+      ],
+      [
+        "colocation_data_center",
+        "motherboard"
+      ],
+      [
+        "colocation_data_center",
+        "printed_circuit_board"
+      ],
+      [
+        "colocation_data_center",
+        "data_storage"
+      ],
+      [
+        "colocation_data_center",
+        "network_switch"
+      ],
+      [
+        "colocation_data_center",
+        "router"
+      ],
+      [
+        "colocation_data_center",
+        "networking_hardware"
+      ],
+      [
+        "colocation_data_center",
+        "structured_cabling"
+      ],
+      [
+        "colocation_data_center",
+        "submarine_cable"
+      ],
+      [
+        "colocation_data_center",
+        "ups"
+      ],
+      [
+        "colocation_data_center",
+        "power_distribution_unit"
+      ],
+      [
+        "colocation_data_center",
+        "diesel_generator"
+      ],
+      [
+        "colocation_data_center",
+        "transformer"
+      ],
+      [
+        "colocation_data_center",
+        "gas_turbine"
+      ],
+      [
+        "colocation_data_center",
+        "transfer_switch"
+      ],
+      [
+        "colocation_data_center",
+        "lithium_ion_battery"
+      ],
+      [
+        "colocation_data_center",
+        "air_conditioning"
+      ],
+      [
+        "colocation_data_center",
+        "computer_cooling"
+      ],
+      [
+        "colocation_data_center",
+        "evaporative_cooler"
+      ],
+      [
+        "colocation_data_center",
+        "heat_pump"
+      ],
+      [
+        "colocation_data_center",
+        "heat_sink"
+      ],
+      [
+        "colocation_data_center",
+        "server_rack"
+      ],
+      [
+        "colocation_data_center",
+        "fire_sprinkler"
+      ],
+      [
+        "colocation_data_center",
+        "gaseous_fire_suppression"
+      ],
+      [
+        "colocation_data_center",
+        "smoke_detector"
+      ],
+      [
+        "hyperscale_cloud",
+        "server"
+      ],
+      [
+        "hyperscale_cloud",
+        "gpu"
+      ],
+      [
+        "hyperscale_cloud",
+        "motherboard"
+      ],
+      [
+        "hyperscale_cloud",
+        "printed_circuit_board"
+      ],
+      [
+        "hyperscale_cloud",
+        "data_storage"
+      ],
+      [
+        "hyperscale_cloud",
+        "network_switch"
+      ],
+      [
+        "hyperscale_cloud",
+        "router"
+      ],
+      [
+        "hyperscale_cloud",
+        "networking_hardware"
+      ],
+      [
+        "hyperscale_cloud",
+        "structured_cabling"
+      ],
+      [
+        "hyperscale_cloud",
+        "submarine_cable"
+      ],
+      [
+        "hyperscale_cloud",
+        "ups"
+      ],
+      [
+        "hyperscale_cloud",
+        "power_distribution_unit"
+      ],
+      [
+        "hyperscale_cloud",
+        "diesel_generator"
+      ],
+      [
+        "hyperscale_cloud",
+        "transformer"
+      ],
+      [
+        "hyperscale_cloud",
+        "gas_turbine"
+      ],
+      [
+        "hyperscale_cloud",
+        "transfer_switch"
+      ],
+      [
+        "hyperscale_cloud",
+        "lithium_ion_battery"
+      ],
+      [
+        "hyperscale_cloud",
+        "air_conditioning"
+      ],
+      [
+        "hyperscale_cloud",
+        "computer_cooling"
+      ],
+      [
+        "hyperscale_cloud",
+        "evaporative_cooler"
+      ],
+      [
+        "hyperscale_cloud",
+        "heat_pump"
+      ],
+      [
+        "hyperscale_cloud",
+        "heat_sink"
+      ],
+      [
+        "hyperscale_cloud",
+        "server_rack"
+      ],
+      [
+        "hyperscale_cloud",
+        "fire_sprinkler"
+      ],
+      [
+        "hyperscale_cloud",
+        "gaseous_fire_suppression"
+      ],
+      [
+        "hyperscale_cloud",
+        "smoke_detector"
+      ],
+      [
+        "server",
+        "cpu"
+      ],
+      [
+        "server",
+        "dram"
+      ],
+      [
+        "server",
+        "hard_disk"
+      ],
+      [
+        "server",
+        "power_supply"
+      ],
+      [
+        "server",
+        "water_cooling"
+      ],
+      [
+        "gpu",
+        "gpu_chip"
+      ],
+      [
+        "gpu",
+        "hbm"
+      ],
+      [
+        "gpu",
+        "gddr_sdram"
+      ],
+      [
+        "gpu",
+        "printed_circuit_board"
+      ],
+      [
+        "gpu",
+        "heat_sink"
+      ],
+      [
+        "gpu",
+        "power_mosfet"
+      ],
+      [
+        "gpu",
+        "voltage_regulator_module"
+      ],
+      [
+        "gpu",
+        "ramdac"
+      ],
+      [
+        "cpu",
+        "semiconductor_fabrication"
+      ],
+      [
+        "cpu",
+        "integrated_circuit"
+      ],
+      [
+        "cpu",
+        "crystal_oscillator"
+      ],
+      [
+        "cpu",
+        "capacitor"
+      ],
+      [
+        "cpu",
+        "resistor"
+      ],
+      [
+        "cpu",
+        "inductor"
+      ],
+      [
+        "cpu",
+        "printed_circuit_board"
+      ],
+      [
+        "cpu",
+        "voltage_regulator_module"
+      ],
+      [
+        "cpu",
+        "power_mosfet"
+      ],
+      [
+        "cpu",
+        "transformer"
+      ],
+      [
+        "semiconductor_fabrication",
+        "silicon_wafer"
+      ],
+      [
+        "semiconductor_fabrication",
+        "monocrystalline_silicon"
+      ],
+      [
+        "semiconductor_fabrication",
+        "polysilicon"
+      ],
+      [
+        "semiconductor_fabrication",
+        "silicon"
+      ],
+      [
+        "semiconductor_fabrication",
+        "copper"
+      ],
+      [
+        "semiconductor_fabrication",
+        "tungsten"
+      ],
+      [
+        "semiconductor_fabrication",
+        "tin"
+      ],
+      [
+        "semiconductor_fabrication",
+        "ultrapure_water"
+      ],
+      [
+        "semiconductor_fabrication",
+        "hydrofluoric_acid"
+      ],
+      [
+        "semiconductor_fabrication",
+        "sulfuric_acid"
+      ],
+      [
+        "semiconductor_fabrication",
+        "nitric_acid"
+      ],
+      [
+        "semiconductor_fabrication",
+        "hydrogen_peroxide"
+      ],
+      [
+        "semiconductor_fabrication",
+        "silane"
+      ],
+      [
+        "semiconductor_fabrication",
+        "photolithography"
+      ],
+      [
+        "semiconductor_fabrication",
+        "photomask"
+      ],
+      [
+        "semiconductor_fabrication",
+        "photoresist"
+      ],
+      [
+        "semiconductor_fabrication",
+        "semiconductor_equipment"
+      ],
+      [
+        "semiconductor_fabrication",
+        "ic_packaging"
+      ],
+      [
+        "semiconductor_fabrication",
+        "automatic_test_equipment"
+      ],
+      [
+        "semiconductor_fabrication",
+        "printed_circuit_board"
+      ],
+      [
+        "semiconductor_fabrication",
+        "dram"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium"
+      ],
+      [
+        "lithium_ion_battery",
+        "cobalt"
+      ],
+      [
+        "lithium_ion_battery",
+        "nickel"
+      ],
+      [
+        "lithium_ion_battery",
+        "graphite"
+      ],
+      [
+        "lithium_ion_battery",
+        "manganese_oxide"
+      ],
+      [
+        "lithium_ion_battery",
+        "aluminium"
+      ],
+      [
+        "lithium_ion_battery",
+        "copper"
+      ],
+      [
+        "lithium_ion_battery",
+        "phosphate"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_cobalt_oxide"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_iron_phosphate"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_nmc"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_nca"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_carbonate"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_hydroxide"
+      ],
+      [
+        "lithium_ion_battery",
+        "lithium_hexafluorophosphate"
+      ],
+      [
+        "lithium_ion_battery",
+        "ethylene_carbonate"
+      ],
+      [
+        "lithium_ion_battery",
+        "dimethyl_carbonate"
+      ],
+      [
+        "lithium_ion_battery",
+        "nmp"
+      ],
+      [
+        "lithium_ion_battery",
+        "electrode"
+      ],
+      [
+        "lithium_ion_battery",
+        "electrolyte"
+      ],
+      [
+        "hard_disk",
+        "disk_read_write_head"
+      ],
+      [
+        "hard_disk",
+        "voice_coil"
+      ],
+      [
+        "hard_disk",
+        "stepper_motor"
+      ],
+      [
+        "hard_disk",
+        "servomotor"
+      ],
+      [
+        "hard_disk",
+        "neodymium_magnet"
+      ],
+      [
+        "hard_disk",
+        "aluminium"
+      ],
+      [
+        "hard_disk",
+        "glass"
+      ],
+      [
+        "hard_disk",
+        "ceramic"
+      ],
+      [
+        "hard_disk",
+        "ruthenium"
+      ],
+      [
+        "hard_disk",
+        "helium"
+      ],
+      [
+        "hard_disk",
+        "printed_circuit_board"
+      ],
+      [
+        "hard_disk",
+        "dram"
+      ],
+      [
+        "hard_disk",
+        "flash_memory"
+      ],
+      [
+        "hard_disk",
+        "power_mosfet"
+      ],
+      [
+        "hard_disk",
+        "voltage_regulator_module"
+      ],
+      [
+        "hard_disk",
+        "magnet_wire"
+      ],
+      [
+        "neodymium_magnet",
+        "neodymium"
+      ],
+      [
+        "neodymium_magnet",
+        "iron"
+      ],
+      [
+        "neodymium_magnet",
+        "boron"
+      ],
+      [
+        "neodymium_magnet",
+        "dysprosium"
+      ],
+      [
+        "neodymium_magnet",
+        "praseodymium"
+      ],
+      [
+        "neodymium_magnet",
+        "terbium"
+      ],
+      [
+        "neodymium_magnet",
+        "cobalt"
+      ],
+      [
+        "electric_motor",
+        "neodymium_magnet"
+      ],
+      [
+        "wind_turbine",
+        "neodymium_magnet"
+      ],
+      [
+        "electric_generator",
+        "neodymium_magnet"
+      ],
+      [
+        "loudspeaker",
+        "neodymium_magnet"
+      ],
+      [
+        "mri",
+        "neodymium_magnet"
+      ],
+      [
+        "stepper_motor",
+        "neodymium_magnet"
+      ],
+      [
+        "servomotor",
+        "neodymium_magnet"
+      ],
+      [
+        "electric_motor",
+        "electrical_steel"
+      ],
+      [
+        "electric_motor",
+        "bearing"
+      ],
+      [
+        "electric_motor",
+        "electromagnetic_coil"
+      ],
+      [
+        "electric_motor",
+        "copper"
+      ],
+      [
+        "electric_motor",
+        "carbon"
+      ],
+      [
+        "electric_motor",
+        "resin"
+      ],
+      [
+        "electric_motor",
+        "power_inverter"
+      ],
+      [
+        "electric_motor",
+        "variable_frequency_drive"
+      ],
+      [
+        "electric_motor",
+        "transformer"
+      ],
+      [
+        "electric_motor",
+        "capacitor"
+      ],
+      [
+        "electric_vehicle",
+        "electric_motor"
+      ],
+      [
+        "electric_vehicle",
+        "lithium_ion_battery"
+      ],
+      [
+        "wind_turbine",
+        "electric_motor"
+      ],
+      [
+        "wind_turbine",
+        "bearing"
+      ],
+      [
+        "robotics",
+        "electric_motor"
+      ],
+      [
+        "robotics",
+        "bearing"
+      ],
+      [
+        "wind_turbine",
+        "gearbox"
+      ],
+      [
+        "wind_turbine",
+        "electric_generator"
+      ],
+      [
+        "wind_turbine",
+        "fiberglass"
+      ],
+      [
+        "wind_turbine",
+        "epoxy"
+      ],
+      [
+        "wind_turbine",
+        "concrete"
+      ],
+      [
+        "wind_turbine",
+        "copper"
+      ],
+      [
+        "wind_turbine",
+        "crane"
+      ],
+      [
+        "wind_turbine",
+        "carbon_nanotube"
+      ],
+      [
+        "wind_turbine",
+        "electrical_steel"
+      ],
+      [
+        "wind_turbine",
+        "fluorspar"
+      ],
+      [
+        "electrical_steel",
+        "iron"
+      ],
+      [
+        "electrical_steel",
+        "silicon"
+      ],
+      [
+        "electrical_steel",
+        "manganese"
+      ],
+      [
+        "electrical_steel",
+        "aluminium"
+      ],
+      [
+        "electrical_steel",
+        "steel"
+      ],
+      [
+        "electrical_steel",
+        "ferrosilicon"
+      ],
+      [
+        "electrical_steel",
+        "cold_rolling"
+      ],
+      [
+        "electrical_steel",
+        "hydrogen"
+      ],
+      [
+        "smartphone",
+        "system_on_a_chip"
+      ],
+      [
+        "smartphone",
+        "baseband_processor"
+      ],
+      [
+        "smartphone",
+        "digital_signal_processor"
+      ],
+      [
+        "smartphone",
+        "liquid_crystal_display"
+      ],
+      [
+        "smartphone",
+        "oled"
+      ],
+      [
+        "smartphone",
+        "touchscreen"
+      ],
+      [
+        "smartphone",
+        "display_driver"
+      ],
+      [
+        "smartphone",
+        "led_driver"
+      ],
+      [
+        "smartphone",
+        "cmos_image_sensor"
+      ],
+      [
+        "smartphone",
+        "camera_lens"
+      ],
+      [
+        "smartphone",
+        "optical_image_stabilization"
+      ],
+      [
+        "smartphone",
+        "flash_memory"
+      ],
+      [
+        "smartphone",
+        "dram"
+      ],
+      [
+        "smartphone",
+        "lithium_ion_battery"
+      ],
+      [
+        "smartphone",
+        "power_management_ic"
+      ],
+      [
+        "smartphone",
+        "wireless_charging"
+      ],
+      [
+        "smartphone",
+        "charge_controller"
+      ],
+      [
+        "smartphone",
+        "rf_transceiver"
+      ],
+      [
+        "smartphone",
+        "rf_power_amplifier"
+      ],
+      [
+        "smartphone",
+        "bluetooth"
+      ],
+      [
+        "smartphone",
+        "wifi"
+      ],
+      [
+        "smartphone",
+        "nfc"
+      ],
+      [
+        "smartphone",
+        "gps_receiver"
+      ],
+      [
+        "smartphone",
+        "sim_card"
+      ],
+      [
+        "smartphone",
+        "accelerometer"
+      ],
+      [
+        "smartphone",
+        "gyroscope"
+      ],
+      [
+        "smartphone",
+        "magnetometer"
+      ],
+      [
+        "smartphone",
+        "barometer_sensor"
+      ],
+      [
+        "smartphone",
+        "fingerprint_scanner"
+      ],
+      [
+        "smartphone",
+        "audio_codec"
+      ],
+      [
+        "smartphone",
+        "micro_speaker"
+      ],
+      [
+        "smartphone",
+        "mems_microphone"
+      ],
+      [
+        "smartphone",
+        "capacitor"
+      ],
+      [
+        "smartphone",
+        "printed_circuit_board"
+      ],
+      [
+        "smartphone",
+        "power_mosfet"
+      ],
+      [
+        "smartphone",
+        "polycarbonate"
+      ],
+      [
+        "smartphone",
+        "cover_glass"
+      ],
+      [
+        "smartphone",
+        "aluminium"
+      ],
+      [
+        "smartphone",
+        "copper"
+      ],
+      [
+        "smartphone",
+        "mobile_operating_system"
+      ],
+      [
+        "smartphone",
+        "app_store"
+      ],
+      [
+        "system_on_a_chip",
+        "semiconductor_fabrication"
+      ],
+      [
+        "system_on_a_chip",
+        "ic_packaging"
+      ],
+      [
+        "baseband_processor",
+        "semiconductor_fabrication"
+      ],
+      [
+        "display_driver",
+        "semiconductor_fabrication"
+      ],
+      [
+        "cmos_image_sensor",
+        "semiconductor_fabrication"
+      ],
+      [
+        "camera_lens",
+        "glass"
+      ],
+      [
+        "wireless_charging",
+        "copper"
+      ],
+      [
+        "rf_transceiver",
+        "semiconductor_fabrication"
+      ],
+      [
+        "rf_power_amplifier",
+        "semiconductor_fabrication"
+      ],
+      [
+        "touchscreen",
+        "cover_glass"
+      ],
+      [
+        "touchscreen",
+        "capacitor"
+      ],
+      [
+        "oled",
+        "anthracene"
+      ],
+      [
+        "oled",
+        "perylene"
+      ],
+      [
+        "oled",
+        "rubrene"
+      ],
+      [
+        "oled",
+        "quinacridone"
+      ],
+      [
+        "oled",
+        "ppv"
+      ],
+      [
+        "oled",
+        "polyfluorene"
+      ],
+      [
+        "oled",
+        "triphenylamine"
+      ],
+      [
+        "oled",
+        "alq3"
+      ],
+      [
+        "oled",
+        "pedot_pss"
+      ],
+      [
+        "oled",
+        "organoiridium"
+      ],
+      [
+        "oled",
+        "indium_tin_oxide"
+      ],
+      [
+        "oled",
+        "ltps"
+      ],
+      [
+        "oled",
+        "thin_film_transistor"
+      ],
+      [
+        "oled",
+        "pet_film"
+      ],
+      [
+        "oled",
+        "antireflective_coating"
+      ],
+      [
+        "oled",
+        "circular_polarizer"
+      ],
+      [
+        "oled",
+        "vapor_deposition"
+      ],
+      [
+        "oled",
+        "atomic_layer_deposition"
+      ],
+      [
+        "oled",
+        "excimer_laser"
+      ],
+      [
+        "oled",
+        "roll_to_roll"
+      ],
+      [
+        "oled",
+        "barium"
+      ],
+      [
+        "oled",
+        "calcium"
+      ],
+      [
+        "oled",
+        "argon"
+      ],
+      [
+        "oled",
+        "nitrogen"
+      ],
+      [
+        "oled",
+        "aluminium"
+      ],
+      [
+        "oled",
+        "photolithography"
+      ],
+      [
+        "oled",
+        "glass"
+      ],
+      [
+        "ltps",
+        "silicon"
+      ],
+      [
+        "ltps",
+        "excimer_laser"
+      ],
+      [
+        "indium_tin_oxide",
+        "tin"
+      ],
+      [
+        "vapor_deposition",
+        "semiconductor_equipment"
+      ],
+      [
+        "automobile",
+        "internal_combustion_engine"
+      ],
+      [
+        "automobile",
+        "electric_motor"
+      ],
+      [
+        "automobile",
+        "transmission"
+      ],
+      [
+        "automobile",
+        "tire"
+      ],
+      [
+        "automobile",
+        "disc_brake"
+      ],
+      [
+        "automobile",
+        "shock_absorber"
+      ],
+      [
+        "automobile",
+        "coil_spring"
+      ],
+      [
+        "automobile",
+        "power_steering"
+      ],
+      [
+        "automobile",
+        "vehicle_glass"
+      ],
+      [
+        "automobile",
+        "automotive_paint"
+      ],
+      [
+        "automobile",
+        "airbag"
+      ],
+      [
+        "automobile",
+        "seat_belt"
+      ],
+      [
+        "automobile",
+        "headlamp"
+      ],
+      [
+        "automobile",
+        "automotive_battery"
+      ],
+      [
+        "automobile",
+        "lithium_ion_battery"
+      ],
+      [
+        "automobile",
+        "engine_control_unit"
+      ],
+      [
+        "automobile",
+        "vehicle_audio"
+      ],
+      [
+        "automobile",
+        "automotive_navigation"
+      ],
+      [
+        "automobile",
+        "anti_lock_braking"
+      ],
+      [
+        "automobile",
+        "electronic_stability_control"
+      ],
+      [
+        "automobile",
+        "lidar"
+      ],
+      [
+        "automobile",
+        "air_conditioning"
+      ],
+      [
+        "automobile",
+        "steel"
+      ],
+      [
+        "automobile",
+        "aluminium"
+      ],
+      [
+        "automobile",
+        "copper"
+      ],
+      [
+        "automobile",
+        "rubber"
+      ],
+      [
+        "automobile",
+        "glass"
+      ],
+      [
+        "automobile",
+        "ev_charging_network"
+      ],
+      [
+        "internal_combustion_engine",
+        "piston"
+      ],
+      [
+        "internal_combustion_engine",
+        "crankshaft"
+      ],
+      [
+        "internal_combustion_engine",
+        "camshaft"
+      ],
+      [
+        "internal_combustion_engine",
+        "fuel_injection"
+      ],
+      [
+        "internal_combustion_engine",
+        "turbocharger"
+      ],
+      [
+        "internal_combustion_engine",
+        "spark_plug"
+      ],
+      [
+        "internal_combustion_engine",
+        "catalytic_converter"
+      ],
+      [
+        "internal_combustion_engine",
+        "exhaust_system"
+      ],
+      [
+        "internal_combustion_engine",
+        "alternator"
+      ],
+      [
+        "internal_combustion_engine",
+        "radiator"
+      ],
+      [
+        "internal_combustion_engine",
+        "motor_oil"
+      ],
+      [
+        "internal_combustion_engine",
+        "flywheel"
+      ],
+      [
+        "internal_combustion_engine",
+        "gasoline"
+      ],
+      [
+        "internal_combustion_engine",
+        "diesel_fuel"
+      ],
+      [
+        "internal_combustion_engine",
+        "iron"
+      ],
+      [
+        "internal_combustion_engine",
+        "aluminium"
+      ],
+      [
+        "internal_combustion_engine",
+        "steel"
+      ],
+      [
+        "transmission",
+        "steel"
+      ],
+      [
+        "transmission",
+        "bearing"
+      ],
+      [
+        "transmission",
+        "clutch"
+      ],
+      [
+        "transmission",
+        "differential"
+      ],
+      [
+        "transmission",
+        "drive_shaft"
+      ],
+      [
+        "transmission",
+        "universal_joint"
+      ],
+      [
+        "tire",
+        "rubber"
+      ],
+      [
+        "tire",
+        "synthetic_rubber"
+      ],
+      [
+        "tire",
+        "steel"
+      ],
+      [
+        "tire",
+        "carbon"
+      ],
+      [
+        "disc_brake",
+        "brake_lining"
+      ],
+      [
+        "disc_brake",
+        "brake_fluid"
+      ],
+      [
+        "disc_brake",
+        "iron"
+      ],
+      [
+        "disc_brake",
+        "steel"
+      ],
+      [
+        "catalytic_converter",
+        "palladium"
+      ],
+      [
+        "catalytic_converter",
+        "platinum"
+      ],
+      [
+        "catalytic_converter",
+        "rhodium"
+      ],
+      [
+        "catalytic_converter",
+        "ceramic"
+      ],
+      [
+        "automotive_battery",
+        "lead"
+      ],
+      [
+        "automotive_battery",
+        "sulfuric_acid"
+      ],
+      [
+        "engine_control_unit",
+        "semiconductor_fabrication"
+      ],
+      [
+        "engine_control_unit",
+        "printed_circuit_board"
+      ],
+      [
+        "anti_lock_braking",
+        "engine_control_unit"
+      ],
+      [
+        "shock_absorber",
+        "steel"
+      ],
+      [
+        "shock_absorber",
+        "rubber"
+      ],
+      [
+        "vehicle_glass",
+        "glass"
+      ],
+      [
+        "headlamp",
+        "oled"
+      ],
+      [
+        "radiator",
+        "aluminium"
+      ],
+      [
+        "radiator",
+        "copper"
+      ],
+      [
+        "power_steering",
+        "electric_motor"
+      ],
+      [
+        "power_steering",
+        "rack_and_pinion"
+      ],
+      [
+        "lidar",
+        "semiconductor_fabrication"
+      ],
+      [
+        "ev_charging_network",
+        "copper"
+      ],
+      [
+        "ev_charging_network",
+        "transformer"
+      ],
+      [
+        "solar_panel",
+        "solar_cell"
+      ],
+      [
+        "solar_panel",
+        "solar_inverter"
+      ],
+      [
+        "solar_panel",
+        "photovoltaic_mounting"
+      ],
+      [
+        "solar_panel",
+        "solar_tracker"
+      ],
+      [
+        "solar_panel",
+        "junction_box"
+      ],
+      [
+        "solar_panel",
+        "mc4_connector"
+      ],
+      [
+        "solar_panel",
+        "mppt"
+      ],
+      [
+        "solar_panel",
+        "eva_encapsulant"
+      ],
+      [
+        "solar_panel",
+        "backsheet"
+      ],
+      [
+        "solar_panel",
+        "glass"
+      ],
+      [
+        "solar_panel",
+        "aluminium"
+      ],
+      [
+        "solar_panel",
+        "copper"
+      ],
+      [
+        "solar_cell",
+        "silicon_wafer"
+      ],
+      [
+        "solar_cell",
+        "monocrystalline_silicon"
+      ],
+      [
+        "solar_cell",
+        "polysilicon"
+      ],
+      [
+        "solar_cell",
+        "silicon"
+      ],
+      [
+        "solar_cell",
+        "silver"
+      ],
+      [
+        "solar_cell",
+        "antireflective_coating"
+      ],
+      [
+        "solar_cell",
+        "cadmium_telluride"
+      ],
+      [
+        "solar_cell",
+        "cigs"
+      ],
+      [
+        "solar_cell",
+        "gallium_arsenide"
+      ],
+      [
+        "solar_cell",
+        "perovskite_solar_cell"
+      ],
+      [
+        "cadmium_telluride",
+        "cadmium"
+      ],
+      [
+        "cadmium_telluride",
+        "tellurium"
+      ],
+      [
+        "cigs",
+        "copper"
+      ],
+      [
+        "cigs",
+        "indium"
+      ],
+      [
+        "cigs",
+        "gallium"
+      ],
+      [
+        "cigs",
+        "selenium"
+      ],
+      [
+        "gallium_arsenide",
+        "gallium"
+      ],
+      [
+        "gallium_arsenide",
+        "semiconductor_fabrication"
+      ],
+      [
+        "solar_inverter",
+        "power_mosfet"
+      ],
+      [
+        "solar_inverter",
+        "capacitor"
+      ],
+      [
+        "solar_inverter",
+        "transformer"
+      ],
+      [
+        "solar_inverter",
+        "printed_circuit_board"
+      ],
+      [
+        "solar_inverter",
+        "semiconductor_fabrication"
+      ],
+      [
+        "photovoltaic_mounting",
+        "aluminium"
+      ],
+      [
+        "photovoltaic_mounting",
+        "steel"
+      ],
+      [
+        "photovoltaic_mounting",
+        "concrete"
+      ],
+      [
+        "indium_tin_oxide",
+        "indium"
+      ],
+      [
+        "wine_bottle",
+        "glass"
+      ],
+      [
+        "wine_bottle",
+        "cork"
+      ],
+      [
+        "wine_bottle",
+        "aluminium"
+      ],
+      [
+        "wine_bottle",
+        "aluminium_foil"
+      ],
+      [
+        "wine_bottle",
+        "tin"
+      ],
+      [
+        "wine_bottle",
+        "lead"
+      ],
+      [
+        "wine_bottle",
+        "label"
+      ],
+      [
+        "wine_bottle",
+        "pvc"
+      ],
+      [
+        "wine_bottle",
+        "blow_molding"
+      ],
+      [
+        "wine_bottle",
+        "packaging_machinery"
+      ],
+      [
+        "wine_bottle",
+        "corrugated_fiberboard"
+      ],
+      [
+        "label",
+        "paper"
+      ],
+      [
+        "label",
+        "adhesive"
+      ],
+      [
+        "label",
+        "printing"
+      ],
+      [
+        "label",
+        "hot_melt_adhesive"
+      ],
+      [
+        "label",
+        "aluminium_foil"
+      ],
+      [
+        "aluminium_foil",
+        "aluminium"
+      ],
+      [
+        "blow_molding",
+        "steel"
+      ],
+      [
+        "blow_molding",
+        "polyethylene"
+      ],
+      [
+        "blow_molding",
+        "polypropylene"
+      ],
+      [
+        "corrugated_fiberboard",
+        "paper"
+      ],
+      [
+        "glass",
+        "silica"
+      ],
+      [
+        "glass",
+        "soda_ash"
+      ],
+      [
+        "glass",
+        "limestone"
+      ],
+      [
+        "glass",
+        "alumina"
+      ],
+      [
+        "glass",
+        "magnesium_oxide"
+      ],
+      [
+        "glass",
+        "natural_gas"
+      ],
+      [
+        "glass",
+        "iron"
+      ],
+      [
+        "glass",
+        "cobalt"
+      ],
+      [
+        "corrugated_fiberboard",
+        "kraft_paper"
+      ],
+      [
+        "corrugated_fiberboard",
+        "starch"
+      ],
+      [
+        "corrugated_fiberboard",
+        "flexography"
+      ],
+      [
+        "kraft_paper",
+        "wood_pulp"
+      ],
+      [
+        "kraft_paper",
+        "kaolin"
+      ],
+      [
+        "kraft_paper",
+        "paper_machine"
+      ],
+      [
+        "paper",
+        "wood_pulp"
+      ],
+      [
+        "paper",
+        "kaolin"
+      ],
+      [
+        "polyethylene",
+        "ethylene"
+      ],
+      [
+        "polypropylene",
+        "propylene"
+      ],
+      [
+        "pvc",
+        "vinyl_chloride"
+      ],
+      [
+        "vinyl_chloride",
+        "ethylene"
+      ],
+      [
+        "vinyl_chloride",
+        "chlorine"
+      ],
+      [
+        "ethylene",
+        "naphtha"
+      ],
+      [
+        "propylene",
+        "naphtha"
+      ],
+      [
+        "naphtha",
+        "petroleum"
+      ],
+      [
+        "bicycle",
+        "steel"
+      ],
+      [
+        "bicycle",
+        "aluminium"
+      ],
+      [
+        "bicycle",
+        "carbon_fiber"
+      ],
+      [
+        "bicycle",
+        "titanium"
+      ],
+      [
+        "bicycle",
+        "tire"
+      ],
+      [
+        "bicycle",
+        "rubber"
+      ],
+      [
+        "bicycle",
+        "roller_chain"
+      ],
+      [
+        "bicycle",
+        "bearing"
+      ],
+      [
+        "bicycle",
+        "hydraulic_brake"
+      ],
+      [
+        "bicycle",
+        "brake_fluid"
+      ],
+      [
+        "bicycle",
+        "electric_motor"
+      ],
+      [
+        "bicycle",
+        "lithium_ion_battery"
+      ],
+      [
+        "bicycle",
+        "aramid_fiber"
+      ],
+      [
+        "bicycle",
+        "welding"
+      ],
+      [
+        "bicycle",
+        "paint"
+      ],
+      [
+        "bicycle",
+        "leather"
+      ],
+      [
+        "bicycle",
+        "polyurethane"
+      ],
+      [
+        "bicycle",
+        "nylon"
+      ],
+      [
+        "roller_chain",
+        "steel"
+      ],
+      [
+        "carbon_fiber",
+        "carbon"
+      ],
+      [
+        "carbon_fiber",
+        "epoxy"
+      ],
+      [
+        "carbon_fiber",
+        "nylon"
+      ],
+      [
+        "titanium",
+        "chlorine"
+      ],
+      [
+        "hydraulic_brake",
+        "aluminium"
+      ],
+      [
+        "hydraulic_brake",
+        "steel"
+      ],
+      [
+        "hydraulic_brake",
+        "rubber"
+      ],
+      [
+        "paint",
+        "resin"
+      ],
+      [
+        "paint",
+        "titanium"
+      ],
+      [
+        "polyurethane",
+        "petroleum"
+      ],
+      [
+        "welding",
+        "argon"
+      ],
+      [
+        "welding",
+        "tungsten"
+      ],
+      [
+        "aramid_fiber",
+        "sulfuric_acid"
+      ],
+      [
+        "carbon_fiber",
+        "polyacrylonitrile"
+      ],
+      [
+        "carbon_fiber",
+        "pitch_resin"
+      ],
+      [
+        "carbon_fiber",
+        "autoclave"
+      ],
+      [
+        "carbon_fiber",
+        "nitrogen"
+      ],
+      [
+        "carbon_fiber",
+        "fiberglass"
+      ],
+      [
+        "polyacrylonitrile",
+        "acrylonitrile"
+      ],
+      [
+        "acrylonitrile",
+        "propylene"
+      ],
+      [
+        "acrylonitrile",
+        "ammonia"
+      ],
+      [
+        "ammonia",
+        "natural_gas"
+      ],
+      [
+        "ammonia",
+        "hydrogen"
+      ],
+      [
+        "ammonia",
+        "nitrogen"
+      ],
+      [
+        "pitch_resin",
+        "petroleum"
+      ],
+      [
+        "autoclave",
+        "steel"
+      ],
+      [
+        "washing_machine",
+        "steel"
+      ],
+      [
+        "washing_machine",
+        "stainless_steel"
+      ],
+      [
+        "washing_machine",
+        "concrete"
+      ],
+      [
+        "washing_machine",
+        "glass"
+      ],
+      [
+        "washing_machine",
+        "electric_motor"
+      ],
+      [
+        "washing_machine",
+        "induction_motor"
+      ],
+      [
+        "washing_machine",
+        "variable_frequency_drive"
+      ],
+      [
+        "washing_machine",
+        "drive_belt"
+      ],
+      [
+        "washing_machine",
+        "solenoid_valve"
+      ],
+      [
+        "washing_machine",
+        "water_pump"
+      ],
+      [
+        "washing_machine",
+        "hose"
+      ],
+      [
+        "washing_machine",
+        "printed_circuit_board"
+      ],
+      [
+        "washing_machine",
+        "microcontroller"
+      ],
+      [
+        "washing_machine",
+        "capacitor"
+      ],
+      [
+        "washing_machine",
+        "bearing"
+      ],
+      [
+        "washing_machine",
+        "shock_absorber"
+      ],
+      [
+        "washing_machine",
+        "spring"
+      ],
+      [
+        "washing_machine",
+        "clutch"
+      ],
+      [
+        "washing_machine",
+        "rubber"
+      ],
+      [
+        "washing_machine",
+        "laundry_detergent"
+      ],
+      [
+        "stainless_steel",
+        "steel"
+      ],
+      [
+        "stainless_steel",
+        "nickel"
+      ],
+      [
+        "stainless_steel",
+        "iron"
+      ],
+      [
+        "solenoid_valve",
+        "copper"
+      ],
+      [
+        "solenoid_valve",
+        "rubber"
+      ],
+      [
+        "water_pump",
+        "polyethylene"
+      ],
+      [
+        "water_pump",
+        "electric_motor"
+      ],
+      [
+        "induction_motor",
+        "copper"
+      ],
+      [
+        "induction_motor",
+        "electrical_steel"
+      ],
+      [
+        "induction_motor",
+        "aluminium"
+      ],
+      [
+        "induction_motor",
+        "bearing"
+      ],
+      [
+        "microcontroller",
+        "silicon_wafer"
+      ],
+      [
+        "microcontroller",
+        "semiconductor_fabrication"
+      ],
+      [
+        "drive_belt",
+        "rubber"
+      ],
+      [
+        "drive_belt",
+        "nylon"
+      ],
+      [
+        "laundry_detergent",
+        "surfactant"
+      ],
+      [
+        "laundry_detergent",
+        "enzyme_industrial"
+      ],
+      [
+        "laundry_detergent",
+        "sodium_hypochlorite"
+      ],
+      [
+        "laundry_detergent",
+        "polyethylene"
+      ],
+      [
+        "surfactant",
+        "petroleum"
+      ],
+      [
+        "sodium_hypochlorite",
+        "chlorine"
+      ],
+      [
+        "hose",
+        "rubber"
+      ],
+      [
+        "hose",
+        "steel"
+      ],
+      [
+        "spring",
+        "steel"
+      ],
+      [
+        "house",
+        "concrete"
+      ],
+      [
+        "house",
+        "steel"
+      ],
+      [
+        "house",
+        "lumber"
+      ],
+      [
+        "house",
+        "plywood"
+      ],
+      [
+        "house",
+        "brick"
+      ],
+      [
+        "house",
+        "drywall"
+      ],
+      [
+        "house",
+        "rebar"
+      ],
+      [
+        "house",
+        "asphalt_shingle"
+      ],
+      [
+        "house",
+        "thermal_insulation"
+      ],
+      [
+        "house",
+        "window"
+      ],
+      [
+        "house",
+        "door"
+      ],
+      [
+        "house",
+        "waterproofing"
+      ],
+      [
+        "house",
+        "paint"
+      ],
+      [
+        "house",
+        "plumbing"
+      ],
+      [
+        "house",
+        "electrical_wiring"
+      ],
+      [
+        "house",
+        "hvac"
+      ],
+      [
+        "house",
+        "ceramic_tile"
+      ],
+      [
+        "house",
+        "granite"
+      ],
+      [
+        "house",
+        "mortar"
+      ],
+      [
+        "house",
+        "plaster"
+      ],
+      [
+        "house",
+        "nail"
+      ],
+      [
+        "house",
+        "screw"
+      ],
+      [
+        "house",
+        "glass"
+      ],
+      [
+        "house",
+        "aluminium"
+      ],
+      [
+        "concrete",
+        "cement"
+      ],
+      [
+        "concrete",
+        "sand"
+      ],
+      [
+        "concrete",
+        "gravel"
+      ],
+      [
+        "concrete",
+        "rebar"
+      ],
+      [
+        "cement",
+        "limestone"
+      ],
+      [
+        "cement",
+        "clay"
+      ],
+      [
+        "cement",
+        "gypsum"
+      ],
+      [
+        "cement",
+        "iron"
+      ],
+      [
+        "cement",
+        "silica"
+      ],
+      [
+        "brick",
+        "clay"
+      ],
+      [
+        "brick",
+        "natural_gas"
+      ],
+      [
+        "lumber",
+        "nail"
+      ],
+      [
+        "plywood",
+        "lumber"
+      ],
+      [
+        "plywood",
+        "adhesive"
+      ],
+      [
+        "drywall",
+        "gypsum"
+      ],
+      [
+        "drywall",
+        "paper"
+      ],
+      [
+        "asphalt_shingle",
+        "asphalt"
+      ],
+      [
+        "asphalt_shingle",
+        "fiberglass"
+      ],
+      [
+        "asphalt_shingle",
+        "sand"
+      ],
+      [
+        "asphalt",
+        "petroleum"
+      ],
+      [
+        "thermal_insulation",
+        "fiberglass"
+      ],
+      [
+        "thermal_insulation",
+        "mineral_wool"
+      ],
+      [
+        "thermal_insulation",
+        "polystyrene"
+      ],
+      [
+        "thermal_insulation",
+        "polyurethane"
+      ],
+      [
+        "mineral_wool",
+        "iron"
+      ],
+      [
+        "polystyrene",
+        "styrene"
+      ],
+      [
+        "styrene",
+        "ethylene"
+      ],
+      [
+        "styrene",
+        "petroleum"
+      ],
+      [
+        "plumbing",
+        "copper"
+      ],
+      [
+        "plumbing",
+        "pvc"
+      ],
+      [
+        "plumbing",
+        "stainless_steel"
+      ],
+      [
+        "plumbing",
+        "rubber"
+      ],
+      [
+        "electrical_wiring",
+        "copper"
+      ],
+      [
+        "electrical_wiring",
+        "pvc"
+      ],
+      [
+        "electrical_wiring",
+        "aluminium"
+      ],
+      [
+        "hvac",
+        "compressor"
+      ],
+      [
+        "hvac",
+        "refrigerant"
+      ],
+      [
+        "hvac",
+        "ductwork"
+      ],
+      [
+        "hvac",
+        "copper"
+      ],
+      [
+        "hvac",
+        "electric_motor"
+      ],
+      [
+        "hvac",
+        "capacitor"
+      ],
+      [
+        "hvac",
+        "microcontroller"
+      ],
+      [
+        "compressor",
+        "steel"
+      ],
+      [
+        "compressor",
+        "electric_motor"
+      ],
+      [
+        "compressor",
+        "copper"
+      ],
+      [
+        "ductwork",
+        "steel"
+      ],
+      [
+        "ductwork",
+        "aluminium"
+      ],
+      [
+        "window",
+        "glass"
+      ],
+      [
+        "window",
+        "pvc"
+      ],
+      [
+        "window",
+        "aluminium"
+      ],
+      [
+        "window",
+        "rubber"
+      ],
+      [
+        "window",
+        "argon"
+      ],
+      [
+        "door",
+        "lumber"
+      ],
+      [
+        "door",
+        "steel"
+      ],
+      [
+        "door",
+        "glass"
+      ],
+      [
+        "ceramic_tile",
+        "clay"
+      ],
+      [
+        "ceramic_tile",
+        "silica"
+      ],
+      [
+        "mortar",
+        "cement"
+      ],
+      [
+        "mortar",
+        "sand"
+      ],
+      [
+        "mortar",
+        "lime"
+      ],
+      [
+        "plaster",
+        "gypsum"
+      ],
+      [
+        "plaster",
+        "lime"
+      ],
+      [
+        "rebar",
+        "steel"
+      ],
+      [
+        "nail",
+        "steel"
+      ],
+      [
+        "screw",
+        "steel"
+      ],
+      [
+        "waterproofing",
+        "asphalt"
+      ],
+      [
+        "waterproofing",
+        "polyethylene"
+      ],
+      [
+        "waterproofing",
+        "rubber"
+      ],
+      [
+        "t_shirt",
+        "cotton"
+      ],
+      [
+        "t_shirt",
+        "polyester_fiber"
+      ],
+      [
+        "t_shirt",
+        "yarn"
+      ],
+      [
+        "t_shirt",
+        "knitting"
+      ],
+      [
+        "t_shirt",
+        "dyeing"
+      ],
+      [
+        "t_shirt",
+        "sewing_machine"
+      ],
+      [
+        "t_shirt",
+        "thread"
+      ],
+      [
+        "t_shirt",
+        "textile_printing"
+      ],
+      [
+        "t_shirt",
+        "label"
+      ],
+      [
+        "t_shirt",
+        "polyethylene"
+      ],
+      [
+        "t_shirt",
+        "corrugated_fiberboard"
+      ],
+      [
+        "t_shirt",
+        "elastane"
+      ],
+      [
+        "yarn",
+        "cotton"
+      ],
+      [
+        "yarn",
+        "polyester_fiber"
+      ],
+      [
+        "yarn",
+        "nylon"
+      ],
+      [
+        "yarn",
+        "wool"
+      ],
+      [
+        "yarn",
+        "silk"
+      ],
+      [
+        "yarn",
+        "linen"
+      ],
+      [
+        "yarn",
+        "acrylic_fiber"
+      ],
+      [
+        "yarn",
+        "rayon"
+      ],
+      [
+        "yarn",
+        "elastane"
+      ],
+      [
+        "knitting",
+        "yarn"
+      ],
+      [
+        "knitting",
+        "knitting_machine"
+      ],
+      [
+        "weaving",
+        "yarn"
+      ],
+      [
+        "weaving",
+        "loom"
+      ],
+      [
+        "dyeing",
+        "synthetic_dye"
+      ],
+      [
+        "dyeing",
+        "sodium_hypochlorite"
+      ],
+      [
+        "dyeing",
+        "starch"
+      ],
+      [
+        "textile_printing",
+        "synthetic_dye"
+      ],
+      [
+        "textile_printing",
+        "printing"
+      ],
+      [
+        "textile_bleaching",
+        "sodium_hypochlorite"
+      ],
+      [
+        "textile_bleaching",
+        "hydrogen_peroxide"
+      ],
+      [
+        "polyester_fiber",
+        "terephthalic_acid"
+      ],
+      [
+        "polyester_fiber",
+        "ethylene_glycol"
+      ],
+      [
+        "terephthalic_acid",
+        "para_xylene"
+      ],
+      [
+        "para_xylene",
+        "naphtha"
+      ],
+      [
+        "ethylene_glycol",
+        "ethylene"
+      ],
+      [
+        "acrylic_fiber",
+        "acrylonitrile"
+      ],
+      [
+        "rayon",
+        "wood_pulp"
+      ],
+      [
+        "rayon",
+        "sulfuric_acid"
+      ],
+      [
+        "elastane",
+        "polyurethane"
+      ],
+      [
+        "sewing_machine",
+        "steel"
+      ],
+      [
+        "sewing_machine",
+        "electric_motor"
+      ],
+      [
+        "loom",
+        "steel"
+      ],
+      [
+        "loom",
+        "electric_motor"
+      ],
+      [
+        "knitting_machine",
+        "steel"
+      ],
+      [
+        "knitting_machine",
+        "electric_motor"
+      ],
+      [
+        "zipper",
+        "aluminium"
+      ],
+      [
+        "zipper",
+        "polyester_fiber"
+      ],
+      [
+        "zipper",
+        "nylon"
+      ],
+      [
+        "button",
+        "polyester_fiber"
+      ],
+      [
+        "button",
+        "nylon"
+      ],
+      [
+        "cotton_gin",
+        "steel"
+      ],
+      [
+        "synthetic_dye",
+        "petroleum"
+      ],
+      [
+        "oil_refinery",
+        "petroleum"
+      ],
+      [
+        "oil_refinery",
+        "natural_gas"
+      ],
+      [
+        "oil_refinery",
+        "hydrogen"
+      ],
+      [
+        "oil_refinery",
+        "stainless_steel"
+      ],
+      [
+        "oil_refinery",
+        "steel"
+      ],
+      [
+        "oil_refinery",
+        "refining_catalyst"
+      ],
+      [
+        "oil_refinery",
+        "heat_exchanger"
+      ],
+      [
+        "oil_refinery",
+        "sulfuric_acid"
+      ],
+      [
+        "gasoline",
+        "oil_refinery"
+      ],
+      [
+        "diesel_fuel",
+        "oil_refinery"
+      ],
+      [
+        "jet_fuel",
+        "oil_refinery"
+      ],
+      [
+        "fuel_oil",
+        "oil_refinery"
+      ],
+      [
+        "lpg",
+        "oil_refinery"
+      ],
+      [
+        "naphtha",
+        "oil_refinery"
+      ],
+      [
+        "lubricant",
+        "oil_refinery"
+      ],
+      [
+        "paraffin_wax",
+        "oil_refinery"
+      ],
+      [
+        "petroleum_coke",
+        "oil_refinery"
+      ],
+      [
+        "asphalt",
+        "oil_refinery"
+      ],
+      [
+        "sulfur",
+        "oil_refinery"
+      ],
+      [
+        "benzene",
+        "oil_refinery"
+      ],
+      [
+        "toluene",
+        "oil_refinery"
+      ],
+      [
+        "xylene",
+        "oil_refinery"
+      ],
+      [
+        "phenol",
+        "benzene"
+      ],
+      [
+        "para_xylene",
+        "xylene"
+      ],
+      [
+        "nylon",
+        "benzene"
+      ],
+      [
+        "sulfuric_acid",
+        "sulfur"
+      ],
+      [
+        "fertilizer",
+        "ammonia"
+      ],
+      [
+        "fertilizer",
+        "sulfuric_acid"
+      ],
+      [
+        "fertilizer",
+        "natural_gas"
+      ],
+      [
+        "heat_exchanger",
+        "steel"
+      ],
+      [
+        "heat_exchanger",
+        "stainless_steel"
+      ],
+      [
+        "heat_exchanger",
+        "copper"
+      ],
+      [
+        "internal_combustion_engine",
+        "lubricant"
+      ],
+      [
+        "bearing",
+        "lubricant"
+      ],
+      [
+        "shipping_container",
+        "steel"
+      ],
+      [
+        "shipping_container",
+        "plywood"
+      ],
+      [
+        "shipping_container",
+        "welding"
+      ],
+      [
+        "shipping_container",
+        "paint"
+      ],
+      [
+        "shipping_container",
+        "twistlock"
+      ],
+      [
+        "container_ship",
+        "shipbuilding"
+      ],
+      [
+        "container_ship",
+        "marine_engine"
+      ],
+      [
+        "container_ship",
+        "steel"
+      ],
+      [
+        "container_ship",
+        "paint"
+      ],
+      [
+        "container_ship",
+        "fuel_oil"
+      ],
+      [
+        "shipbuilding",
+        "steel"
+      ],
+      [
+        "shipbuilding",
+        "welding"
+      ],
+      [
+        "shipbuilding",
+        "aluminium"
+      ],
+      [
+        "shipbuilding",
+        "crane"
+      ],
+      [
+        "shipbuilding",
+        "electric_motor"
+      ],
+      [
+        "shipbuilding",
+        "paint"
+      ],
+      [
+        "marine_engine",
+        "steel"
+      ],
+      [
+        "marine_engine",
+        "stainless_steel"
+      ],
+      [
+        "marine_engine",
+        "diesel_fuel"
+      ],
+      [
+        "marine_engine",
+        "lubricant"
+      ],
+      [
+        "marine_engine",
+        "heat_exchanger"
+      ],
+      [
+        "container_crane",
+        "steel"
+      ],
+      [
+        "container_crane",
+        "electric_motor"
+      ],
+      [
+        "container_crane",
+        "copper"
+      ],
+      [
+        "container_terminal",
+        "container_crane"
+      ],
+      [
+        "container_terminal",
+        "forklift"
+      ],
+      [
+        "container_terminal",
+        "concrete"
+      ],
+      [
+        "forklift",
+        "steel"
+      ],
+      [
+        "forklift",
+        "electric_motor"
+      ],
+      [
+        "forklift",
+        "lithium_ion_battery"
+      ],
+      [
+        "forklift",
+        "tire"
+      ],
+      [
+        "forklift",
+        "internal_combustion_engine"
+      ],
+      [
+        "refrigerated_container",
+        "shipping_container"
+      ],
+      [
+        "refrigerated_container",
+        "compressor"
+      ],
+      [
+        "refrigerated_container",
+        "refrigerant"
+      ],
+      [
+        "refrigerated_container",
+        "thermal_insulation"
+      ],
+      [
+        "refrigerated_container",
+        "stainless_steel"
+      ],
+      [
+        "container_shipping",
+        "container_ship"
+      ],
+      [
+        "container_shipping",
+        "shipping_container"
+      ],
+      [
+        "container_shipping",
+        "container_terminal"
+      ],
+      [
+        "container_shipping",
+        "diesel_fuel"
+      ],
+      [
+        "container_shipping",
+        "fuel_oil"
+      ],
+      [
+        "twistlock",
+        "steel"
+      ],
+      [
+        "statin",
+        "pharmaceutical_manufacturing"
+      ],
+      [
+        "statin",
+        "api_synthesis"
+      ],
+      [
+        "antibiotic",
+        "pharmaceutical_manufacturing"
+      ],
+      [
+        "antibiotic",
+        "api_synthesis"
+      ],
+      [
+        "antiretroviral",
+        "pharmaceutical_manufacturing"
+      ],
+      [
+        "antiretroviral",
+        "api_synthesis"
+      ],
+      [
+        "vaccine",
+        "bioreactor"
+      ],
+      [
+        "vaccine",
+        "pharmaceutical_packaging"
+      ],
+      [
+        "vaccine",
+        "gelatin"
+      ],
+      [
+        "monoclonal_antibody",
+        "bioreactor"
+      ],
+      [
+        "monoclonal_antibody",
+        "pharmaceutical_packaging"
+      ],
+      [
+        "monoclonal_antibody",
+        "cleanroom"
+      ],
+      [
+        "insulin",
+        "bioreactor"
+      ],
+      [
+        "insulin",
+        "pharmaceutical_packaging"
+      ],
+      [
+        "biologic_drug",
+        "bioreactor"
+      ],
+      [
+        "biologic_drug",
+        "pharmaceutical_packaging"
+      ],
+      [
+        "biologic_drug",
+        "cleanroom"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "api_synthesis"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "gelatin"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "tablet_press"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "pharmaceutical_packaging"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "starch"
+      ],
+      [
+        "pharmaceutical_manufacturing",
+        "cleanroom"
+      ],
+      [
+        "api_synthesis",
+        "benzene"
+      ],
+      [
+        "api_synthesis",
+        "phenol"
+      ],
+      [
+        "api_synthesis",
+        "toluene"
+      ],
+      [
+        "api_synthesis",
+        "stainless_steel"
+      ],
+      [
+        "api_synthesis",
+        "glass"
+      ],
+      [
+        "bioreactor",
+        "stainless_steel"
+      ],
+      [
+        "bioreactor",
+        "glass"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "glass"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "aluminium_foil"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "rubber"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "label"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "polyethylene"
+      ],
+      [
+        "pharmaceutical_packaging",
+        "stainless_steel"
+      ],
+      [
+        "syringe",
+        "glass"
+      ],
+      [
+        "syringe",
+        "stainless_steel"
+      ],
+      [
+        "syringe",
+        "rubber"
+      ],
+      [
+        "syringe",
+        "polypropylene"
+      ],
+      [
+        "vaccine",
+        "syringe"
+      ],
+      [
+        "insulin",
+        "syringe"
+      ],
+      [
+        "monoclonal_antibody",
+        "syringe"
+      ],
+      [
+        "tablet_press",
+        "steel"
+      ],
+      [
+        "tablet_press",
+        "stainless_steel"
+      ],
+      [
+        "cleanroom",
+        "stainless_steel"
+      ],
+      [
+        "cleanroom",
+        "glass"
+      ]
+    ]
+  },
+  "explored": [
+    "Data center",
+    "Graphics card",
+    "Server (computing)",
+    "Central processing unit",
+    "Semiconductor device fabrication",
+    "Lithium-ion battery",
+    "Hard disk drive",
+    "Neodymium magnet",
+    "Electric motor",
+    "Wind turbine",
+    "Electrical steel",
+    "Smartphone",
+    "OLED",
+    "Automobile (Car)",
+    "Solar panel",
+    "Wine bottle",
+    "Container glass",
+    "Corrugated fiberboard",
+    "Bicycle",
+    "Carbon fibre",
+    "Washing machine",
+    "House",
+    "Building material",
+    "Textile manufacturing",
+    "T-shirt",
+    "Oil refinery",
+    "Shipping container",
+    "Pharmaceutical pill"
+  ],
+  "unexplored": [
+    "gpu_chip",
+    "hbm",
+    "gddr_sdram",
+    "dram",
+    "power_mosfet",
+    "voltage_regulator_module",
+    "ramdac",
+    "motherboard",
+    "printed_circuit_board",
+    "data_storage",
+    "network_switch",
+    "router",
+    "networking_hardware",
+    "structured_cabling",
+    "submarine_cable",
+    "ups",
+    "power_distribution_unit",
+    "diesel_generator",
+    "transformer",
+    "gas_turbine",
+    "transfer_switch",
+    "air_conditioning",
+    "computer_cooling",
+    "evaporative_cooler",
+    "heat_pump",
+    "heat_sink",
+    "water_cooling",
+    "power_supply",
+    "server_rack",
+    "fire_sprinkler",
+    "gaseous_fire_suppression",
+    "smoke_detector",
+    "integrated_circuit",
+    "crystal_oscillator",
+    "capacitor",
+    "resistor",
+    "inductor",
+    "semiconductor_equipment",
+    "photolithography",
+    "photomask",
+    "photoresist",
+    "silicon_wafer",
+    "monocrystalline_silicon",
+    "polysilicon",
+    "silicon",
+    "copper",
+    "tungsten",
+    "tin",
+    "ultrapure_water",
+    "hydrofluoric_acid",
+    "sulfuric_acid",
+    "nitric_acid",
+    "hydrogen_peroxide",
+    "silane",
+    "ic_packaging",
+    "automatic_test_equipment",
+    "lithium",
+    "cobalt",
+    "nickel",
+    "graphite",
+    "manganese_oxide",
+    "aluminium",
+    "phosphate",
+    "lithium_cobalt_oxide",
+    "lithium_iron_phosphate",
+    "lithium_nmc",
+    "lithium_nca",
+    "lithium_carbonate",
+    "lithium_hydroxide",
+    "lithium_hexafluorophosphate",
+    "ethylene_carbonate",
+    "dimethyl_carbonate",
+    "nmp",
+    "electrode",
+    "electrolyte",
+    "battery_recycling",
+    "disk_read_write_head",
+    "voice_coil",
+    "stepper_motor",
+    "servomotor",
+    "neodymium_magnet",
+    "glass",
+    "ceramic",
+    "ruthenium",
+    "helium",
+    "flash_memory",
+    "solid_state_drive",
+    "magnet_wire",
+    "neodymium",
+    "iron",
+    "boron",
+    "dysprosium",
+    "praseodymium",
+    "terbium",
+    "wind_turbine",
+    "electric_generator",
+    "loudspeaker",
+    "mri",
+    "electrical_steel",
+    "bearing",
+    "power_inverter",
+    "variable_frequency_drive",
+    "electromagnetic_coil",
+    "carbon",
+    "resin",
+    "electric_vehicle",
+    "robotics",
+    "gearbox",
+    "fiberglass",
+    "epoxy",
+    "concrete",
+    "crane",
+    "carbon_nanotube",
+    "fluorspar",
+    "steel",
+    "manganese",
+    "ferrosilicon",
+    "cold_rolling",
+    "hydrogen"
+  ]
+}

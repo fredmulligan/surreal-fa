@@ -1,0 +1,3354 @@
+{
+  "meta": {
+    "description": "Companies discovered during industry walking \u2014 to process later",
+    "date": "2026-03-07"
+  },
+  "companies": {
+    "semiconductor_fabrication": [
+      {
+        "name": "TSMC",
+        "wikipedia": "TSMC",
+        "context": "foundry",
+        "operates_in": [
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Samsung Electronics",
+        "wikipedia": "Samsung Electronics",
+        "context": "foundry + memory",
+        "operates_in": [
+          "semiconductor_fabrication",
+          "smartphone",
+          "oled",
+          "flash_memory",
+          "washing_machine",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Intel",
+        "wikipedia": "Intel",
+        "context": "IDM",
+        "operates_in": [
+          "gpu",
+          "cpu",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "GlobalFoundries",
+        "wikipedia": "GlobalFoundries",
+        "context": "foundry",
+        "operates_in": [
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Micron Technology",
+        "wikipedia": "Micron Technology",
+        "context": "memory",
+        "operates_in": [
+          "flash_memory",
+          "dram",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "SK Hynix",
+        "wikipedia": "SK Hynix",
+        "context": "memory",
+        "operates_in": [
+          "flash_memory",
+          "dram",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Qualcomm",
+        "wikipedia": "Qualcomm",
+        "context": "fabless",
+        "operates_in": [
+          "system_on_a_chip",
+          "rf_transceiver",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Broadcom",
+        "wikipedia": "Broadcom",
+        "context": "fabless",
+        "operates_in": [
+          "semiconductor_fabrication",
+          "wifi",
+          "bluetooth"
+        ]
+      },
+      {
+        "name": "STMicroelectronics",
+        "wikipedia": "STMicroelectronics",
+        "context": "IDM",
+        "operates_in": [
+          "gyroscope",
+          "accelerometer",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "United Microelectronics Corporation",
+        "wikipedia": "United Microelectronics Corporation",
+        "context": "foundry",
+        "operates_in": [
+          "semiconductor_fabrication"
+        ]
+      }
+    ],
+    "semiconductor_equipment": [
+      {
+        "name": "ASML",
+        "wikipedia": "ASML Holding",
+        "context": "lithography",
+        "operates_in": [
+          "semiconductor_equipment",
+          "photolithography"
+        ]
+      },
+      {
+        "name": "Applied Materials",
+        "wikipedia": "Applied Materials",
+        "context": "deposition, etch",
+        "operates_in": [
+          "semiconductor_equipment",
+          "vapor_deposition"
+        ]
+      },
+      {
+        "name": "Lam Research",
+        "wikipedia": "Lam Research",
+        "context": "etch",
+        "operates_in": [
+          "semiconductor_equipment"
+        ]
+      },
+      {
+        "name": "Tokyo Electron",
+        "wikipedia": "Tokyo Electron",
+        "context": "equipment",
+        "operates_in": [
+          "semiconductor_equipment"
+        ]
+      },
+      {
+        "name": "KLA Corporation",
+        "wikipedia": "KLA Corporation",
+        "context": "metrology, inspection",
+        "operates_in": [
+          "semiconductor_equipment",
+          "automatic_test_equipment"
+        ]
+      }
+    ],
+    "colocation_data_center": [
+      {
+        "name": "Equinix",
+        "wikipedia": "Equinix",
+        "context": "colocation",
+        "operates_in": [
+          "colocation_data_center"
+        ]
+      },
+      {
+        "name": "Digital Realty",
+        "wikipedia": "Digital Realty",
+        "context": "colocation",
+        "operates_in": [
+          "colocation_data_center"
+        ]
+      }
+    ],
+    "hyperscale_cloud": [
+      {
+        "name": "Amazon Web Services",
+        "wikipedia": "Amazon Web Services",
+        "context": "cloud",
+        "operates_in": [
+          "hyperscale_cloud",
+          "server"
+        ]
+      },
+      {
+        "name": "Microsoft Azure",
+        "wikipedia": "Microsoft Azure",
+        "context": "cloud",
+        "operates_in": [
+          "hyperscale_cloud",
+          "server"
+        ]
+      },
+      {
+        "name": "Google Cloud",
+        "wikipedia": "Google Cloud Platform",
+        "context": "cloud",
+        "operates_in": [
+          "hyperscale_cloud",
+          "server"
+        ]
+      }
+    ],
+    "gpu": [
+      {
+        "name": "Nvidia",
+        "wikipedia": "Nvidia",
+        "context": "GPU",
+        "operates_in": [
+          "gpu",
+          "gpu_chip"
+        ]
+      },
+      {
+        "name": "AMD",
+        "wikipedia": "AMD",
+        "context": "GPU + CPU",
+        "operates_in": [
+          "gpu",
+          "gpu_chip"
+        ]
+      },
+      {
+        "name": "Intel",
+        "wikipedia": "Intel",
+        "context": "Intel Arc",
+        "operates_in": [
+          "gpu",
+          "cpu",
+          "semiconductor_fabrication"
+        ]
+      }
+    ],
+    "lithium_ion_battery": [
+      {
+        "name": "LG Chem",
+        "wikipedia": "LG Chem",
+        "context": "battery cells",
+        "operates_in": [
+          "lithium_ion_battery"
+        ]
+      },
+      {
+        "name": "Panasonic",
+        "wikipedia": "Panasonic",
+        "context": "battery cells",
+        "operates_in": [
+          "lithium_ion_battery",
+          "capacitor"
+        ]
+      },
+      {
+        "name": "Samsung SDI",
+        "wikipedia": "Samsung",
+        "context": "battery cells",
+        "operates_in": [
+          "lithium_ion_battery"
+        ]
+      },
+      {
+        "name": "Sony",
+        "wikipedia": "Sony",
+        "context": "invented Li-ion",
+        "operates_in": [
+          "lithium_ion_battery",
+          "cmos_image_sensor"
+        ]
+      },
+      {
+        "name": "EVE Energy",
+        "wikipedia": "EVE Energy",
+        "context": "battery cells",
+        "operates_in": [
+          "lithium_ion_battery"
+        ]
+      },
+      {
+        "name": "Toshiba",
+        "wikipedia": "Toshiba",
+        "context": "LTO batteries",
+        "operates_in": [
+          "flash_memory",
+          "hard_disk",
+          "lithium_ion_battery"
+        ]
+      },
+      {
+        "name": "Hitachi",
+        "wikipedia": "Hitachi, Ltd.",
+        "context": "battery materials",
+        "operates_in": [
+          "lithium_ion_battery",
+          "hard_disk"
+        ]
+      }
+    ],
+    "cathode_materials": [
+      {
+        "name": "POSCO Future M",
+        "wikipedia": "POSCO Future M",
+        "context": "cathode materials",
+        "operates_in": [
+          "lithium_nmc",
+          "lithium_iron_phosphate"
+        ]
+      },
+      {
+        "name": "Ronbay Technology",
+        "wikipedia": "Ronbay Technology",
+        "context": "cathode materials",
+        "operates_in": [
+          "lithium_nmc",
+          "lithium_iron_phosphate"
+        ]
+      },
+      {
+        "name": "Shenzhen Dynanonic",
+        "wikipedia": "Shenzhen Dynanonic",
+        "context": "LFP cathode",
+        "operates_in": [
+          "lithium_nmc",
+          "lithium_iron_phosphate"
+        ]
+      },
+      {
+        "name": "Hunan Yuneng",
+        "wikipedia": "Hunan Yuneng",
+        "context": "cathode materials",
+        "operates_in": [
+          "lithium_nmc",
+          "lithium_iron_phosphate"
+        ]
+      }
+    ],
+    "battery_recycling": [
+      {
+        "name": "Umicore",
+        "wikipedia": "Umicore",
+        "context": "battery recycling + cathode materials",
+        "operates_in": [
+          "catalytic_converter",
+          "battery_recycling"
+        ]
+      }
+    ],
+    "separator": [
+      {
+        "name": "Asahi Kasei",
+        "wikipedia": "Asahi Kasei",
+        "context": "battery separator",
+        "operates_in": [
+          "lithium_ion_battery"
+        ]
+      }
+    ],
+    "hard_disk": [
+      {
+        "name": "Seagate Technology",
+        "wikipedia": "Seagate Technology",
+        "context": "HDD",
+        "operates_in": [
+          "hard_disk"
+        ]
+      },
+      {
+        "name": "Western Digital",
+        "wikipedia": "Western Digital",
+        "context": "HDD + SSD",
+        "operates_in": [
+          "hard_disk"
+        ]
+      },
+      {
+        "name": "Toshiba",
+        "wikipedia": "Toshiba",
+        "context": "HDD + NAND",
+        "operates_in": [
+          "flash_memory",
+          "hard_disk",
+          "lithium_ion_battery"
+        ]
+      },
+      {
+        "name": "Samsung Electronics",
+        "wikipedia": "Samsung Electronics",
+        "context": "SSD + NAND",
+        "operates_in": [
+          "semiconductor_fabrication",
+          "smartphone",
+          "oled",
+          "flash_memory",
+          "washing_machine",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Hitachi (HGST)",
+        "wikipedia": "HGST",
+        "context": "HDD, now WD subsidiary",
+        "operates_in": [
+          "hard_disk"
+        ]
+      },
+      {
+        "name": "Fujitsu",
+        "wikipedia": "Fujitsu",
+        "context": "exited HDD",
+        "operates_in": [
+          "hard_disk"
+        ]
+      }
+    ],
+    "flash_memory": [
+      {
+        "name": "Kioxia",
+        "wikipedia": "Kioxia",
+        "context": "NAND flash, formerly Toshiba Memory",
+        "operates_in": [
+          "flash_memory"
+        ]
+      },
+      {
+        "name": "SK Hynix",
+        "wikipedia": "SK Hynix",
+        "context": "NAND flash",
+        "operates_in": [
+          "flash_memory",
+          "dram",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Micron Technology",
+        "wikipedia": "Micron Technology",
+        "context": "NAND flash",
+        "operates_in": [
+          "flash_memory",
+          "dram",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Yangtze Memory Technologies",
+        "wikipedia": "Yangtze Memory Technologies",
+        "context": "NAND flash, China",
+        "operates_in": [
+          "flash_memory"
+        ]
+      }
+    ],
+    "neodymium_magnet": [
+      {
+        "name": "Hitachi Metals",
+        "wikipedia": "Hitachi",
+        "context": "NdFeB magnets",
+        "operates_in": [
+          "neodymium_magnet",
+          "electrical_steel"
+        ]
+      },
+      {
+        "name": "Sumitomo Metal Industries",
+        "wikipedia": "Sumitomo Metal Industries",
+        "context": "NdFeB magnets",
+        "operates_in": [
+          "neodymium_magnet"
+        ]
+      },
+      {
+        "name": "Nitto Denko",
+        "wikipedia": "Nitto Denko",
+        "context": "magnet processing",
+        "operates_in": [
+          "neodymium_magnet"
+        ]
+      },
+      {
+        "name": "Molycorp",
+        "wikipedia": "Molycorp",
+        "context": "rare earth mining, US (defunct/reorganized)",
+        "operates_in": [
+          "neodymium_magnet"
+        ]
+      }
+    ],
+    "rare_earth_mining": [
+      {
+        "name": "China Northern Rare Earth",
+        "wikipedia": null,
+        "context": "world's largest RE producer",
+        "operates_in": [
+          "neodymium",
+          "praseodymium",
+          "terbium",
+          "dysprosium"
+        ]
+      },
+      {
+        "name": "Lynas Rare Earths",
+        "wikipedia": null,
+        "context": "largest non-Chinese RE producer, Australia",
+        "operates_in": [
+          "neodymium",
+          "praseodymium",
+          "terbium",
+          "dysprosium"
+        ]
+      },
+      {
+        "name": "MP Materials",
+        "wikipedia": null,
+        "context": "Mountain Pass mine, US",
+        "operates_in": [
+          "neodymium",
+          "praseodymium",
+          "terbium",
+          "dysprosium"
+        ]
+      }
+    ],
+    "bearing": [
+      {
+        "name": "SKF",
+        "wikipedia": null,
+        "context": "bearings, Sweden",
+        "operates_in": [
+          "bearing"
+        ]
+      },
+      {
+        "name": "NSK Ltd",
+        "wikipedia": null,
+        "context": "bearings, Japan",
+        "operates_in": [
+          "bearing"
+        ]
+      },
+      {
+        "name": "NTN Corporation",
+        "wikipedia": null,
+        "context": "bearings, Japan",
+        "operates_in": [
+          "bearing"
+        ]
+      },
+      {
+        "name": "Schaeffler Group",
+        "wikipedia": null,
+        "context": "bearings, Germany",
+        "operates_in": [
+          "bearing"
+        ]
+      },
+      {
+        "name": "Timken",
+        "wikipedia": null,
+        "context": "bearings, US",
+        "operates_in": [
+          "bearing"
+        ]
+      }
+    ],
+    "electric_motor": [
+      {
+        "name": "Nidec",
+        "wikipedia": null,
+        "context": "world's largest motor maker",
+        "operates_in": [
+          "electric_motor",
+          "hard_disk"
+        ]
+      },
+      {
+        "name": "ABB",
+        "wikipedia": null,
+        "context": "industrial motors + drives",
+        "operates_in": [
+          "electric_motor",
+          "variable_frequency_drive",
+          "robotics"
+        ]
+      },
+      {
+        "name": "Siemens",
+        "wikipedia": null,
+        "context": "industrial motors",
+        "operates_in": [
+          "electric_motor",
+          "variable_frequency_drive",
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "WEG Industries",
+        "wikipedia": null,
+        "context": "motors, Brazil",
+        "operates_in": [
+          "electric_motor"
+        ]
+      }
+    ],
+    "electrical_steel": [
+      {
+        "name": "Nippon Steel",
+        "wikipedia": null,
+        "context": "grain-oriented electrical steel",
+        "operates_in": [
+          "electrical_steel",
+          "steel"
+        ]
+      },
+      {
+        "name": "JFE Steel",
+        "wikipedia": null,
+        "context": "electrical steel, Japan",
+        "operates_in": [
+          "electrical_steel",
+          "steel"
+        ]
+      },
+      {
+        "name": "POSCO",
+        "wikipedia": null,
+        "context": "electrical steel, South Korea",
+        "operates_in": [
+          "electrical_steel",
+          "steel"
+        ]
+      },
+      {
+        "name": "ThyssenKrupp",
+        "wikipedia": null,
+        "context": "electrical steel, Germany",
+        "operates_in": [
+          "electrical_steel",
+          "steel"
+        ]
+      },
+      {
+        "name": "Baowu Steel",
+        "wikipedia": null,
+        "context": "electrical steel, China",
+        "operates_in": [
+          "electrical_steel",
+          "steel"
+        ]
+      }
+    ],
+    "wind_turbine": [
+      {
+        "name": "Vestas",
+        "wikipedia": "Vestas",
+        "context": "world's largest wind turbine maker, Denmark",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Siemens Gamesa",
+        "wikipedia": "Siemens Gamesa",
+        "context": "wind turbines, Germany/Spain",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "GE Vernova",
+        "wikipedia": "GE Wind",
+        "context": "wind turbines + offshore, US",
+        "operates_in": [
+          "wind_turbine",
+          "gas_turbine"
+        ]
+      },
+      {
+        "name": "Goldwind",
+        "wikipedia": "Goldwind",
+        "context": "wind turbines, China",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Mingyang Wind Power",
+        "wikipedia": "Ming Yang",
+        "context": "wind turbines, China",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Nordex",
+        "wikipedia": "Nordex SE",
+        "context": "wind turbines, Germany",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Enercon",
+        "wikipedia": "Enercon",
+        "context": "direct-drive wind turbines, Germany",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Envision Energy",
+        "wikipedia": "Envision Energy",
+        "context": "wind + batteries, China",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Suzlon",
+        "wikipedia": "Suzlon",
+        "context": "wind turbines, India",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "SANY",
+        "wikipedia": "SANY",
+        "context": "wind + heavy equipment, China",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      },
+      {
+        "name": "Dongfang Electric",
+        "wikipedia": "Dongfang Electric",
+        "context": "wind + power equipment, China",
+        "operates_in": [
+          "wind_turbine"
+        ]
+      }
+    ],
+    "smartphone_oem": [
+      {
+        "name": "Apple Inc.",
+        "wikipedia": "Apple Inc.",
+        "context": "iPhone maker, designs own SoCs (A-series), iOS ecosystem",
+        "operates_in": [
+          "smartphone",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Samsung Electronics",
+        "wikipedia": "Samsung Electronics",
+        "context": "Galaxy phones, also makes OLED displays, DRAM, NAND, image sensors, and SoCs (Exynos)",
+        "operates_in": [
+          "semiconductor_fabrication",
+          "smartphone",
+          "oled",
+          "flash_memory",
+          "washing_machine",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Xiaomi",
+        "wikipedia": "Xiaomi",
+        "context": "Chinese smartphone OEM, uses Qualcomm/MediaTek SoCs",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Oppo",
+        "wikipedia": "Oppo",
+        "context": "Chinese OEM, BBK Electronics subsidiary, camera-focused phones",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Vivo",
+        "wikipedia": "Vivo (technology company)",
+        "context": "Chinese OEM, BBK Electronics subsidiary",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Huawei",
+        "wikipedia": "Huawei",
+        "context": "Chinese OEM, designed own Kirin SoCs (HiSilicon), US sanctions impacted chip supply",
+        "operates_in": [
+          "smartphone",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "OnePlus",
+        "wikipedia": "OnePlus",
+        "context": "Chinese OEM, BBK subsidiary, uses Qualcomm Snapdragon",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Google (Pixel)",
+        "wikipedia": "Google Pixel",
+        "context": "Makes Pixel phones, designs Tensor SoC with Samsung fab",
+        "operates_in": [
+          "smartphone",
+          "mobile_operating_system"
+        ]
+      },
+      {
+        "name": "Motorola Mobility",
+        "wikipedia": "Motorola Mobility",
+        "context": "Lenovo subsidiary, mid-range smartphones",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Nokia/HMD Global",
+        "wikipedia": "HMD Global",
+        "context": "Finnish, licenses Nokia brand, uses Qualcomm/MediaTek",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Sony Mobile",
+        "wikipedia": "Sony Mobile Communications",
+        "context": "Xperia phones, also major CMOS image sensor maker (Sony Semiconductor)",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "ZTE",
+        "wikipedia": "ZTE",
+        "context": "Chinese telecom equipment and smartphone maker",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Realme",
+        "wikipedia": "Realme",
+        "context": "BBK subsidiary, budget smartphones",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Honor",
+        "wikipedia": "Honor (brand)",
+        "context": "Spun off from Huawei 2020, independent smartphone maker",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "TCL Technology",
+        "wikipedia": "TCL Technology",
+        "context": "Chinese, makes phones + TVs + displays (CSOT subsidiary)",
+        "operates_in": [
+          "smartphone",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "Nothing Technology",
+        "wikipedia": "Nothing (technology company)",
+        "context": "UK startup, Qualcomm SoCs, distinctive design",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Transsion Holdings",
+        "wikipedia": "Transsion",
+        "context": "Parent of Infinix, Tecno, Itel \u2014 dominates African smartphone market",
+        "operates_in": [
+          "smartphone"
+        ]
+      }
+    ],
+    "mobile_soc": [
+      {
+        "name": "Qualcomm",
+        "wikipedia": "Qualcomm",
+        "context": "Snapdragon SoCs, dominant in Android phones, also modems and RF front-end",
+        "operates_in": [
+          "system_on_a_chip",
+          "rf_transceiver",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "MediaTek",
+        "wikipedia": "MediaTek",
+        "context": "Dimensity SoCs, #2 mobile chip designer, strong in mid-range",
+        "operates_in": [
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "HiSilicon",
+        "wikipedia": "HiSilicon",
+        "context": "Huawei subsidiary, designed Kirin SoCs, impacted by US sanctions",
+        "operates_in": [
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Apple (Silicon)",
+        "wikipedia": "Apple silicon",
+        "context": "Designs A-series and M-series chips, fabbed at TSMC",
+        "operates_in": [
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Samsung LSI",
+        "wikipedia": "Samsung Semiconductor",
+        "context": "Designs Exynos SoCs, also fabs chips for others",
+        "operates_in": [
+          "system_on_a_chip",
+          "semiconductor_fabrication"
+        ]
+      }
+    ],
+    "display_panel": [
+      {
+        "name": "Samsung Display",
+        "wikipedia": "Samsung Display",
+        "context": "World's largest OLED maker, supplies Apple iPhone panels",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "LG Display",
+        "wikipedia": "LG Display",
+        "context": "LCD and OLED panels for phones, TVs, automotive",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "BOE Technology",
+        "wikipedia": "BOE Technology",
+        "context": "Chinese display maker, growing OLED capacity, supplies many Android OEMs",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "Japan Display Inc (JDI)",
+        "wikipedia": "Japan Display",
+        "context": "Japanese LCD maker, formerly supplied iPhone LCD panels",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "AU Optronics",
+        "wikipedia": "AU Optronics",
+        "context": "Taiwanese display maker, LCD panels",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      },
+      {
+        "name": "Innolux",
+        "wikipedia": "Innolux",
+        "context": "Taiwanese, Foxconn subsidiary, LCD panels",
+        "operates_in": [
+          "oled",
+          "liquid_crystal_display"
+        ]
+      }
+    ],
+    "cmos_image_sensor": [
+      {
+        "name": "Sony Semiconductor Solutions",
+        "wikipedia": "Sony Semiconductor Solutions",
+        "context": "Dominant image sensor maker (~50% market share), supplies Apple, Samsung, most Android OEMs",
+        "operates_in": [
+          "cmos_image_sensor",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Samsung ISOCELL",
+        "wikipedia": "Samsung Electronics",
+        "context": "Samsung's image sensor division, #2 market share",
+        "operates_in": [
+          "cmos_image_sensor"
+        ]
+      },
+      {
+        "name": "OmniVision Technologies",
+        "wikipedia": "OmniVision Technologies",
+        "context": "Chinese-owned, mid-range image sensors",
+        "operates_in": [
+          "cmos_image_sensor"
+        ]
+      }
+    ],
+    "mems_sensors": [
+      {
+        "name": "Bosch Sensortec",
+        "wikipedia": "Robert Bosch GmbH",
+        "context": "MEMS accelerometers, gyroscopes, pressure sensors for smartphones",
+        "operates_in": [
+          "gyroscope",
+          "accelerometer",
+          "automobile"
+        ]
+      },
+      {
+        "name": "STMicroelectronics",
+        "wikipedia": "STMicroelectronics",
+        "context": "MEMS sensors, also NFC chips, power management ICs",
+        "operates_in": [
+          "gyroscope",
+          "accelerometer",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "InvenSense (TDK)",
+        "wikipedia": "InvenSense",
+        "context": "MEMS motion sensors, acquired by TDK",
+        "operates_in": [
+          "gyroscope",
+          "accelerometer",
+          "barometer_sensor"
+        ]
+      },
+      {
+        "name": "Analog Devices",
+        "wikipedia": "Analog Devices",
+        "context": "MEMS accelerometers, signal processing ICs",
+        "operates_in": [
+          "gyroscope",
+          "accelerometer",
+          "barometer_sensor"
+        ]
+      }
+    ],
+    "rf_components": [
+      {
+        "name": "Skyworks Solutions",
+        "wikipedia": "Skyworks Solutions",
+        "context": "RF front-end modules, power amplifiers, filters for smartphones",
+        "operates_in": [
+          "rf_transceiver",
+          "rf_power_amplifier"
+        ]
+      },
+      {
+        "name": "Qorvo",
+        "wikipedia": "Qorvo",
+        "context": "RF filters (BAW/SAW), power amplifiers, smartphone RF front-end",
+        "operates_in": [
+          "rf_transceiver",
+          "rf_power_amplifier"
+        ]
+      },
+      {
+        "name": "Broadcom (wireless)",
+        "wikipedia": "Broadcom Inc.",
+        "context": "WiFi/Bluetooth combo chips, also supplies Apple",
+        "operates_in": [
+          "rf_transceiver",
+          "wifi",
+          "bluetooth"
+        ]
+      },
+      {
+        "name": "Murata Manufacturing",
+        "wikipedia": "Murata Manufacturing",
+        "context": "Japanese, passive components (MLCCs), WiFi modules, SAW filters",
+        "operates_in": [
+          "rf_transceiver",
+          "rf_power_amplifier"
+        ]
+      }
+    ],
+    "audio_ic": [
+      {
+        "name": "Cirrus Logic",
+        "wikipedia": "Cirrus Logic",
+        "context": "Audio codec ICs, amplifiers \u2014 major Apple supplier",
+        "operates_in": [
+          "audio_codec"
+        ]
+      },
+      {
+        "name": "Knowles Corporation",
+        "wikipedia": "Knowles Corporation",
+        "context": "MEMS microphones, dominant in smartphones",
+        "operates_in": [
+          "audio_codec"
+        ]
+      }
+    ],
+    "cover_glass": [
+      {
+        "name": "Corning Inc.",
+        "wikipedia": "Corning Inc.",
+        "context": "Gorilla Glass monopoly \u2014 supplies nearly every smartphone maker",
+        "operates_in": [
+          "cover_glass",
+          "glass",
+          "fiberglass"
+        ]
+      },
+      {
+        "name": "AGC Inc.",
+        "wikipedia": "AGC Inc.",
+        "context": "Japanese glass maker, Dragontrail cover glass (Gorilla Glass competitor)",
+        "operates_in": [
+          "vehicle_glass",
+          "glass",
+          "cover_glass"
+        ]
+      },
+      {
+        "name": "Schott AG",
+        "wikipedia": "Schott AG",
+        "context": "German specialty glass, Xensation cover glass",
+        "operates_in": [
+          "cover_glass",
+          "glass"
+        ]
+      }
+    ],
+    "smartphone_contract_manufacturing": [
+      {
+        "name": "Foxconn",
+        "wikipedia": "Foxconn",
+        "context": "World's largest electronics contract manufacturer, assembles iPhones",
+        "operates_in": [
+          "smartphone",
+          "printed_circuit_board",
+          "server"
+        ]
+      },
+      {
+        "name": "Pegatron",
+        "wikipedia": "Pegatron",
+        "context": "Taiwanese contract manufacturer, assembles iPhones and other devices",
+        "operates_in": [
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Wistron",
+        "wikipedia": "Wistron",
+        "context": "Taiwanese contract manufacturer, iPhone assembly in India",
+        "operates_in": [
+          "smartphone"
+        ]
+      }
+    ],
+    "nfc_chips": [
+      {
+        "name": "NXP Semiconductors",
+        "wikipedia": "NXP Semiconductors",
+        "context": "Dominant NFC chip maker for smartphones + contactless payments",
+        "operates_in": [
+          "nfc",
+          "integrated_circuit",
+          "automobile"
+        ]
+      }
+    ],
+    "oled_materials": [
+      {
+        "name": "Universal Display Corporation",
+        "wikipedia": "Universal Display Corporation",
+        "context": "Holds key patents on phosphorescent OLED materials, licenses to Samsung/LG/BOE",
+        "operates_in": [
+          "oled"
+        ]
+      },
+      {
+        "name": "Idemitsu Kosan",
+        "wikipedia": "Idemitsu Kosan",
+        "context": "Japanese chemical company, major OLED organic materials supplier",
+        "operates_in": [
+          "oled"
+        ]
+      },
+      {
+        "name": "Novaled",
+        "wikipedia": "Novaled",
+        "context": "Samsung subsidiary, German OLED materials company, charge transport layers",
+        "operates_in": [
+          "oled"
+        ]
+      },
+      {
+        "name": "Merck KGaA (Display)",
+        "wikipedia": "Merck Group",
+        "context": "German chemical company, OLED and LC materials",
+        "operates_in": [
+          "oled"
+        ]
+      },
+      {
+        "name": "DuPont (Display)",
+        "wikipedia": "DuPont",
+        "context": "Inkjet-printable OLED materials",
+        "operates_in": [
+          "oled"
+        ]
+      },
+      {
+        "name": "Mitsubishi Chemical",
+        "wikipedia": "Mitsubishi Chemical Holdings",
+        "context": "OLED organic materials supplier",
+        "operates_in": [
+          "carbon_fiber",
+          "oled"
+        ]
+      }
+    ],
+    "oled_equipment": [
+      {
+        "name": "Canon Tokki",
+        "wikipedia": "Canon Inc.",
+        "context": "Near-monopoly on OLED vacuum deposition equipment \u2014 bottleneck for entire industry",
+        "operates_in": [
+          "oled",
+          "semiconductor_equipment"
+        ]
+      }
+    ],
+    "tier1_automotive": [
+      {
+        "name": "Robert Bosch GmbH",
+        "wikipedia": "Robert Bosch GmbH",
+        "context": "World's largest auto parts supplier \u2014 ABS, fuel injection, ECUs, sensors, also MEMS",
+        "operates_in": [
+          "automobile",
+          "electric_motor",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Continental AG",
+        "wikipedia": "Continental AG",
+        "context": "German Tier 1 \u2014 tires, brakes, ADAS, electronics. Also tire manufacturer.",
+        "operates_in": [
+          "tire",
+          "automobile"
+        ]
+      },
+      {
+        "name": "ZF Friedrichshafen",
+        "wikipedia": "ZF Friedrichshafen",
+        "context": "German \u2014 transmissions, steering, chassis, EV drivetrains",
+        "operates_in": [
+          "automobile",
+          "transmission",
+          "electric_motor"
+        ]
+      },
+      {
+        "name": "Aisin",
+        "wikipedia": "Aisin",
+        "context": "Toyota group, transmissions, brakes, body parts",
+        "operates_in": [
+          "automobile"
+        ]
+      },
+      {
+        "name": "Magna International",
+        "wikipedia": "Magna International",
+        "context": "Canadian \u2014 contract manufacturer, mirrors, seating, powertrain. Can build entire vehicles.",
+        "operates_in": [
+          "automobile",
+          "vehicle_glass"
+        ]
+      },
+      {
+        "name": "Valeo",
+        "wikipedia": "Valeo",
+        "context": "French \u2014 thermal systems, visibility (wipers/lights), EV powertrain, ADAS",
+        "operates_in": [
+          "automobile",
+          "electric_motor"
+        ]
+      },
+      {
+        "name": "BorgWarner",
+        "wikipedia": "BorgWarner",
+        "context": "US \u2014 turbochargers, EV drivetrain components, torque transfer",
+        "operates_in": [
+          "automobile",
+          "electric_motor",
+          "turbocharger"
+        ]
+      },
+      {
+        "name": "Aptiv",
+        "wikipedia": "Aptiv",
+        "context": "US \u2014 wiring harnesses, connectors, autonomous driving software",
+        "operates_in": [
+          "automobile",
+          "electronic_stability_control"
+        ]
+      },
+      {
+        "name": "Yazaki",
+        "wikipedia": "Yazaki",
+        "context": "Japanese \u2014 world's largest wiring harness maker",
+        "operates_in": [
+          "automobile"
+        ]
+      }
+    ],
+    "tire_manufacturer": [
+      {
+        "name": "Michelin",
+        "wikipedia": "Michelin",
+        "context": "French \u2014 #1 or #2 tire maker globally",
+        "operates_in": [
+          "tire"
+        ]
+      },
+      {
+        "name": "Bridgestone",
+        "wikipedia": "Bridgestone",
+        "context": "Japanese \u2014 #1 or #2 tire maker globally",
+        "operates_in": [
+          "tire"
+        ]
+      },
+      {
+        "name": "Goodyear",
+        "wikipedia": "Goodyear Tire and Rubber Company",
+        "context": "US \u2014 major tire maker",
+        "operates_in": [
+          "tire"
+        ]
+      },
+      {
+        "name": "Continental (Tires)",
+        "wikipedia": "Continental AG",
+        "context": "German \u2014 major tire maker (also Tier 1 supplier)",
+        "operates_in": [
+          "tire"
+        ]
+      },
+      {
+        "name": "Pirelli",
+        "wikipedia": "Pirelli",
+        "context": "Italian \u2014 premium/performance tires, Chinese-owned (ChemChina)",
+        "operates_in": [
+          "tire"
+        ]
+      }
+    ],
+    "automotive_glass": [
+      {
+        "name": "AGC Inc.",
+        "wikipedia": "AGC Inc.",
+        "context": "Japanese \u2014 world's largest flat glass maker, auto + architectural + display",
+        "operates_in": [
+          "vehicle_glass",
+          "glass",
+          "cover_glass"
+        ]
+      },
+      {
+        "name": "NSG/Pilkington",
+        "wikipedia": "Nippon Sheet Glass",
+        "context": "Japanese \u2014 automotive + architectural glass",
+        "operates_in": [
+          "vehicle_glass",
+          "glass"
+        ]
+      },
+      {
+        "name": "Fuyao Glass",
+        "wikipedia": "Fuyao Glass",
+        "context": "Chinese \u2014 world's largest automotive glass maker, supplies most global OEMs",
+        "operates_in": [
+          "vehicle_glass",
+          "glass"
+        ]
+      },
+      {
+        "name": "Saint-Gobain",
+        "wikipedia": "Saint-Gobain",
+        "context": "French \u2014 glass, construction materials, major automotive glass supplier",
+        "operates_in": [
+          "glass",
+          "vehicle_glass"
+        ]
+      }
+    ],
+    "brake_manufacturer": [
+      {
+        "name": "Brembo",
+        "wikipedia": "Brembo",
+        "context": "Italian \u2014 premium brake systems (calipers, discs, pads)",
+        "operates_in": [
+          "disc_brake"
+        ]
+      },
+      {
+        "name": "Akebono Brake",
+        "wikipedia": "Akebono Brake Industry",
+        "context": "Japanese \u2014 brake pads, calipers, OEM supplier",
+        "operates_in": [
+          "disc_brake"
+        ]
+      }
+    ],
+    "catalytic_converter": [
+      {
+        "name": "Johnson Matthey",
+        "wikipedia": "Johnson Matthey",
+        "context": "British \u2014 catalytic converter catalysts, PGM refining, dominant player",
+        "operates_in": [
+          "catalytic_converter"
+        ]
+      },
+      {
+        "name": "BASF (Catalysts)",
+        "wikipedia": "BASF",
+        "context": "German chemical giant, also makes catalytic converter catalysts",
+        "operates_in": [
+          "catalytic_converter"
+        ]
+      },
+      {
+        "name": "Umicore",
+        "wikipedia": "Umicore",
+        "context": "Belgian \u2014 catalytic converters, battery materials, PGM recycling",
+        "operates_in": [
+          "catalytic_converter",
+          "battery_recycling"
+        ]
+      }
+    ],
+    "automotive_semiconductor": [
+      {
+        "name": "Infineon Technologies",
+        "wikipedia": "Infineon Technologies",
+        "context": "German \u2014 #1 automotive semiconductor maker, power MOSFETs, MCUs",
+        "operates_in": [
+          "integrated_circuit",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "NXP Semiconductors",
+        "wikipedia": "NXP Semiconductors",
+        "context": "Dutch \u2014 automotive MCUs, radar, NFC, major auto chip supplier",
+        "operates_in": [
+          "nfc",
+          "integrated_circuit",
+          "automobile"
+        ]
+      },
+      {
+        "name": "Renesas Electronics",
+        "wikipedia": "Renesas Electronics",
+        "context": "Japanese \u2014 automotive MCUs, SoCs, #3 auto chip maker",
+        "operates_in": [
+          "integrated_circuit",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "Texas Instruments",
+        "wikipedia": "Texas Instruments",
+        "context": "US \u2014 analog/mixed-signal ICs, automotive power management",
+        "operates_in": [
+          "integrated_circuit",
+          "semiconductor_fabrication"
+        ]
+      },
+      {
+        "name": "ON Semiconductor",
+        "wikipedia": "Onsemi",
+        "context": "US \u2014 image sensors, power management, automotive focus",
+        "operates_in": [
+          "integrated_circuit",
+          "semiconductor_fabrication"
+        ]
+      }
+    ],
+    "solar_panel": [
+      {
+        "name": "Jinko Solar",
+        "wikipedia": "Jinko Solar",
+        "context": "Chinese, world's largest solar panel maker by shipments",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "LONGi Green Energy",
+        "wikipedia": "LONGi Green Energy Technology",
+        "context": "Chinese, largest mono-Si wafer maker, vertically integrated into panels",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell",
+          "monocrystalline_silicon"
+        ]
+      },
+      {
+        "name": "Trina Solar",
+        "wikipedia": "Trina Solar",
+        "context": "Chinese, top-5 panel maker, also tracker systems",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "JA Solar",
+        "wikipedia": "JA Solar",
+        "context": "Chinese, top-5 panel maker",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "Canadian Solar",
+        "wikipedia": "Canadian Solar",
+        "context": "Chinese-Canadian, panels + utility-scale projects",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "First Solar",
+        "wikipedia": "First Solar",
+        "context": "US, only major CdTe thin-film maker, vertically integrated",
+        "operates_in": [
+          "solar_panel",
+          "cadmium_telluride"
+        ]
+      },
+      {
+        "name": "Hanwha Q Cells",
+        "wikipedia": "Hanwha Q Cells",
+        "context": "Korean, top-10 panel maker",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "SunPower",
+        "wikipedia": "SunPower",
+        "context": "US, high-efficiency IBC cells, premium residential",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      },
+      {
+        "name": "GCL Technology",
+        "wikipedia": "GCL-Poly Energy Holdings",
+        "context": "Chinese, major polysilicon + wafer producer",
+        "operates_in": [
+          "solar_panel",
+          "polysilicon"
+        ]
+      },
+      {
+        "name": "Tongwei",
+        "wikipedia": "Tongwei",
+        "context": "Chinese, major polysilicon producer + solar cells",
+        "operates_in": [
+          "solar_panel",
+          "solar_cell"
+        ]
+      }
+    ],
+    "solar_inverter": [
+      {
+        "name": "Huawei (Solar)",
+        "wikipedia": "Huawei",
+        "context": "World's largest solar inverter maker by shipments",
+        "operates_in": [
+          "solar_inverter"
+        ]
+      },
+      {
+        "name": "SMA Solar Technology",
+        "wikipedia": "SMA Solar Technology",
+        "context": "German, leading inverter maker",
+        "operates_in": [
+          "solar_inverter"
+        ]
+      },
+      {
+        "name": "Enphase Energy",
+        "wikipedia": "Enphase Energy",
+        "context": "US, microinverter pioneer, dominant in residential",
+        "operates_in": [
+          "solar_inverter"
+        ]
+      },
+      {
+        "name": "SolarEdge",
+        "wikipedia": "SolarEdge",
+        "context": "Israeli, power optimizers + inverters",
+        "operates_in": [
+          "solar_inverter"
+        ]
+      }
+    ],
+    "container_glass": [
+      {
+        "name": "O-I Glass",
+        "wikipedia": "O-I_Glass",
+        "context": "World's largest glass container manufacturer. Wine bottles, beer bottles, food jars.",
+        "operates_in": [
+          "glass"
+        ]
+      },
+      {
+        "name": "Verallia",
+        "wikipedia": "Verallia",
+        "context": "Major glass packaging producer, spun off from Saint-Gobain. Strong in wine bottles.",
+        "operates_in": [
+          "glass"
+        ]
+      },
+      {
+        "name": "Ardagh Glass Packaging",
+        "wikipedia": "Ardagh_Group",
+        "context": "Glass and metal packaging. Major wine bottle supplier in Europe.",
+        "operates_in": [
+          "glass"
+        ]
+      },
+      {
+        "name": "Vitro",
+        "wikipedia": "Vitro_(company)",
+        "context": "Mexican glass manufacturer. Containers, flat glass, automotive glass.",
+        "operates_in": [
+          "glass"
+        ]
+      }
+    ],
+    "cork": [
+      {
+        "name": "Corticeira Amorim",
+        "wikipedia": "Corticeira_Amorim",
+        "context": "World's largest cork producer. ~30% global market share. Portuguese.",
+        "operates_in": [
+          "cork"
+        ]
+      },
+      {
+        "name": "DIAM Bouchage (Oeneo)",
+        "wikipedia": "Oeneo",
+        "context": "French cork/closure producer using DIAMANT process to eliminate TCA taint.",
+        "operates_in": [
+          "cork"
+        ]
+      },
+      {
+        "name": "Nomacorc (Vinventions)",
+        "wikipedia": "Nomacorc",
+        "context": "Synthetic cork producer. Plant-based polymer closures.",
+        "operates_in": [
+          "cork"
+        ]
+      }
+    ],
+    "packaging_machinery": [
+      {
+        "name": "Krones AG",
+        "wikipedia": "Krones",
+        "context": "German bottling and packaging technology. Lines for beer, wine, soft drinks.",
+        "operates_in": [
+          "packaging_machinery"
+        ]
+      },
+      {
+        "name": "Sidel (Tetra Laval)",
+        "wikipedia": "Sidel",
+        "context": "PET and glass bottling lines. Part of Tetra Laval group.",
+        "operates_in": [
+          "packaging_machinery"
+        ]
+      },
+      {
+        "name": "KHS Group",
+        "wikipedia": "KHS_Group",
+        "context": "German filling and packaging technology for beverages.",
+        "operates_in": [
+          "packaging_machinery"
+        ]
+      }
+    ],
+    "corrugated_fiberboard": [
+      {
+        "name": "Smurfit WestRock",
+        "wikipedia": "Smurfit_WestRock",
+        "context": "World's largest corrugated packaging company after 2024 merger.",
+        "operates_in": [
+          "corrugated_fiberboard"
+        ]
+      },
+      {
+        "name": "International Paper",
+        "wikipedia": "International_Paper",
+        "context": "Largest pulp and paper company globally. Corrugated packaging, pulp.",
+        "operates_in": [
+          "corrugated_fiberboard"
+        ]
+      },
+      {
+        "name": "Packaging Corporation of America",
+        "wikipedia": "Packaging_Corporation_of_America",
+        "context": "Major US corrugated packaging producer.",
+        "operates_in": [
+          "corrugated_fiberboard"
+        ]
+      }
+    ],
+    "pulp_and_paper": [
+      {
+        "name": "UPM-Kymmene",
+        "wikipedia": "UPM_(company)",
+        "context": "Finnish pulp, paper, timber company. Major global producer.",
+        "operates_in": [
+          "paper",
+          "kraft_paper",
+          "wood_pulp"
+        ]
+      },
+      {
+        "name": "Stora Enso",
+        "wikipedia": "Stora_Enso",
+        "context": "Finnish-Swedish pulp, paper, biomaterials. One of world's largest.",
+        "operates_in": [
+          "paper",
+          "kraft_paper",
+          "wood_pulp"
+        ]
+      },
+      {
+        "name": "Sappi",
+        "wikipedia": "Sappi",
+        "context": "South African pulp and paper. Speciality papers, packaging.",
+        "operates_in": [
+          "paper",
+          "kraft_paper",
+          "wood_pulp"
+        ]
+      }
+    ],
+    "adhesives": [
+      {
+        "name": "Henkel",
+        "wikipedia": "Henkel",
+        "context": "German chemical/consumer goods. Adhesives division (Loctite, Technomelt) is world's largest.",
+        "operates_in": [
+          "adhesive",
+          "laundry_detergent"
+        ]
+      },
+      {
+        "name": "H.B. Fuller",
+        "wikipedia": "H.B._Fuller",
+        "context": "US adhesives company. Hot melts, labeling adhesives for packaging.",
+        "operates_in": [
+          "adhesive"
+        ]
+      }
+    ],
+    "petrochemicals": [
+      {
+        "name": "LyondellBasell",
+        "wikipedia": "LyondellBasell",
+        "context": "One of world's largest plastics, chemicals, refining companies. Major PE, PP producer.",
+        "operates_in": [
+          "polyethylene",
+          "polypropylene",
+          "ethylene",
+          "propylene"
+        ]
+      },
+      {
+        "name": "SABIC",
+        "wikipedia": "SABIC",
+        "context": "Saudi Arabian petrochemicals giant. PE, PP, PVC, ethylene, propylene.",
+        "operates_in": [
+          "polyethylene",
+          "polypropylene",
+          "ethylene",
+          "propylene"
+        ]
+      },
+      {
+        "name": "Dow Inc.",
+        "wikipedia": "Dow_Inc.",
+        "context": "Major US chemicals company. Polyethylene, packaging plastics.",
+        "operates_in": [
+          "polyethylene",
+          "ethylene"
+        ]
+      },
+      {
+        "name": "INEOS",
+        "wikipedia": "INEOS",
+        "context": "British chemicals company. Major PVC, PE producer in Europe.",
+        "operates_in": [
+          "pvc",
+          "polyethylene",
+          "ethylene"
+        ]
+      },
+      {
+        "name": "Shin-Etsu Chemical",
+        "wikipedia": "Shin-Etsu_Chemical",
+        "context": "Japanese chemical company. World's largest PVC producer. Also silicon wafers (MERGE!).",
+        "operates_in": [
+          "pvc",
+          "silicon_wafer",
+          "polyethylene"
+        ]
+      }
+    ],
+    "bicycle_component": [
+      {
+        "name": "Shimano",
+        "wikipedia": "Shimano",
+        "context": "World's largest bicycle component manufacturer. Groupsets, brakes, pedals, wheels. Also fishing tackle.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "SRAM Corporation",
+        "wikipedia": "SRAM_Corporation",
+        "context": "#2 bicycle components. Groupsets, suspension (RockShox), wheels (Zipp). Chicago-based.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Campagnolo",
+        "wikipedia": "Campagnolo",
+        "context": "Italian premium bicycle components. Groupsets, wheels. Founded 1933 by Tullio Campagnolo.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Fox Factory",
+        "wikipedia": "Fox_Factory",
+        "context": "Suspension forks and shocks for MTB and moto. Also powers some automotive suspension.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Magura GmbH",
+        "wikipedia": "Magura_GmbH",
+        "context": "German bicycle hydraulic brakes and suspension forks.",
+        "operates_in": [
+          "bicycle"
+        ]
+      }
+    ],
+    "bicycle_manufacturer": [
+      {
+        "name": "Trek Bicycle Corporation",
+        "wikipedia": "Trek_Bicycle_Corporation",
+        "context": "Largest US bicycle manufacturer. Carbon, aluminium, steel frames. Owns Bontrager, Electra.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Specialized Bicycle Components",
+        "wikipedia": "Specialized_Bicycle_Components",
+        "context": "Major US bike brand. Mountain, road, e-bikes. Morgan Hill, CA.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Cannondale",
+        "wikipedia": "Cannondale",
+        "context": "US bicycle manufacturer known for aluminium innovation. Part of Dorel/Cycling Sports Group.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Bianchi",
+        "wikipedia": "Bianchi_(company)",
+        "context": "Oldest bicycle manufacturer (1885). Italian. Famous celeste green color.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Brompton Bicycle",
+        "wikipedia": "Brompton_Bicycle",
+        "context": "British folding bicycle manufacturer. Iconic design. London-made.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Pinarello",
+        "wikipedia": "Pinarello",
+        "context": "Italian high-end road bicycles. Tour de France winning frames.",
+        "operates_in": [
+          "bicycle"
+        ]
+      },
+      {
+        "name": "Giant Manufacturing",
+        "wikipedia": "Giant_Manufacturing",
+        "context": "Taiwanese, world's largest bicycle manufacturer by revenue. Makes frames for many brands.",
+        "operates_in": [
+          "bicycle",
+          "carbon_fiber"
+        ]
+      }
+    ],
+    "carbon_fiber": [
+      {
+        "name": "Toray Industries",
+        "wikipedia": "Toray_Industries",
+        "context": "Japanese, world's largest carbon fiber producer (~30% global). Aerospace (Boeing 787), bicycles, automotive.",
+        "operates_in": [
+          "carbon_fiber"
+        ]
+      },
+      {
+        "name": "Hexcel",
+        "wikipedia": "Hexcel",
+        "context": "US carbon fiber and composites. Major aerospace supplier (Airbus, Boeing). Also wind turbine blades.",
+        "operates_in": [
+          "carbon_fiber"
+        ]
+      },
+      {
+        "name": "Mitsubishi Chemical",
+        "wikipedia": "Mitsubishi_Chemical",
+        "context": "Japanese carbon fiber producer. Also chemicals, pharma. Part of Mitsubishi Chemical Group.",
+        "operates_in": [
+          "carbon_fiber",
+          "oled"
+        ]
+      },
+      {
+        "name": "SGL Carbon",
+        "wikipedia": "SGL_Carbon",
+        "context": "German carbon fiber and graphite products. Automotive (BMW i3), industrial applications.",
+        "operates_in": [
+          "carbon_fiber"
+        ]
+      },
+      {
+        "name": "Teijin",
+        "wikipedia": "Teijin",
+        "context": "Japanese chemical company. Carbon fiber (Tenax brand), aramid fiber (Twaron), polyester.",
+        "operates_in": [
+          "carbon_fiber",
+          "aramid_fiber"
+        ]
+      }
+    ],
+    "titanium": [
+      {
+        "name": "VSMPO-AVISMA",
+        "wikipedia": "VSMPO-AVISMA",
+        "context": "Russian, world's largest titanium producer. Supplies Boeing, Airbus. Sanctioned post-2022.",
+        "operates_in": [
+          "titanium"
+        ]
+      },
+      {
+        "name": "Titanium Metals Corporation (TIMET)",
+        "wikipedia": "Titanium_Metals_Corporation",
+        "context": "US titanium producer. Aerospace, industrial. Subsidiary of Precision Castparts (Berkshire Hathaway).",
+        "operates_in": [
+          "titanium"
+        ]
+      }
+    ],
+    "welding": [
+      {
+        "name": "Lincoln Electric",
+        "wikipedia": "Lincoln_Electric",
+        "context": "World's largest welding equipment/consumables manufacturer. US-based. Cleveland, Ohio.",
+        "operates_in": [
+          "welding"
+        ]
+      },
+      {
+        "name": "ESAB",
+        "wikipedia": "ESAB",
+        "context": "Swedish-origin welding/cutting equipment. Now part of Enovis. Global presence.",
+        "operates_in": [
+          "welding"
+        ]
+      }
+    ],
+    "bicycle_tire": [
+      {
+        "name": "Continental AG",
+        "wikipedia": "Continental_AG",
+        "context": "German tire giant. Bicycle tires AND automotive tires (MERGE!). Also automotive electronics.",
+        "operates_in": [
+          "tire",
+          "automobile"
+        ]
+      },
+      {
+        "name": "Vittoria S.p.A.",
+        "wikipedia": "Vittoria_S.p.A.",
+        "context": "Italian bicycle tire specialist. Road and mountain bike tires. Graphene-enhanced.",
+        "operates_in": [
+          "tire"
+        ]
+      },
+      {
+        "name": "Schwalbe (Ralf Bohle GmbH)",
+        "wikipedia": "Schwalbe_Tires",
+        "context": "German bicycle tire brand. Marathon, Nobby Nic. Europe's largest bike tire company.",
+        "operates_in": [
+          "tire"
+        ]
+      }
+    ],
+    "home_appliance_manufacturer": [
+      {
+        "name": "Whirlpool Corporation",
+        "wikipedia": "Whirlpool_Corporation",
+        "context": "World's largest home appliance maker. Washing machines, dryers, refrigerators. US-based.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      },
+      {
+        "name": "LG Electronics",
+        "wikipedia": "LG_Electronics",
+        "context": "South Korean electronics/appliances. Washing machines, TVs, OLED panels. Part of LG Group.",
+        "operates_in": [
+          "washing_machine",
+          "oled",
+          "smartphone"
+        ]
+      },
+      {
+        "name": "Samsung Electronics",
+        "wikipedia": "Samsung_Electronics",
+        "context": "South Korean conglomerate. Washing machines AND semiconductors AND smartphones (massive cross-graph node).",
+        "operates_in": [
+          "semiconductor_fabrication",
+          "smartphone",
+          "oled",
+          "flash_memory",
+          "washing_machine",
+          "system_on_a_chip"
+        ]
+      },
+      {
+        "name": "Haier Group",
+        "wikipedia": "Haier",
+        "context": "Chinese, world's largest home appliance brand by sales. Owns GE Appliances, Fisher & Paykel.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      },
+      {
+        "name": "Electrolux",
+        "wikipedia": "Electrolux",
+        "context": "Swedish home appliance maker. Washing machines, vacuum cleaners. #2 in Europe.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      },
+      {
+        "name": "BSH Hausger\u00e4te",
+        "wikipedia": "BSH_Hausger\u00e4te",
+        "context": "German, Bosch-Siemens joint venture. Bosch, Siemens, Gaggenau brands. Major washer maker.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      },
+      {
+        "name": "Miele",
+        "wikipedia": "Miele",
+        "context": "German premium home appliance maker. Known for longevity. Family-owned since 1899.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      },
+      {
+        "name": "Beko (Ar\u00e7elik)",
+        "wikipedia": "Beko",
+        "context": "Turkish home appliance brand. Part of Ar\u00e7elik/Ko\u00e7 Group. Europe's #2 white goods by volume.",
+        "operates_in": [
+          "washing_machine"
+        ]
+      }
+    ],
+    "laundry_detergent": [
+      {
+        "name": "Procter & Gamble",
+        "wikipedia": "Procter_%26_Gamble",
+        "context": "US consumer goods giant. Tide, Ariel detergents. Massive chemical supply chain.",
+        "operates_in": [
+          "laundry_detergent",
+          "surfactant"
+        ]
+      },
+      {
+        "name": "Unilever",
+        "wikipedia": "Unilever",
+        "context": "Anglo-Dutch consumer goods. Persil, OMO, Surf detergents. Plus food, beauty.",
+        "operates_in": [
+          "laundry_detergent",
+          "surfactant"
+        ]
+      },
+      {
+        "name": "Church & Dwight",
+        "wikipedia": "Church_%26_Dwight",
+        "context": "US consumer products. Arm & Hammer, OxiClean laundry products.",
+        "operates_in": [
+          "laundry_detergent"
+        ]
+      }
+    ],
+    "industrial_enzyme": [
+      {
+        "name": "Novozymes (Novonesis)",
+        "wikipedia": "Novozymes",
+        "context": "Danish, world's largest industrial enzyme producer (~48% global share). Laundry, biofuel enzymes.",
+        "operates_in": [
+          "enzyme_industrial"
+        ]
+      },
+      {
+        "name": "DSM-Firmenich",
+        "wikipedia": "DSM-Firmenich",
+        "context": "Dutch-Swiss. Industrial enzymes, nutrition, fragrances. Major detergent enzyme supplier.",
+        "operates_in": [
+          "enzyme_industrial"
+        ]
+      }
+    ],
+    "solenoid_valve": [
+      {
+        "name": "Parker Hannifin",
+        "wikipedia": "Parker_Hannifin",
+        "context": "US, world's largest motion and control technologies company. Solenoid valves, hydraulics, seals.",
+        "operates_in": [
+          "solenoid_valve",
+          "hydraulic_brake"
+        ]
+      },
+      {
+        "name": "Danfoss",
+        "wikipedia": "Danfoss",
+        "context": "Danish, major valve and drive manufacturer. Solenoid valves, VFDs, compressors.",
+        "operates_in": [
+          "solenoid_valve",
+          "variable_frequency_drive"
+        ]
+      }
+    ],
+    "pump_manufacturer": [
+      {
+        "name": "Grundfos",
+        "wikipedia": "Grundfos",
+        "context": "Danish, world's largest pump manufacturer. Water pumps, circulation pumps.",
+        "operates_in": [
+          "water_pump"
+        ]
+      },
+      {
+        "name": "Xylem Inc.",
+        "wikipedia": "Xylem_Inc.",
+        "context": "US water technology company. Pumps, treatment, analytics. Spun off from ITT.",
+        "operates_in": [
+          "water_pump"
+        ]
+      }
+    ],
+    "cement": [
+      {
+        "name": "LafargeHolcim (Holcim)",
+        "wikipedia": "Holcim",
+        "context": "Swiss, world's largest cement and building materials company. Operates in 70 countries.",
+        "operates_in": [
+          "cement",
+          "concrete",
+          "gravel",
+          "sand"
+        ]
+      },
+      {
+        "name": "CNBM (China National Building Material)",
+        "wikipedia": "China_National_Building_Material",
+        "context": "Chinese state-owned, world's largest cement producer by volume.",
+        "operates_in": [
+          "cement",
+          "concrete",
+          "glass",
+          "fiberglass"
+        ]
+      },
+      {
+        "name": "Heidelberg Materials",
+        "wikipedia": "Heidelberg_Materials",
+        "context": "German, #3 cement producer globally. Former HeidelbergCement.",
+        "operates_in": [
+          "cement",
+          "concrete",
+          "gravel"
+        ]
+      },
+      {
+        "name": "Cemex",
+        "wikipedia": "Cemex",
+        "context": "Mexican multinational. #4 cement producer. Concrete, aggregates.",
+        "operates_in": [
+          "cement",
+          "concrete",
+          "gravel",
+          "sand"
+        ]
+      },
+      {
+        "name": "UltraTech Cement",
+        "wikipedia": "UltraTech_Cement",
+        "context": "Indian, largest cement company in India. Part of Aditya Birla Group.",
+        "operates_in": [
+          "cement",
+          "concrete"
+        ]
+      }
+    ],
+    "homebuilder": [
+      {
+        "name": "D.R. Horton",
+        "wikipedia": "D.R._Horton",
+        "context": "Largest US homebuilder by volume. ~90,000 homes/year.",
+        "operates_in": [
+          "house"
+        ]
+      },
+      {
+        "name": "Lennar Corporation",
+        "wikipedia": "Lennar",
+        "context": "#2 US homebuilder. Also financial services, multifamily.",
+        "operates_in": [
+          "house"
+        ]
+      },
+      {
+        "name": "China State Construction Engineering",
+        "wikipedia": "China_State_Construction_Engineering",
+        "context": "Chinese state-owned, world's largest construction company by revenue.",
+        "operates_in": [
+          "house",
+          "concrete",
+          "steel"
+        ]
+      },
+      {
+        "name": "Vinci SA",
+        "wikipedia": "Vinci_(company)",
+        "context": "French construction and concessions giant. Largest construction company in Europe.",
+        "operates_in": [
+          "house",
+          "concrete"
+        ]
+      },
+      {
+        "name": "Barratt Developments",
+        "wikipedia": "Barratt_Developments",
+        "context": "UK's largest housebuilder by volume. ~17,000 homes/year.",
+        "operates_in": [
+          "house"
+        ]
+      }
+    ],
+    "hvac": [
+      {
+        "name": "Daikin Industries",
+        "wikipedia": "Daikin",
+        "context": "Japanese, world's largest HVAC manufacturer. Air conditioners, heat pumps, refrigerants.",
+        "operates_in": [
+          "hvac",
+          "compressor",
+          "refrigerant"
+        ]
+      },
+      {
+        "name": "Carrier Global",
+        "wikipedia": "Carrier_Global",
+        "context": "US, founded by Willis Carrier (inventor of modern AC). HVAC, refrigeration, fire/security.",
+        "operates_in": [
+          "hvac",
+          "compressor"
+        ]
+      },
+      {
+        "name": "Trane Technologies",
+        "wikipedia": "Trane_Technologies",
+        "context": "US/Irish. Trane and Thermo King brands. HVAC and transport refrigeration.",
+        "operates_in": [
+          "hvac",
+          "compressor"
+        ]
+      },
+      {
+        "name": "Johnson Controls",
+        "wikipedia": "Johnson_Controls",
+        "context": "US/Irish. Building automation, HVAC, fire/security. York brand.",
+        "operates_in": [
+          "hvac",
+          "microcontroller"
+        ]
+      }
+    ],
+    "plumbing_fixtures": [
+      {
+        "name": "Masco Corporation",
+        "wikipedia": "Masco_Corporation",
+        "context": "US. Delta faucets, Behr paint, Liberty Hardware. Home improvement products.",
+        "operates_in": [
+          "plumbing",
+          "paint"
+        ]
+      },
+      {
+        "name": "Kohler Co.",
+        "wikipedia": "Kohler_Co.",
+        "context": "US. Plumbing fixtures (sinks, toilets, faucets), engines, furniture.",
+        "operates_in": [
+          "plumbing",
+          "ceramic_tile"
+        ]
+      }
+    ],
+    "insulation": [
+      {
+        "name": "Owens Corning",
+        "wikipedia": "Owens_Corning",
+        "context": "US. World leader in fiberglass insulation, roofing, composites.",
+        "operates_in": [
+          "thermal_insulation",
+          "fiberglass",
+          "asphalt_shingle"
+        ]
+      },
+      {
+        "name": "Rockwool International",
+        "wikipedia": "Rockwool_International",
+        "context": "Danish, world's largest mineral wool insulation manufacturer.",
+        "operates_in": [
+          "mineral_wool",
+          "thermal_insulation"
+        ]
+      },
+      {
+        "name": "Knauf",
+        "wikipedia": "Knauf",
+        "context": "German. Drywall, insulation, plasters. Family-owned, one of world's largest.",
+        "operates_in": [
+          "drywall",
+          "gypsum",
+          "plaster",
+          "thermal_insulation"
+        ]
+      }
+    ],
+    "window_manufacturer": [
+      {
+        "name": "Andersen Corporation",
+        "wikipedia": "Andersen_Corporation",
+        "context": "US, largest window and door manufacturer in North America.",
+        "operates_in": [
+          "window",
+          "door"
+        ]
+      },
+      {
+        "name": "Velux",
+        "wikipedia": "Velux",
+        "context": "Danish, world's largest manufacturer of roof windows and skylights.",
+        "operates_in": [
+          "window",
+          "glass"
+        ]
+      }
+    ],
+    "lumber": [
+      {
+        "name": "Weyerhaeuser",
+        "wikipedia": "Weyerhaeuser",
+        "context": "US, largest private owner of timberlands. Lumber, plywood, engineered wood.",
+        "operates_in": [
+          "lumber",
+          "plywood"
+        ]
+      },
+      {
+        "name": "West Fraser Timber",
+        "wikipedia": "West_Fraser_Timber",
+        "context": "Canadian, largest lumber producer in North America after Canfor.",
+        "operates_in": [
+          "lumber",
+          "plywood"
+        ]
+      }
+    ],
+    "textile_fiber": [
+      {
+        "name": "Indorama Ventures",
+        "wikipedia": "Indorama_Ventures",
+        "context": "Thai, world's largest PET/polyester producer. Polyester fiber, PET resin, recycling.",
+        "operates_in": [
+          "polyester_fiber",
+          "ethylene_glycol",
+          "terephthalic_acid"
+        ]
+      },
+      {
+        "name": "Reliance Industries (Textiles)",
+        "wikipedia": "Reliance_Industries",
+        "context": "Indian conglomerate. World's largest polyester fiber producer. Also petrochemicals, refining.",
+        "operates_in": [
+          "polyester_fiber",
+          "para_xylene",
+          "naphtha",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "Lenzing AG",
+        "wikipedia": "Lenzing_AG",
+        "context": "Austrian, world leader in wood-based cellulose fibers. Tencel, Modal, viscose.",
+        "operates_in": [
+          "rayon",
+          "wood_pulp"
+        ]
+      }
+    ],
+    "apparel_manufacturer": [
+      {
+        "name": "Nike Inc.",
+        "wikipedia": "Nike,_Inc.",
+        "context": "US, world's largest athletic apparel/footwear brand. Massive supply chain across Asia.",
+        "operates_in": [
+          "t_shirt",
+          "polyester_fiber",
+          "rubber"
+        ]
+      },
+      {
+        "name": "Inditex (Zara)",
+        "wikipedia": "Inditex",
+        "context": "Spanish, world's largest fashion retailer. Zara, Massimo Dutti. Fast fashion pioneer.",
+        "operates_in": [
+          "t_shirt",
+          "cotton",
+          "polyester_fiber"
+        ]
+      },
+      {
+        "name": "H&M Group",
+        "wikipedia": "H%26M",
+        "context": "Swedish fashion retailer. Second largest globally after Inditex.",
+        "operates_in": [
+          "t_shirt",
+          "cotton",
+          "polyester_fiber"
+        ]
+      },
+      {
+        "name": "PVH Corp",
+        "wikipedia": "PVH_Corp",
+        "context": "US, owns Calvin Klein and Tommy Hilfiger. Major global apparel company.",
+        "operates_in": [
+          "t_shirt",
+          "cotton"
+        ]
+      },
+      {
+        "name": "Hanesbrands",
+        "wikipedia": "Hanesbrands",
+        "context": "US, world's largest basics apparel company. Hanes, Champion, Bonds. T-shirts, underwear.",
+        "operates_in": [
+          "t_shirt",
+          "cotton",
+          "yarn",
+          "knitting"
+        ]
+      }
+    ],
+    "sewing_machine": [
+      {
+        "name": "Juki Corporation",
+        "wikipedia": "Juki",
+        "context": "Japanese, world's largest industrial sewing machine manufacturer.",
+        "operates_in": [
+          "sewing_machine"
+        ]
+      },
+      {
+        "name": "Brother Industries",
+        "wikipedia": "Brother_Industries",
+        "context": "Japanese. Sewing machines, printers, machine tools. Industrial + consumer.",
+        "operates_in": [
+          "sewing_machine",
+          "printing"
+        ]
+      }
+    ],
+    "zipper": [
+      {
+        "name": "YKK Group",
+        "wikipedia": "YKK",
+        "context": "Japanese, world's largest zipper manufacturer (~46% global market). Also architectural products.",
+        "operates_in": [
+          "zipper",
+          "aluminium"
+        ]
+      }
+    ],
+    "synthetic_dye": [
+      {
+        "name": "Archroma",
+        "wikipedia": "Archroma",
+        "context": "Swiss specialty chemicals. Textile dyes and chemicals. Spun off from Clariant.",
+        "operates_in": [
+          "synthetic_dye",
+          "dyeing"
+        ]
+      },
+      {
+        "name": "Huntsman Corporation",
+        "wikipedia": "Huntsman_Corporation",
+        "context": "US chemicals. Textile dyes/effects, polyurethanes, performance products.",
+        "operates_in": [
+          "synthetic_dye",
+          "polyurethane"
+        ]
+      }
+    ],
+    "cotton_trading": [
+      {
+        "name": "Louis Dreyfus Company",
+        "wikipedia": "Louis_Dreyfus_Company",
+        "context": "Dutch/French agri commodities trader. Cotton, grains, oilseeds. Global supply chain.",
+        "operates_in": [
+          "cotton"
+        ]
+      }
+    ],
+    "oil_refining": [
+      {
+        "name": "ExxonMobil",
+        "wikipedia": "ExxonMobil",
+        "context": "Largest US refiner, integrated oil major",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum",
+          "lubricant"
+        ]
+      },
+      {
+        "name": "Shell",
+        "wikipedia": "Shell plc",
+        "context": "Global integrated oil major",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum",
+          "lubricant"
+        ]
+      },
+      {
+        "name": "BP",
+        "wikipedia": "BP",
+        "context": "British integrated oil major",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "Chevron",
+        "wikipedia": "Chevron Corporation",
+        "context": "US integrated oil major",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "TotalEnergies",
+        "wikipedia": "TotalEnergies",
+        "context": "French integrated oil major",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "Saudi Aramco",
+        "wikipedia": "Saudi Aramco",
+        "context": "World's largest oil company by production",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "Valero Energy",
+        "wikipedia": "Valero Energy",
+        "context": "Largest independent US refiner",
+        "operates_in": [
+          "oil_refinery"
+        ]
+      },
+      {
+        "name": "Marathon Petroleum",
+        "wikipedia": "Marathon Petroleum",
+        "context": "Major US refiner, Garyville refinery",
+        "operates_in": [
+          "oil_refinery"
+        ]
+      },
+      {
+        "name": "Phillips 66",
+        "wikipedia": "Phillips 66",
+        "context": "US refiner and chemicals",
+        "operates_in": [
+          "oil_refinery"
+        ]
+      },
+      {
+        "name": "Reliance Industries",
+        "wikipedia": "Reliance Industries",
+        "context": "Jamnagar \u2014 world's largest refining complex",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "Sinopec",
+        "wikipedia": "Sinopec",
+        "context": "China's largest refiner",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      },
+      {
+        "name": "PetroChina",
+        "wikipedia": "PetroChina",
+        "context": "CNPC subsidiary, major Chinese refiner",
+        "operates_in": [
+          "oil_refinery",
+          "petroleum"
+        ]
+      }
+    ],
+    "refining_catalyst": [
+      {
+        "name": "Albemarle",
+        "wikipedia": "Albemarle Corporation",
+        "context": "FCC catalyst and hydrotreating catalyst",
+        "operates_in": [
+          "refining_catalyst"
+        ]
+      },
+      {
+        "name": "W.R. Grace",
+        "wikipedia": "W. R. Grace and Company",
+        "context": "FCC catalysts and specialty chemicals",
+        "operates_in": [
+          "refining_catalyst"
+        ]
+      },
+      {
+        "name": "Johnson Matthey",
+        "wikipedia": "Johnson Matthey",
+        "context": "Catalysts for refining and chemicals",
+        "operates_in": [
+          "refining_catalyst"
+        ]
+      },
+      {
+        "name": "Honeywell UOP",
+        "wikipedia": "UOP LLC",
+        "context": "Refining process technology and catalysts",
+        "operates_in": [
+          "refining_catalyst"
+        ]
+      }
+    ],
+    "lubricant": [
+      {
+        "name": "Valvoline",
+        "wikipedia": "Valvoline",
+        "context": "Motor oil and automotive lubricants",
+        "operates_in": [
+          "lubricant"
+        ]
+      },
+      {
+        "name": "Fuchs Petrolub",
+        "wikipedia": "Fuchs Petrolub",
+        "context": "World's largest independent lubricant manufacturer",
+        "operates_in": [
+          "lubricant"
+        ]
+      }
+    ],
+    "fertilizer": [
+      {
+        "name": "Yara International",
+        "wikipedia": "Yara International",
+        "context": "World's largest fertilizer company",
+        "operates_in": [
+          "fertilizer"
+        ]
+      },
+      {
+        "name": "CF Industries",
+        "wikipedia": "CF Industries",
+        "context": "Nitrogen fertilizer manufacturer",
+        "operates_in": [
+          "fertilizer"
+        ]
+      },
+      {
+        "name": "Nutrien",
+        "wikipedia": "Nutrien",
+        "context": "World's largest potash producer, major fertilizer",
+        "operates_in": [
+          "fertilizer"
+        ]
+      },
+      {
+        "name": "Mosaic Company",
+        "wikipedia": "The Mosaic Company",
+        "context": "Phosphate and potash fertilizer",
+        "operates_in": [
+          "fertilizer"
+        ]
+      }
+    ],
+    "industrial_chemicals_btx": [
+      {
+        "name": "INEOS",
+        "wikipedia": "Ineos",
+        "context": "Major benzene, toluene, phenol producer",
+        "operates_in": [
+          "benzene",
+          "toluene",
+          "phenol"
+        ]
+      },
+      {
+        "name": "LyondellBasell",
+        "wikipedia": "LyondellBasell",
+        "context": "Olefins, polyolefins, and aromatics",
+        "operates_in": [
+          "benzene",
+          "ethylene",
+          "propylene"
+        ]
+      },
+      {
+        "name": "SABIC",
+        "wikipedia": "SABIC",
+        "context": "Saudi petrochemicals \u2014 ethylene, benzene, fertilizer",
+        "operates_in": [
+          "benzene",
+          "ethylene",
+          "fertilizer"
+        ]
+      }
+    ],
+    "heat_exchanger": [
+      {
+        "name": "Alfa Laval",
+        "wikipedia": "Alfa Laval",
+        "context": "Heat exchangers, separators, process equipment",
+        "operates_in": [
+          "heat_exchanger"
+        ]
+      },
+      {
+        "name": "SPX Technologies",
+        "wikipedia": "SPX Technologies",
+        "context": "Heat exchangers and cooling towers",
+        "operates_in": [
+          "heat_exchanger"
+        ]
+      }
+    ],
+    "container_shipping": [
+      {
+        "name": "Maersk",
+        "wikipedia": "Maersk",
+        "context": "World's largest container shipping line",
+        "operates_in": [
+          "container_shipping"
+        ]
+      },
+      {
+        "name": "MSC",
+        "wikipedia": "Mediterranean Shipping Company",
+        "context": "Second largest container shipping line",
+        "operates_in": [
+          "container_shipping"
+        ]
+      },
+      {
+        "name": "CMA CGM",
+        "wikipedia": "CMA CGM",
+        "context": "French container shipping major",
+        "operates_in": [
+          "container_shipping"
+        ]
+      },
+      {
+        "name": "COSCO Shipping",
+        "wikipedia": "COSCO Shipping",
+        "context": "Chinese state-owned shipping conglomerate",
+        "operates_in": [
+          "container_shipping"
+        ]
+      },
+      {
+        "name": "Hapag-Lloyd",
+        "wikipedia": "Hapag-Lloyd",
+        "context": "German container shipping line",
+        "operates_in": [
+          "container_shipping"
+        ]
+      },
+      {
+        "name": "Evergreen Marine",
+        "wikipedia": "Evergreen Marine Corporation",
+        "context": "Taiwanese container shipping line",
+        "operates_in": [
+          "container_shipping"
+        ]
+      }
+    ],
+    "shipbuilding": [
+      {
+        "name": "HD Hyundai Heavy Industries",
+        "wikipedia": "HD Hyundai Heavy Industries",
+        "context": "World's largest shipbuilder",
+        "operates_in": [
+          "shipbuilding",
+          "marine_engine"
+        ]
+      },
+      {
+        "name": "Samsung Heavy Industries",
+        "wikipedia": "Samsung Heavy Industries",
+        "context": "Korean Big 3 shipbuilder",
+        "operates_in": [
+          "shipbuilding"
+        ]
+      },
+      {
+        "name": "Daewoo Shipbuilding",
+        "wikipedia": "HD Hyundai Marine Solution",
+        "context": "Korean Big 3 shipbuilder (now HD Hyundai subsidiary)",
+        "operates_in": [
+          "shipbuilding"
+        ]
+      },
+      {
+        "name": "China State Shipbuilding Corp",
+        "wikipedia": "China State Shipbuilding Corporation",
+        "context": "Chinese state-owned shipbuilder",
+        "operates_in": [
+          "shipbuilding"
+        ]
+      }
+    ],
+    "shipping_container_mfg": [
+      {
+        "name": "CIMC",
+        "wikipedia": "China International Marine Containers",
+        "context": "World's largest shipping container manufacturer",
+        "operates_in": [
+          "shipping_container",
+          "refrigerated_container"
+        ]
+      },
+      {
+        "name": "Singamas",
+        "wikipedia": "Singamas Container Holdings",
+        "context": "Second largest container manufacturer",
+        "operates_in": [
+          "shipping_container"
+        ]
+      },
+      {
+        "name": "CXIC",
+        "wikipedia": "CXIC Group",
+        "context": "Chinese container manufacturer",
+        "operates_in": [
+          "shipping_container"
+        ]
+      }
+    ],
+    "marine_engine": [
+      {
+        "name": "MAN Energy Solutions",
+        "wikipedia": "MAN Energy Solutions",
+        "context": "World's largest marine engine manufacturer",
+        "operates_in": [
+          "marine_engine"
+        ]
+      },
+      {
+        "name": "W\u00e4rtsil\u00e4",
+        "wikipedia": "W\u00e4rtsil\u00e4",
+        "context": "Finnish marine engines and power plants",
+        "operates_in": [
+          "marine_engine"
+        ]
+      }
+    ],
+    "container_crane": [
+      {
+        "name": "ZPMC",
+        "wikipedia": "ZPMC",
+        "context": "Shanghai \u2014 world's largest port crane manufacturer",
+        "operates_in": [
+          "container_crane",
+          "crane"
+        ]
+      },
+      {
+        "name": "Konecranes",
+        "wikipedia": "Konecranes",
+        "context": "Finnish crane and lifting equipment",
+        "operates_in": [
+          "container_crane",
+          "crane"
+        ]
+      },
+      {
+        "name": "Liebherr",
+        "wikipedia": "Liebherr",
+        "context": "Swiss-German crane and construction equipment",
+        "operates_in": [
+          "container_crane",
+          "crane"
+        ]
+      }
+    ],
+    "forklift": [
+      {
+        "name": "Toyota Industries",
+        "wikipedia": "Toyota Industries",
+        "context": "World's largest forklift manufacturer",
+        "operates_in": [
+          "forklift"
+        ]
+      },
+      {
+        "name": "KION Group",
+        "wikipedia": "KION Group",
+        "context": "Linde and STILL forklifts",
+        "operates_in": [
+          "forklift"
+        ]
+      },
+      {
+        "name": "Hyster-Yale",
+        "wikipedia": "Hyster-Yale Materials Handling",
+        "context": "US forklift manufacturer",
+        "operates_in": [
+          "forklift"
+        ]
+      }
+    ],
+    "container_terminal": [
+      {
+        "name": "PSA International",
+        "wikipedia": "PSA International",
+        "context": "Singapore port operator, global terminal network",
+        "operates_in": [
+          "container_terminal"
+        ]
+      },
+      {
+        "name": "DP World",
+        "wikipedia": "DP World",
+        "context": "Dubai-based global port operator",
+        "operates_in": [
+          "container_terminal"
+        ]
+      },
+      {
+        "name": "Hutchison Ports",
+        "wikipedia": "Hutchison Ports",
+        "context": "Hong Kong \u2014 world's leading port operator",
+        "operates_in": [
+          "container_terminal"
+        ]
+      },
+      {
+        "name": "APM Terminals",
+        "wikipedia": "APM Terminals",
+        "context": "Maersk subsidiary, global terminal operator",
+        "operates_in": [
+          "container_terminal"
+        ]
+      }
+    ],
+    "big_pharma": [
+      {
+        "name": "Pfizer",
+        "wikipedia": "Pfizer",
+        "context": "Lipitor, Prevnar, COVID vaccine, Zithromax",
+        "operates_in": [
+          "statin",
+          "vaccine",
+          "antibiotic",
+          "pharmaceutical_manufacturing"
+        ]
+      },
+      {
+        "name": "Roche",
+        "wikipedia": "Roche",
+        "context": "Herceptin, Avastin, Rituxan \u2014 biologics leader",
+        "operates_in": [
+          "monoclonal_antibody",
+          "biologic_drug"
+        ]
+      },
+      {
+        "name": "AbbVie",
+        "wikipedia": "AbbVie",
+        "context": "Humira, Skyrizi, Rinvoq \u2014 immunology mAbs",
+        "operates_in": [
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "Johnson & Johnson",
+        "wikipedia": "Johnson %26 Johnson",
+        "context": "Janssen vaccine, Stelara, Darzalex",
+        "operates_in": [
+          "vaccine",
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "Merck & Co",
+        "wikipedia": "Merck %26 Co.",
+        "context": "Keytruda, Gardasil, Isentress",
+        "operates_in": [
+          "monoclonal_antibody",
+          "vaccine",
+          "antiretroviral"
+        ]
+      },
+      {
+        "name": "Novartis",
+        "wikipedia": "Novartis",
+        "context": "Entresto, Cosentyx, Sandoz generics",
+        "operates_in": [
+          "monoclonal_antibody",
+          "pharmaceutical_manufacturing"
+        ]
+      },
+      {
+        "name": "Sanofi",
+        "wikipedia": "Sanofi",
+        "context": "Insulin, vaccines (Fluzone, childhood), Dupixent",
+        "operates_in": [
+          "insulin",
+          "vaccine",
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "GSK",
+        "wikipedia": "GSK plc",
+        "context": "Shingrix vaccine, antibiotics, respiratory",
+        "operates_in": [
+          "vaccine",
+          "antibiotic"
+        ]
+      },
+      {
+        "name": "AstraZeneca",
+        "wikipedia": "AstraZeneca",
+        "context": "COVID vaccine, Crestor (statin), oncology",
+        "operates_in": [
+          "vaccine",
+          "statin",
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "Eli Lilly",
+        "wikipedia": "Eli Lilly and Company",
+        "context": "Insulin pioneer, Verzenio, Mounjaro",
+        "operates_in": [
+          "insulin",
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "Bristol-Myers Squibb",
+        "wikipedia": "Bristol-Myers Squibb",
+        "context": "Opdivo, Eliquis, immuno-oncology",
+        "operates_in": [
+          "monoclonal_antibody"
+        ]
+      }
+    ],
+    "insulin_specialist": [
+      {
+        "name": "Novo Nordisk",
+        "wikipedia": "Novo Nordisk",
+        "context": "World's largest insulin maker, GLP-1 (Ozempic)",
+        "operates_in": [
+          "insulin",
+          "biologic_drug"
+        ]
+      }
+    ],
+    "antiretroviral": [
+      {
+        "name": "Gilead Sciences",
+        "wikipedia": "Gilead Sciences",
+        "context": "Biktarvy, Truvada \u2014 HIV treatment leader",
+        "operates_in": [
+          "antiretroviral"
+        ]
+      },
+      {
+        "name": "ViiV Healthcare",
+        "wikipedia": "ViiV Healthcare",
+        "context": "GSK/Pfizer/Shionogi JV \u2014 HIV drugs",
+        "operates_in": [
+          "antiretroviral"
+        ]
+      }
+    ],
+    "vaccine_specialist": [
+      {
+        "name": "Moderna",
+        "wikipedia": "Moderna",
+        "context": "mRNA COVID vaccine pioneer",
+        "operates_in": [
+          "vaccine"
+        ]
+      },
+      {
+        "name": "BioNTech",
+        "wikipedia": "BioNTech",
+        "context": "mRNA vaccine technology, Pfizer partner",
+        "operates_in": [
+          "vaccine"
+        ]
+      },
+      {
+        "name": "Serum Institute of India",
+        "wikipedia": "Serum Institute of India",
+        "context": "World's largest vaccine manufacturer by doses",
+        "operates_in": [
+          "vaccine"
+        ]
+      }
+    ],
+    "generic_pharma_api": [
+      {
+        "name": "Teva Pharmaceutical",
+        "wikipedia": "Teva Pharmaceutical Industries",
+        "context": "World's largest generic drug maker",
+        "operates_in": [
+          "pharmaceutical_manufacturing",
+          "api_synthesis"
+        ]
+      },
+      {
+        "name": "Sun Pharmaceutical",
+        "wikipedia": "Sun Pharmaceutical",
+        "context": "Indian generic manufacturer",
+        "operates_in": [
+          "pharmaceutical_manufacturing",
+          "api_synthesis"
+        ]
+      },
+      {
+        "name": "Dr. Reddy's",
+        "wikipedia": "Dr. Reddy%27s Laboratories",
+        "context": "Indian API and generics",
+        "operates_in": [
+          "pharmaceutical_manufacturing",
+          "api_synthesis"
+        ]
+      }
+    ],
+    "bioreactor_equipment": [
+      {
+        "name": "Sartorius",
+        "wikipedia": "Sartorius (company)",
+        "context": "Bioreactors, single-use systems for biopharma",
+        "operates_in": [
+          "bioreactor"
+        ]
+      },
+      {
+        "name": "Cytiva (Danaher)",
+        "wikipedia": "Cytiva",
+        "context": "Bioprocessing equipment, chromatography",
+        "operates_in": [
+          "bioreactor"
+        ]
+      },
+      {
+        "name": "Thermo Fisher Scientific",
+        "wikipedia": "Thermo Fisher Scientific",
+        "context": "Lab equipment, single-use bioreactors",
+        "operates_in": [
+          "bioreactor",
+          "cleanroom"
+        ]
+      }
+    ],
+    "pharma_packaging": [
+      {
+        "name": "Gerresheimer",
+        "wikipedia": "Gerresheimer",
+        "context": "Glass vials, syringes, drug delivery devices",
+        "operates_in": [
+          "pharmaceutical_packaging",
+          "syringe"
+        ]
+      },
+      {
+        "name": "Schott AG",
+        "wikipedia": "Schott AG",
+        "context": "Pharmaceutical glass vials and ampoules",
+        "operates_in": [
+          "pharmaceutical_packaging",
+          "glass"
+        ]
+      },
+      {
+        "name": "West Pharmaceutical Services",
+        "wikipedia": "West Pharmaceutical Services",
+        "context": "Rubber stoppers, seals for injectables",
+        "operates_in": [
+          "pharmaceutical_packaging"
+        ]
+      },
+      {
+        "name": "Becton Dickinson",
+        "wikipedia": "Becton, Dickinson and Company",
+        "context": "Syringes, needles, injection devices",
+        "operates_in": [
+          "syringe"
+        ]
+      }
+    ],
+    "pharma_equipment": [
+      {
+        "name": "Syntegon (Bosch)",
+        "wikipedia": "Syntegon",
+        "context": "Pharma packaging and processing machinery",
+        "operates_in": [
+          "pharmaceutical_packaging",
+          "tablet_press"
+        ]
+      },
+      {
+        "name": "IMA Group",
+        "wikipedia": "IMA (company)",
+        "context": "Pharmaceutical machinery \u2014 tablet presses, packaging",
+        "operates_in": [
+          "tablet_press",
+          "pharmaceutical_packaging"
+        ]
+      }
+    ],
+    "gelatin": [
+      {
+        "name": "Rousselot",
+        "wikipedia": "Rousselot",
+        "context": "World's largest gelatin producer (Darling Ingredients)",
+        "operates_in": [
+          "gelatin"
+        ]
+      },
+      {
+        "name": "Gelita",
+        "wikipedia": "Gelita",
+        "context": "Gelatin and collagen peptides",
+        "operates_in": [
+          "gelatin"
+        ]
+      }
+    ],
+    "biologic_specialist": [
+      {
+        "name": "Amgen",
+        "wikipedia": "Amgen",
+        "context": "Epogen, Neulasta, Enbrel \u2014 biotech pioneer",
+        "operates_in": [
+          "biologic_drug",
+          "monoclonal_antibody"
+        ]
+      },
+      {
+        "name": "Regeneron",
+        "wikipedia": "Regeneron Pharmaceuticals",
+        "context": "Dupixent (with Sanofi), Eylea \u2014 mAb specialist",
+        "operates_in": [
+          "monoclonal_antibody"
+        ]
+      }
+    ]
+  }
+}

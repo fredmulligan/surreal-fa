@@ -12,7 +12,7 @@ import json
 from typing import Literal
 
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_openai import AzureChatOpenAI
 from langchain_core.tools import tool
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode
@@ -60,20 +60,17 @@ def create_shock_agent():
     engine = ShockEngine(db)
     queries = GraphQueries(db)
 
-    # Create graph-reading tools
     @tool
     def find_affected_by_commodity(commodity_name: str) -> str:
         """Find all companies that use a commodity as input.
         Returns companies with their cost sensitivity to this commodity."""
-        import asyncio
-        result = asyncio.run(engine.get_commodity_ripple(commodity_name))
+        result = engine.get_commodity_ripple(commodity_name)
         return json.dumps(result, indent=2, default=str)
 
     @tool
     def find_affected_by_industry_shock(industry_name: str) -> str:
         """Find all companies in an industry that would be affected by an industry-wide shock."""
-        import asyncio
-        result = asyncio.run(queries.companies_in_industry(industry_name))
+        result = queries.companies_in_industry(industry_name)
         return json.dumps(result, indent=2, default=str)
 
     @tool
@@ -81,32 +78,28 @@ def create_shock_agent():
         """Get all dependencies for a company — supply chain, commodity inputs,
         technologies, complements, competitors. Shows what the company depends on
         and what depends on the company."""
-        import asyncio
-        result = asyncio.run(db.traverse("company", company_name.lower().replace(" ", "_")))
+        result = db.traverse("company", company_name.lower().replace(" ", "_"))
         return json.dumps(result, indent=2, default=str)
 
     @tool
     def get_supply_chain(company_name: str) -> str:
         """Get suppliers and customers of a company from the knowledge graph."""
-        import asyncio
-        result = asyncio.run(queries.supply_chain_of(company_name))
+        result = queries.supply_chain_of(company_name)
         return json.dumps(result, indent=2, default=str)
 
     @tool
     def find_substitute_commodities(commodity_name: str) -> str:
         """Find substitute commodities/inputs. If copper gets expensive,
         what can companies switch to?"""
-        import asyncio
-        result = asyncio.run(engine.get_substitute_options(commodity_name))
+        result = engine.get_substitute_options(commodity_name)
         return json.dumps(result, indent=2, default=str)
 
     @tool
     def get_second_order_effects(company_names: str) -> str:
         """Given a comma-separated list of company names, find their downstream
         dependencies — the second-order effects of those companies being affected."""
-        import asyncio
         names = [n.strip() for n in company_names.split(",")]
-        result = asyncio.run(engine.get_second_order(names))
+        result = engine.get_second_order(names)
         return json.dumps(result, indent=2, default=str)
 
     @tool
@@ -114,15 +107,13 @@ def create_shock_agent():
         """Run a raw SurrealQL query against the knowledge graph.
         Use for custom traversals not covered by other tools.
         Example: SELECT ->supplies_to->company FROM company WHERE name = 'TSMC'"""
-        import asyncio
-        result = asyncio.run(db.query(surql_query))
+        result = db.query(surql_query)
         return json.dumps(result, indent=2, default=str)
 
     @tool
     def get_current_graph_stats() -> str:
         """Get summary statistics of the knowledge graph."""
-        import asyncio
-        result = asyncio.run(queries.graph_stats())
+        result = queries.graph_stats()
         return json.dumps(result, indent=2, default=str)
 
     all_tools = [
@@ -137,17 +128,15 @@ def create_shock_agent():
         search_polymarket,
     ]
 
-    llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
+    llm = AzureChatOpenAI(
+        azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o"),
+        api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview"),
+        temperature=0.2,
+    )
     llm_with_tools = llm.bind_tools(all_tools)
 
-    async def get_stats_str():
-        stats = await queries.graph_stats()
-        return json.dumps(stats, indent=2)
-
     def agent_node(state: ShockState) -> dict:
-        """Main reasoning node for shock propagation."""
-        import asyncio
-        stats_str = asyncio.run(get_stats_str())
+        stats_str = json.dumps(queries.graph_stats(), indent=2)
 
         probability_info = ""
         if state.get("polymarket_checked") and state.get("probability") is not None:
@@ -180,12 +169,10 @@ def create_shock_agent():
     workflow.add_conditional_edges("agent", should_continue, {"tools": "tools", "__end__": END})
     workflow.add_edge("tools", "agent")
 
-    compiled = workflow.compile()
-    return compiled
+    return workflow.compile()
 
 
 def run_shock(query: str):
-    """Run the shock propagation agent."""
     agent = create_shock_agent()
 
     initial_state: ShockState = {
