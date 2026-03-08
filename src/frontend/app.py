@@ -17,7 +17,10 @@ from pyvis.network import Network
 # Inject Streamlit secrets into db.py BEFORE any tools import it.
 # st.secrets is only available on the main thread — worker threads can't access it.
 from src.graph import db as _db
-_db._secrets = dict(st.secrets)
+try:
+    _db._secrets = dict(st.secrets)
+except Exception:
+    pass  # No secrets.toml locally — db.py falls back to .env
 
 from src.frontend.agent import get_agent
 
