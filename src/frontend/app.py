@@ -14,6 +14,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 from pyvis.network import Network
 
+# Inject Streamlit secrets into db.py BEFORE any tools import it.
+# st.secrets is only available on the main thread — worker threads can't access it.
+from src.graph import db as _db
+_db._secrets = dict(st.secrets)
+
 from src.frontend.agent import get_agent
 
 st.set_page_config(page_title="Surreal FA", layout="wide")
