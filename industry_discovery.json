@@ -2400,6 +2400,220 @@
       "wikipedia": "Syringe",
       "discovered_from": "Pharmaceutical pill",
       "type": "product"
+    },
+    "silicon_nitride": {
+      "name": "Silicon Nitride",
+      "wikipedia": "Silicon nitride",
+      "discovered_from": [
+        "Ball bearing",
+        "Flash memory"
+      ]
+    },
+    "thermal_interface_material": {
+      "name": "Thermal Interface Material",
+      "wikipedia": "Thermal interface material",
+      "discovered_from": "Heat sink"
+    },
+    "silicone": {
+      "name": "Silicone",
+      "wikipedia": "Silicone",
+      "discovered_from": "Heat sink"
+    },
+    "heat_pipe": {
+      "name": "Heat Pipe",
+      "wikipedia": "Heat pipe",
+      "discovered_from": "Heat sink"
+    },
+    "chipset": {
+      "name": "Chipset",
+      "wikipedia": "Chipset",
+      "discovered_from": "Motherboard"
+    },
+    "network_interface_controller": {
+      "name": "Network Interface Controller",
+      "wikipedia": "Network interface controller",
+      "discovered_from": "Motherboard"
+    },
+    "thermostat": {
+      "name": "Thermostat",
+      "wikipedia": "Thermostat",
+      "discovered_from": "Air conditioning"
+    },
+    "air_filter": {
+      "name": "Air Filter",
+      "wikipedia": "Air filter",
+      "discovered_from": "Air conditioning"
+    },
+    "thermal_expansion_valve": {
+      "name": "Thermal Expansion Valve",
+      "wikipedia": "Thermal expansion valve",
+      "discovered_from": "Air conditioning"
+    },
+    "cooling_tower": {
+      "name": "Cooling Tower",
+      "wikipedia": "Cooling tower",
+      "discovered_from": "Air conditioning"
+    },
+    "coke_fuel": {
+      "name": "Coke (Fuel)",
+      "wikipedia": "Coke (fuel)",
+      "discovered_from": "Iron ore"
+    },
+    "coking_coal": {
+      "name": "Coking Coal / Metallurgical Coal",
+      "wikipedia": "Metallurgical coal",
+      "discovered_from": "Iron ore"
+    },
+    "ferrite_core": {
+      "name": "Ferrite Core",
+      "wikipedia": "Ferrite core",
+      "discovered_from": "Inductor"
+    },
+    "lead_frame": {
+      "name": "Lead Frame",
+      "wikipedia": "Lead frame",
+      "discovered_from": "Integrated circuit packaging"
+    },
+    "gold": {
+      "name": "Gold",
+      "wikipedia": "Gold",
+      "discovered_from": "Integrated circuit packaging"
+    },
+    "igbt": {
+      "name": "IGBT (Insulated-Gate Bipolar Transistor)",
+      "wikipedia": "Insulated-gate bipolar transistor",
+      "discovered_from": [
+        "Variable-frequency drive",
+        "Uninterruptible power supply"
+      ]
+    },
+    "diode": {
+      "name": "Diode",
+      "wikipedia": "Diode",
+      "discovered_from": "Variable-frequency drive"
+    },
+    "circuit_breaker": {
+      "name": "Circuit Breaker",
+      "wikipedia": "Circuit breaker",
+      "discovered_from": [
+        "Variable-frequency drive",
+        "Uninterruptible power supply"
+      ]
+    },
+    "optical_fiber": {
+      "name": "Optical Fiber",
+      "wikipedia": "Optical fiber",
+      "discovered_from": "Submarine communications cable"
+    },
+    "optical_amplifier": {
+      "name": "Optical Amplifier",
+      "wikipedia": "Optical amplifier",
+      "discovered_from": "Submarine communications cable"
+    },
+    "wire_rope": {
+      "name": "Wire Rope",
+      "wikipedia": "Wire rope",
+      "discovered_from": "Submarine communications cable"
+    },
+    "lead_acid_battery": {
+      "name": "Lead-Acid Battery",
+      "wikipedia": "Lead\u2013acid battery",
+      "discovered_from": "Uninterruptible power supply"
+    },
+    "nickel_cadmium_battery": {
+      "name": "Nickel-Cadmium Battery",
+      "wikipedia": "Nickel\u2013cadmium battery",
+      "discovered_from": "Uninterruptible power supply"
+    },
+    "rectifier": {
+      "name": "Rectifier",
+      "wikipedia": "Rectifier",
+      "discovered_from": "Uninterruptible power supply"
+    },
+    "supercapacitor": {
+      "name": "Supercapacitor",
+      "wikipedia": "Supercapacitor",
+      "discovered_from": "Uninterruptible power supply"
+    },
+    "sfp_transceiver": {
+      "name": "SFP Transceiver (Optical Module)",
+      "wikipedia": "Small Form-factor Pluggable",
+      "discovered_from": "Network switch"
+    },
+    "germanium": {
+      "name": "Germanium",
+      "wikipedia": "Germanium",
+      "discovered_from": "Optical fiber"
+    },
+    "switchgear": {
+      "name": "Switchgear",
+      "wikipedia": "Switchgear",
+      "discovered_from": "Diesel generator"
+    },
+    "busbar": {
+      "name": "Busbar",
+      "wikipedia": "Busbar",
+      "discovered_from": "Diesel generator"
+    },
+    "superalloy": {
+      "name": "Superalloy (Nickel-based)",
+      "wikipedia": "Superalloy",
+      "discovered_from": "Gas-turbine engine"
+    },
+    "thermal_barrier_coating": {
+      "name": "Thermal Barrier Coating",
+      "wikipedia": "Thermal barrier coatings",
+      "discovered_from": "Gas-turbine engine"
+    },
+    "fused_quartz": {
+      "name": "Fused Quartz",
+      "wikipedia": "Fused quartz",
+      "discovered_from": "Photolithography"
+    },
+    "stepper_lithography": {
+      "name": "Stepper (Lithography Machine)",
+      "wikipedia": "Stepper",
+      "discovered_from": "Photolithography"
+    },
+    "sodium_hydroxide": {
+      "name": "Sodium Hydroxide (Caustic Soda)",
+      "wikipedia": "Sodium hydroxide",
+      "discovered_from": "Photolithography"
+    },
+    "twisted_pair_cable": {
+      "name": "Twisted Pair Cable",
+      "wikipedia": "Twisted pair",
+      "discovered_from": "Structured cabling"
+    },
+    "varistor": {
+      "name": "Varistor",
+      "wikipedia": "Varistor",
+      "discovered_from": "Power supply unit"
+    },
+    "through_silicon_via": {
+      "name": "Through-Silicon Via (TSV)",
+      "wikipedia": "Through-silicon via",
+      "discovered_from": "High Bandwidth Memory"
+    },
+    "interposer": {
+      "name": "Interposer",
+      "wikipedia": "Interposer",
+      "discovered_from": "High Bandwidth Memory"
+    },
+    "quartz": {
+      "name": "Quartz",
+      "wikipedia": "Quartz",
+      "discovered_from": "Crystal oscillator"
+    },
+    "reversing_valve": {
+      "name": "Reversing Valve",
+      "wikipedia": "Reversing valve",
+      "discovered_from": "Heat pump"
+    },
+    "electrical_insulation": {
+      "name": "Electrical Insulation",
+      "wikipedia": "Electrical insulation",
+      "discovered_from": "Electric generator"
     }
   },
   "edges": {
@@ -5543,6 +5757,958 @@
       [
         "cleanroom",
         "glass"
+      ],
+      [
+        "bearing",
+        "steel"
+      ],
+      [
+        "bearing",
+        "stainless_steel"
+      ],
+      [
+        "bearing",
+        "ceramic"
+      ],
+      [
+        "bearing",
+        "silicon_nitride"
+      ],
+      [
+        "power_mosfet",
+        "semiconductor_fabrication"
+      ],
+      [
+        "power_mosfet",
+        "ic_packaging"
+      ],
+      [
+        "power_mosfet",
+        "silicon_wafer"
+      ],
+      [
+        "dram",
+        "semiconductor_fabrication"
+      ],
+      [
+        "dram",
+        "ic_packaging"
+      ],
+      [
+        "dram",
+        "capacitor"
+      ],
+      [
+        "heat_sink",
+        "aluminium"
+      ],
+      [
+        "heat_sink",
+        "copper"
+      ],
+      [
+        "heat_sink",
+        "graphite"
+      ],
+      [
+        "heat_sink",
+        "thermal_interface_material"
+      ],
+      [
+        "heat_sink",
+        "heat_pipe"
+      ],
+      [
+        "motherboard",
+        "printed_circuit_board"
+      ],
+      [
+        "motherboard",
+        "capacitor"
+      ],
+      [
+        "motherboard",
+        "power_mosfet"
+      ],
+      [
+        "motherboard",
+        "chipset"
+      ],
+      [
+        "motherboard",
+        "dram"
+      ],
+      [
+        "motherboard",
+        "flash_memory"
+      ],
+      [
+        "motherboard",
+        "voltage_regulator_module"
+      ],
+      [
+        "motherboard",
+        "heat_sink"
+      ],
+      [
+        "motherboard",
+        "crystal_oscillator"
+      ],
+      [
+        "motherboard",
+        "network_interface_controller"
+      ],
+      [
+        "motherboard",
+        "integrated_circuit"
+      ],
+      [
+        "motherboard",
+        "inductor"
+      ],
+      [
+        "motherboard",
+        "resistor"
+      ],
+      [
+        "voltage_regulator_module",
+        "power_mosfet"
+      ],
+      [
+        "voltage_regulator_module",
+        "capacitor"
+      ],
+      [
+        "voltage_regulator_module",
+        "inductor"
+      ],
+      [
+        "voltage_regulator_module",
+        "printed_circuit_board"
+      ],
+      [
+        "air_conditioning",
+        "compressor"
+      ],
+      [
+        "air_conditioning",
+        "refrigerant"
+      ],
+      [
+        "air_conditioning",
+        "heat_exchanger"
+      ],
+      [
+        "air_conditioning",
+        "copper"
+      ],
+      [
+        "air_conditioning",
+        "aluminium"
+      ],
+      [
+        "air_conditioning",
+        "electric_motor"
+      ],
+      [
+        "air_conditioning",
+        "capacitor"
+      ],
+      [
+        "air_conditioning",
+        "thermostat"
+      ],
+      [
+        "air_conditioning",
+        "air_filter"
+      ],
+      [
+        "air_conditioning",
+        "thermal_expansion_valve"
+      ],
+      [
+        "air_conditioning",
+        "cooling_tower"
+      ],
+      [
+        "air_conditioning",
+        "variable_frequency_drive"
+      ],
+      [
+        "iron",
+        "coke_fuel"
+      ],
+      [
+        "iron",
+        "limestone"
+      ],
+      [
+        "iron",
+        "silica"
+      ],
+      [
+        "flash_memory",
+        "semiconductor_fabrication"
+      ],
+      [
+        "flash_memory",
+        "ic_packaging"
+      ],
+      [
+        "flash_memory",
+        "silicon_nitride"
+      ],
+      [
+        "inductor",
+        "copper"
+      ],
+      [
+        "inductor",
+        "ferrite_core"
+      ],
+      [
+        "inductor",
+        "ceramic"
+      ],
+      [
+        "resistor",
+        "carbon"
+      ],
+      [
+        "resistor",
+        "ceramic"
+      ],
+      [
+        "chipset",
+        "semiconductor_fabrication"
+      ],
+      [
+        "chipset",
+        "ic_packaging"
+      ],
+      [
+        "network_interface_controller",
+        "semiconductor_fabrication"
+      ],
+      [
+        "network_interface_controller",
+        "ic_packaging"
+      ],
+      [
+        "heat_pipe",
+        "copper"
+      ],
+      [
+        "coke_fuel",
+        "coking_coal"
+      ],
+      [
+        "ferrite_core",
+        "iron"
+      ],
+      [
+        "cooling_tower",
+        "steel"
+      ],
+      [
+        "cooling_tower",
+        "concrete"
+      ],
+      [
+        "cooling_tower",
+        "fiberglass"
+      ],
+      [
+        "cooling_tower",
+        "electric_motor"
+      ],
+      [
+        "silicone",
+        "silicon"
+      ],
+      [
+        "silicone",
+        "chlorine"
+      ],
+      [
+        "thermal_interface_material",
+        "silicone"
+      ],
+      [
+        "thermal_interface_material",
+        "aluminium"
+      ],
+      [
+        "thermal_interface_material",
+        "silver"
+      ],
+      [
+        "ic_packaging",
+        "epoxy"
+      ],
+      [
+        "ic_packaging",
+        "solder"
+      ],
+      [
+        "ic_packaging",
+        "lead_frame"
+      ],
+      [
+        "ic_packaging",
+        "gold"
+      ],
+      [
+        "ic_packaging",
+        "copper"
+      ],
+      [
+        "ic_packaging",
+        "ceramic"
+      ],
+      [
+        "ic_packaging",
+        "printed_circuit_board"
+      ],
+      [
+        "variable_frequency_drive",
+        "igbt"
+      ],
+      [
+        "variable_frequency_drive",
+        "capacitor"
+      ],
+      [
+        "variable_frequency_drive",
+        "inductor"
+      ],
+      [
+        "variable_frequency_drive",
+        "diode"
+      ],
+      [
+        "variable_frequency_drive",
+        "transformer"
+      ],
+      [
+        "variable_frequency_drive",
+        "printed_circuit_board"
+      ],
+      [
+        "variable_frequency_drive",
+        "heat_sink"
+      ],
+      [
+        "variable_frequency_drive",
+        "microcontroller"
+      ],
+      [
+        "variable_frequency_drive",
+        "circuit_breaker"
+      ],
+      [
+        "data_storage",
+        "solid_state_drive"
+      ],
+      [
+        "data_storage",
+        "hard_disk"
+      ],
+      [
+        "solid_state_drive",
+        "flash_memory"
+      ],
+      [
+        "solid_state_drive",
+        "printed_circuit_board"
+      ],
+      [
+        "solid_state_drive",
+        "capacitor"
+      ],
+      [
+        "solid_state_drive",
+        "power_mosfet"
+      ],
+      [
+        "solid_state_drive",
+        "integrated_circuit"
+      ],
+      [
+        "submarine_cable",
+        "optical_fiber"
+      ],
+      [
+        "submarine_cable",
+        "polyethylene"
+      ],
+      [
+        "submarine_cable",
+        "steel"
+      ],
+      [
+        "submarine_cable",
+        "copper"
+      ],
+      [
+        "submarine_cable",
+        "optical_amplifier"
+      ],
+      [
+        "submarine_cable",
+        "wire_rope"
+      ],
+      [
+        "ups",
+        "lead_acid_battery"
+      ],
+      [
+        "ups",
+        "lithium_ion_battery"
+      ],
+      [
+        "ups",
+        "transformer"
+      ],
+      [
+        "ups",
+        "rectifier"
+      ],
+      [
+        "ups",
+        "igbt"
+      ],
+      [
+        "ups",
+        "capacitor"
+      ],
+      [
+        "ups",
+        "transfer_switch"
+      ],
+      [
+        "ups",
+        "circuit_breaker"
+      ],
+      [
+        "ups",
+        "flywheel"
+      ],
+      [
+        "ups",
+        "supercapacitor"
+      ],
+      [
+        "network_switch",
+        "integrated_circuit"
+      ],
+      [
+        "network_switch",
+        "printed_circuit_board"
+      ],
+      [
+        "network_switch",
+        "sfp_transceiver"
+      ],
+      [
+        "network_switch",
+        "power_supply"
+      ],
+      [
+        "igbt",
+        "semiconductor_fabrication"
+      ],
+      [
+        "igbt",
+        "silicon_wafer"
+      ],
+      [
+        "igbt",
+        "ic_packaging"
+      ],
+      [
+        "diode",
+        "semiconductor_fabrication"
+      ],
+      [
+        "diode",
+        "silicon_wafer"
+      ],
+      [
+        "lead_frame",
+        "copper"
+      ],
+      [
+        "optical_fiber",
+        "silica"
+      ],
+      [
+        "optical_fiber",
+        "germanium"
+      ],
+      [
+        "optical_amplifier",
+        "optical_fiber"
+      ],
+      [
+        "optical_amplifier",
+        "semiconductor_fabrication"
+      ],
+      [
+        "lead_acid_battery",
+        "lead"
+      ],
+      [
+        "lead_acid_battery",
+        "sulfuric_acid"
+      ],
+      [
+        "nickel_cadmium_battery",
+        "nickel"
+      ],
+      [
+        "nickel_cadmium_battery",
+        "cadmium"
+      ],
+      [
+        "rectifier",
+        "diode"
+      ],
+      [
+        "rectifier",
+        "heat_sink"
+      ],
+      [
+        "flywheel",
+        "steel"
+      ],
+      [
+        "flywheel",
+        "bearing"
+      ],
+      [
+        "supercapacitor",
+        "carbon"
+      ],
+      [
+        "supercapacitor",
+        "aluminium"
+      ],
+      [
+        "wire_rope",
+        "steel"
+      ],
+      [
+        "wire_rope",
+        "lubricant"
+      ],
+      [
+        "sfp_transceiver",
+        "optical_fiber"
+      ],
+      [
+        "sfp_transceiver",
+        "semiconductor_fabrication"
+      ],
+      [
+        "sfp_transceiver",
+        "printed_circuit_board"
+      ],
+      [
+        "circuit_breaker",
+        "copper"
+      ],
+      [
+        "circuit_breaker",
+        "steel"
+      ],
+      [
+        "circuit_breaker",
+        "ceramic"
+      ],
+      [
+        "diesel_generator",
+        "internal_combustion_engine"
+      ],
+      [
+        "diesel_generator",
+        "electric_generator"
+      ],
+      [
+        "diesel_generator",
+        "diesel_fuel"
+      ],
+      [
+        "diesel_generator",
+        "switchgear"
+      ],
+      [
+        "diesel_generator",
+        "circuit_breaker"
+      ],
+      [
+        "gas_turbine",
+        "superalloy"
+      ],
+      [
+        "gas_turbine",
+        "thermal_barrier_coating"
+      ],
+      [
+        "gas_turbine",
+        "compressor"
+      ],
+      [
+        "gas_turbine",
+        "natural_gas"
+      ],
+      [
+        "gas_turbine",
+        "heat_exchanger"
+      ],
+      [
+        "gas_turbine",
+        "bearing"
+      ],
+      [
+        "gas_turbine",
+        "steel"
+      ],
+      [
+        "photolithography",
+        "photoresist"
+      ],
+      [
+        "photolithography",
+        "photomask"
+      ],
+      [
+        "photolithography",
+        "excimer_laser"
+      ],
+      [
+        "photolithography",
+        "fused_quartz"
+      ],
+      [
+        "photolithography",
+        "ultrapure_water"
+      ],
+      [
+        "photolithography",
+        "chromium"
+      ],
+      [
+        "photolithography",
+        "hydrogen_peroxide"
+      ],
+      [
+        "photolithography",
+        "stepper_lithography"
+      ],
+      [
+        "photolithography",
+        "sodium_hydroxide"
+      ],
+      [
+        "structured_cabling",
+        "twisted_pair_cable"
+      ],
+      [
+        "structured_cabling",
+        "optical_fiber"
+      ],
+      [
+        "structured_cabling",
+        "copper"
+      ],
+      [
+        "structured_cabling",
+        "pvc"
+      ],
+      [
+        "power_supply",
+        "transformer"
+      ],
+      [
+        "power_supply",
+        "capacitor"
+      ],
+      [
+        "power_supply",
+        "power_mosfet"
+      ],
+      [
+        "power_supply",
+        "printed_circuit_board"
+      ],
+      [
+        "power_supply",
+        "ferrite_core"
+      ],
+      [
+        "power_supply",
+        "inductor"
+      ],
+      [
+        "power_supply",
+        "heat_sink"
+      ],
+      [
+        "power_supply",
+        "copper"
+      ],
+      [
+        "power_supply",
+        "varistor"
+      ],
+      [
+        "hbm",
+        "dram"
+      ],
+      [
+        "hbm",
+        "through_silicon_via"
+      ],
+      [
+        "hbm",
+        "interposer"
+      ],
+      [
+        "hbm",
+        "ic_packaging"
+      ],
+      [
+        "superalloy",
+        "nickel"
+      ],
+      [
+        "superalloy",
+        "cobalt"
+      ],
+      [
+        "superalloy",
+        "chromium"
+      ],
+      [
+        "thermal_barrier_coating",
+        "ceramic"
+      ],
+      [
+        "fused_quartz",
+        "silica"
+      ],
+      [
+        "sodium_hydroxide",
+        "chlorine"
+      ],
+      [
+        "sodium_hydroxide",
+        "soda_ash"
+      ],
+      [
+        "twisted_pair_cable",
+        "copper"
+      ],
+      [
+        "twisted_pair_cable",
+        "polyethylene"
+      ],
+      [
+        "twisted_pair_cable",
+        "pvc"
+      ],
+      [
+        "switchgear",
+        "copper"
+      ],
+      [
+        "switchgear",
+        "steel"
+      ],
+      [
+        "switchgear",
+        "circuit_breaker"
+      ],
+      [
+        "busbar",
+        "copper"
+      ],
+      [
+        "busbar",
+        "aluminium"
+      ],
+      [
+        "through_silicon_via",
+        "silicon_wafer"
+      ],
+      [
+        "through_silicon_via",
+        "copper"
+      ],
+      [
+        "interposer",
+        "silicon_wafer"
+      ],
+      [
+        "interposer",
+        "copper"
+      ],
+      [
+        "varistor",
+        "ceramic"
+      ],
+      [
+        "stepper_lithography",
+        "fused_quartz"
+      ],
+      [
+        "stepper_lithography",
+        "excimer_laser"
+      ],
+      [
+        "electric_generator",
+        "copper"
+      ],
+      [
+        "electric_generator",
+        "electromagnetic_coil"
+      ],
+      [
+        "electric_generator",
+        "steel"
+      ],
+      [
+        "electric_generator",
+        "bearing"
+      ],
+      [
+        "electric_generator",
+        "electrical_insulation"
+      ],
+      [
+        "crystal_oscillator",
+        "quartz"
+      ],
+      [
+        "crystal_oscillator",
+        "steel"
+      ],
+      [
+        "crystal_oscillator",
+        "ceramic"
+      ],
+      [
+        "crystal_oscillator",
+        "gold"
+      ],
+      [
+        "photomask",
+        "fused_quartz"
+      ],
+      [
+        "photomask",
+        "chromium"
+      ],
+      [
+        "photomask",
+        "photoresist"
+      ],
+      [
+        "photoresist",
+        "petroleum"
+      ],
+      [
+        "heat_pump",
+        "compressor"
+      ],
+      [
+        "heat_pump",
+        "refrigerant"
+      ],
+      [
+        "heat_pump",
+        "heat_exchanger"
+      ],
+      [
+        "heat_pump",
+        "thermal_expansion_valve"
+      ],
+      [
+        "heat_pump",
+        "copper"
+      ],
+      [
+        "heat_pump",
+        "electric_motor"
+      ],
+      [
+        "heat_pump",
+        "reversing_valve"
+      ],
+      [
+        "power_inverter",
+        "igbt"
+      ],
+      [
+        "power_inverter",
+        "power_mosfet"
+      ],
+      [
+        "power_inverter",
+        "capacitor"
+      ],
+      [
+        "power_inverter",
+        "inductor"
+      ],
+      [
+        "power_inverter",
+        "transformer"
+      ],
+      [
+        "power_inverter",
+        "diode"
+      ],
+      [
+        "power_inverter",
+        "heat_sink"
+      ],
+      [
+        "power_inverter",
+        "printed_circuit_board"
+      ],
+      [
+        "electromagnetic_coil",
+        "copper"
+      ],
+      [
+        "electromagnetic_coil",
+        "electrical_insulation"
+      ],
+      [
+        "quartz",
+        "silica"
+      ],
+      [
+        "reversing_valve",
+        "copper"
+      ],
+      [
+        "reversing_valve",
+        "steel"
+      ],
+      [
+        "electrical_insulation",
+        "pvc"
+      ],
+      [
+        "electrical_insulation",
+        "polyethylene"
+      ],
+      [
+        "electrical_insulation",
+        "rubber"
       ]
     ]
   },
@@ -5574,71 +6740,67 @@
     "T-shirt",
     "Oil refinery",
     "Shipping container",
-    "Pharmaceutical pill"
+    "Pharmaceutical pill",
+    "Ball bearing",
+    "Power MOSFET",
+    "Dynamic random-access memory",
+    "Heat sink",
+    "Motherboard",
+    "Voltage regulator module",
+    "Air conditioning",
+    "Iron ore",
+    "Flash memory",
+    "Integrated circuit packaging",
+    "Variable-frequency drive",
+    "Solid-state drive",
+    "Submarine communications cable",
+    "Uninterruptible power supply",
+    "Network switch",
+    "Diesel generator",
+    "Gas-turbine engine",
+    "Photolithography",
+    "Structured cabling",
+    "Power supply unit (computer)",
+    "High Bandwidth Memory",
+    "Electric generator",
+    "Crystal oscillator",
+    "Photomask",
+    "Photoresist",
+    "Heat pump",
+    "Power inverter"
   ],
   "unexplored": [
     "gpu_chip",
-    "hbm",
     "gddr_sdram",
-    "dram",
-    "power_mosfet",
-    "voltage_regulator_module",
     "ramdac",
-    "motherboard",
-    "printed_circuit_board",
-    "data_storage",
-    "network_switch",
     "router",
     "networking_hardware",
-    "structured_cabling",
-    "submarine_cable",
-    "ups",
     "power_distribution_unit",
-    "diesel_generator",
-    "transformer",
-    "gas_turbine",
     "transfer_switch",
-    "air_conditioning",
     "computer_cooling",
     "evaporative_cooler",
-    "heat_pump",
-    "heat_sink",
     "water_cooling",
-    "power_supply",
     "server_rack",
     "fire_sprinkler",
     "gaseous_fire_suppression",
     "smoke_detector",
     "integrated_circuit",
-    "crystal_oscillator",
-    "capacitor",
-    "resistor",
-    "inductor",
     "semiconductor_equipment",
-    "photolithography",
-    "photomask",
-    "photoresist",
-    "silicon_wafer",
     "monocrystalline_silicon",
     "polysilicon",
-    "silicon",
-    "copper",
     "tungsten",
     "tin",
     "ultrapure_water",
     "hydrofluoric_acid",
-    "sulfuric_acid",
     "nitric_acid",
     "hydrogen_peroxide",
     "silane",
-    "ic_packaging",
     "automatic_test_equipment",
     "lithium",
     "cobalt",
     "nickel",
     "graphite",
     "manganese_oxide",
-    "aluminium",
     "phosphate",
     "lithium_cobalt_oxide",
     "lithium_iron_phosphate",
@@ -5657,44 +6819,37 @@
     "voice_coil",
     "stepper_motor",
     "servomotor",
-    "neodymium_magnet",
-    "glass",
-    "ceramic",
     "ruthenium",
     "helium",
-    "flash_memory",
     "solid_state_drive",
     "magnet_wire",
     "neodymium",
-    "iron",
     "boron",
     "dysprosium",
     "praseodymium",
     "terbium",
     "wind_turbine",
-    "electric_generator",
     "loudspeaker",
     "mri",
-    "electrical_steel",
-    "bearing",
-    "power_inverter",
-    "variable_frequency_drive",
-    "electromagnetic_coil",
     "carbon",
     "resin",
     "electric_vehicle",
     "robotics",
     "gearbox",
-    "fiberglass",
-    "epoxy",
-    "concrete",
     "crane",
     "carbon_nanotube",
     "fluorspar",
-    "steel",
     "manganese",
     "ferrosilicon",
     "cold_rolling",
-    "hydrogen"
+    "hydrogen",
+    "air_filter",
+    "coking_coal",
+    "silicon_nitride",
+    "thermal_expansion_valve",
+    "thermostat",
+    "cadmium",
+    "germanium",
+    "gold"
   ]
 }
